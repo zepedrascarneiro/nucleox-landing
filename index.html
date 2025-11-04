@@ -47,12 +47,17 @@
             --black: #000000;
             --white: #FFFFFF;
             --graphite: #2F4F4F;
+            --surface-dark: rgba(255, 255, 255, 0.05);
+            --surface-mid: rgba(255, 255, 255, 0.08);
+            --text-primary: #FFFFFF;
+            --text-secondary: rgba(255, 255, 255, 0.72);
+            --text-tertiary: rgba(255, 255, 255, 0.55);
         }
         
         body {
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-            background: #ffffff;
-            color: #000000;
+            background: #000000;
+            color: var(--text-primary);
             line-height: 1.7;
             overflow-x: hidden;
             -webkit-font-smoothing: antialiased;
@@ -65,7 +70,7 @@
             align-items: center;
             justify-content: center;
             position: relative;
-            background: #ffffff;
+            background: linear-gradient(135deg, #000000 0%, #0b0b0b 50%, #050505 100%);
             overflow: hidden;
         }
         
@@ -84,7 +89,7 @@
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            border: 1px solid rgba(0, 0, 0, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.06);
             border-radius: 50%;
             animation: rotate 60s linear infinite;
         }
@@ -100,7 +105,7 @@
             transform: translate(-50%, -50%);
             width: 6px;
             height: 6px;
-            background: #000000;
+            background: var(--gold);
             border-radius: 50%;
             animation: pulse 4s ease-in-out infinite;
         }
@@ -272,7 +277,7 @@
             font-size: 12px;
             letter-spacing: 3px;
             text-transform: uppercase;
-            color: #999;
+            color: var(--gold);
             margin-bottom: 2rem;
             font-weight: 500;
         }
@@ -295,18 +300,18 @@
             font-weight: 300;
             line-height: 1.15;
             margin-bottom: 2rem;
-            color: #000000;
+            color: var(--text-primary);
         }
         
         .hero-headline strong {
             font-weight: 700;
-            border-bottom: 3px solid #000;
+            border-bottom: 3px solid var(--gold);
         }
         
         .hero-subheadline {
             font-size: 22px;
             font-weight: 400;
-            color: #666666;
+            color: var(--text-secondary);
             margin-bottom: 3rem;
             max-width: 750px;
             margin-left: auto;
@@ -316,12 +321,12 @@
         
         /* CTAs Premium */
         .cta-primary {
-            background: #000000;
-            color: #ffffff;
+            background: var(--gold);
+            color: #000000;
             border: none;
             padding: 1.5rem 3rem;
             font-size: 16px;
-            font-weight: 600;
+            font-weight: 700;
             border-radius: 6px;
             cursor: pointer;
             transition: all 0.3s ease;
@@ -329,17 +334,18 @@
             letter-spacing: 0.5px;
             display: inline-block;
             text-decoration: none;
+            box-shadow: 0 15px 35px rgba(212, 175, 55, 0.25);
         }
         
         .cta-primary:hover {
             transform: translateY(-2px);
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
+            box-shadow: 0 20px 45px rgba(212, 175, 55, 0.35);
         }
         
         .cta-secondary {
             background: transparent;
-            color: #000000;
-            border: 2px solid #000000;
+            color: var(--gold);
+            border: 2px solid var(--gold);
             padding: 1.25rem 2.5rem;
             font-size: 15px;
             font-weight: 600;
@@ -352,8 +358,8 @@
         }
         
         .cta-secondary:hover {
-            background: #000000;
-            color: #ffffff;
+            background: var(--gold);
+            color: #000000;
         }
         
         /* Seções */
@@ -369,11 +375,12 @@
             line-height: 1.2;
             margin-bottom: 2rem;
             text-align: center;
+            color: var(--text-primary);
         }
         
         .section-subtitle {
             font-size: 20px;
-            color: #666666;
+            color: var(--text-secondary);
             text-align: center;
             max-width: 700px;
             margin: 0 auto 4rem;
@@ -396,9 +403,10 @@
         
         /* História de Origem */
         .origin-story {
-            background: #f8f9fa;
+            background: var(--surface-dark);
             padding: 80px 2rem;
             margin: 0 -2rem;
+            border: 1px solid rgba(255, 255, 255, 0.08);
         }
         
         .origin-content {
@@ -412,13 +420,13 @@
             line-height: 1.4;
             margin-bottom: 3rem;
             font-style: italic;
-            color: #000;
+            color: var(--text-primary);
         }
         
         .origin-text {
             font-size: 20px;
             line-height: 1.8;
-            color: #555;
+            color: var(--text-secondary);
             margin-bottom: 1.5rem;
         }
         
@@ -426,14 +434,14 @@
             font-size: 18px;
             font-weight: 600;
             margin-top: 3rem;
-            color: #000;
+            color: var(--text-primary);
         }
         
         .author-signature small {
             display: block;
             font-size: 14px;
             font-weight: 400;
-            color: #999;
+            color: var(--text-tertiary);
             margin-top: 0.5rem;
         }
         
@@ -449,16 +457,17 @@
             padding: 3rem;
             border-radius: 8px;
             text-align: left;
+            background: var(--surface-dark);
+            border: 1px solid rgba(255, 255, 255, 0.06);
         }
         
         .transform-before {
-            background: #f8f9fa;
-            border-left: 4px solid #999;
+            border-left: 4px solid rgba(255, 255, 255, 0.15);
         }
         
         .transform-after {
-            background: #000000;
-            color: #ffffff;
+            background: rgba(212, 175, 55, 0.08);
+            color: var(--text-primary);
             border-left: 4px solid var(--gold);
         }
         
@@ -471,7 +480,7 @@
         }
         
         .transform-before .transform-label {
-            color: #999;
+            color: var(--text-tertiary);
         }
         
         .transform-after .transform-label {
@@ -481,6 +490,7 @@
         .transform-text {
             font-size: 20px;
             line-height: 1.7;
+            color: var(--text-secondary);
         }
         
         /* Pilares */
@@ -493,17 +503,17 @@
         
         .pillar-card {
             padding: 2.5rem;
-            background: #ffffff;
-            border: 1px solid #e5e5e5;
+            background: var(--surface-dark);
+            border: 1px solid rgba(255, 255, 255, 0.08);
             border-radius: 8px;
             transition: all 0.3s ease;
             text-align: left;
         }
         
         .pillar-card:hover {
-            border-color: #000000;
+            border-color: var(--gold);
             transform: translateY(-5px);
-            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 15px 40px rgba(212, 175, 55, 0.15);
         }
         
         .pillar-number {
@@ -528,7 +538,7 @@
         
         .pillar-description {
             font-size: 16px;
-            color: #666;
+            color: var(--text-secondary);
             line-height: 1.6;
             margin-bottom: 1rem;
         }
@@ -537,7 +547,7 @@
             font-size: 14px;
             text-transform: uppercase;
             letter-spacing: 2px;
-            color: #000;
+            color: var(--gold);
             font-weight: 700;
         }
         
@@ -550,16 +560,16 @@
         }
         
         .testimonial-card {
-            background: #f8f9fa;
+            background: var(--surface-dark);
             padding: 2.5rem;
             border-radius: 8px;
-            border-left: 3px solid #000;
+            border-left: 3px solid var(--gold);
         }
         
         .testimonial-text {
             font-size: 18px;
             line-height: 1.6;
-            color: #333;
+            color: var(--text-secondary);
             font-style: italic;
             margin-bottom: 1.5rem;
         }
@@ -567,12 +577,12 @@
         .testimonial-author {
             font-size: 15px;
             font-weight: 600;
-            color: #000;
+            color: var(--text-primary);
         }
         
         .testimonial-role {
             font-size: 14px;
-            color: #999;
+            color: var(--text-tertiary);
         }
         
         /* Preview de Conteúdo */
@@ -583,8 +593,8 @@
         }
         
         .preview-card {
-            background: #ffffff;
-            border: 1px solid #e5e5e5;
+            background: var(--surface-dark);
+            border: 1px solid rgba(255, 255, 255, 0.08);
             padding: 2.5rem;
             border-radius: 8px;
             text-align: left;
@@ -592,7 +602,7 @@
         
         .preview-number {
             font-size: 14px;
-            color: #999;
+            color: var(--text-tertiary);
             text-transform: uppercase;
             letter-spacing: 2px;
             margin-bottom: 1rem;
@@ -603,13 +613,13 @@
             font-size: 24px;
             font-weight: 700;
             line-height: 1.4;
-            color: #000;
+            color: var(--text-primary);
             margin-bottom: 1rem;
         }
         
         .preview-description {
             font-size: 17px;
-            color: #666;
+            color: var(--text-secondary);
             line-height: 1.7;
         }
         
@@ -686,9 +696,11 @@
         
         /* Comunidade */
         .community-section {
-            background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+            background: linear-gradient(135deg, rgba(76, 175, 80, 0.08) 0%, rgba(0, 0, 0, 0.9) 60%);
             padding: 100px 2rem;
             text-align: center;
+            border-top: 1px solid rgba(255, 255, 255, 0.06);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.06);
         }
         
         .community-badge {
@@ -704,7 +716,7 @@
         
         .community-text {
             font-size: 20px;
-            color: #666;
+            color: var(--text-secondary);
             max-width: 700px;
             margin: 0 auto 3rem;
             line-height: 1.8;
@@ -1101,7 +1113,7 @@
             <a href="#pilares" class="cta-primary">Estruturar Meu Pensamento</a>
             <a href="#pilares" class="cta-secondary">Conhecer o Método</a>
             
-            <div style="margin-top: 3rem; font-size: 14px; color: #999;">
+            <div style="margin-top: 3rem; font-size: 14px; color: var(--text-tertiary);">
                 147 páginas · 7 pilares · 21 dias de transformação
             </div>
         </div>
@@ -1277,20 +1289,20 @@
         
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; margin-top: 4rem; text-align: center;">
             <div>
-                <div style="font-size: 52px; font-weight: 900; color: #000; margin-bottom: 0.5rem;">50+</div>
-                <p style="font-size: 16px; color: #666;">Estudos de Neurociência</p>
+                <div style="font-size: 52px; font-weight: 900; color: var(--text-primary); margin-bottom: 0.5rem;">50+</div>
+                <p style="font-size: 16px; color: var(--text-secondary);">Estudos de Neurociência</p>
             </div>
             <div>
-                <div style="font-size: 52px; font-weight: 900; color: #000; margin-bottom: 0.5rem;">20+</div>
-                <p style="font-size: 16px; color: #666;">Casos Práticos</p>
+                <div style="font-size: 52px; font-weight: 900; color: var(--text-primary); margin-bottom: 0.5rem;">20+</div>
+                <p style="font-size: 16px; color: var(--text-secondary);">Casos Práticos</p>
             </div>
             <div>
-                <div style="font-size: 52px; font-weight: 900; color: #000; margin-bottom: 0.5rem;">7</div>
-                <p style="font-size: 16px; color: #666;">Pilares Fundamentais</p>
+                <div style="font-size: 52px; font-weight: 900; color: var(--text-primary); margin-bottom: 0.5rem;">7</div>
+                <p style="font-size: 16px; color: var(--text-secondary);">Pilares Fundamentais</p>
             </div>
             <div>
-                <div style="font-size: 52px; font-weight: 900; color: #000; margin-bottom: 0.5rem;">21</div>
-                <p style="font-size: 16px; color: #666;">Dias de Protocolo</p>
+                <div style="font-size: 52px; font-weight: 900; color: var(--text-primary); margin-bottom: 0.5rem;">21</div>
+                <p style="font-size: 16px; color: var(--text-secondary);">Dias de Protocolo</p>
             </div>
         </div>
     </section>
@@ -1399,8 +1411,8 @@
             </div>
         </div>
         
-        <div style="background: #f8f9fa; padding: 3rem; border-radius: 8px; margin-top: 4rem; text-align: center;">
-            <p style="font-size: 24px; line-height: 1.6; color: #000; max-width: 700px; margin: 0 auto;">
+        <div style="background: var(--surface-dark); padding: 3rem; border-radius: 8px; margin-top: 4rem; text-align: center; border: 1px solid rgba(255, 255, 255, 0.08);">
+            <p style="font-size: 24px; line-height: 1.6; color: var(--text-primary); max-width: 700px; margin: 0 auto;">
                 <strong>Você não se torna mais inteligente.</strong><br>
                 Você se torna mais <em>estruturado</em>.<br><br>
                 E estrutura é o que separa gênios de pessoas inteligentes.
@@ -1487,11 +1499,11 @@
     <!-- ========================================
          PILAR 5: CONTEÚDO E VALOR (Reciprocidade)
          ======================================== -->
-    <section id="preview" class="section" style="background: #f8f9fa; padding: 100px 2rem; margin: 0 -2rem;">
+    <section id="preview" class="section" style="background: var(--surface-dark); padding: 100px 2rem; margin: 0 -2rem; border: 1px solid rgba(255, 255, 255, 0.08);">
         <div style="max-width: 1100px; margin: 0 auto;">
             <div class="overline" style="text-align: center;">Preview Exclusivo</div>
             <h2 class="section-title">
-                3 Insights que Vão Mudar Seu Pensamento<br><span style="font-weight: 300; font-size: 0.7em; color: #666;">(mesmo antes de comprar)</span>
+                3 Insights que Vão Mudar Seu Pensamento<br><span style="font-weight: 300; font-size: 0.7em; color: var(--text-secondary);">(mesmo antes de comprar)</span>
             </h2>
             
             <div class="preview-grid">
@@ -1532,7 +1544,7 @@
             <a href="#oferta-final" class="cta-primary" style="font-size: 18px; padding: 1.5rem 3rem;">
                 Quero transformar meu pensamento →
             </a>
-            <p style="margin-top: 1rem; font-size: 14px; color: #666;">
+            <p style="margin-top: 1rem; font-size: 14px; color: var(--text-secondary);">
                 Pagamento único • Parcelamento em até 12x disponível
             </p>
         </div>
@@ -1693,10 +1705,10 @@
         
         <!-- CTA após 7 pilares -->
         <div style="text-align: center; margin-top: 4rem;">
-            <a  class="cta-primary" style="font-size: 18px; padding: 1.5rem 3rem;">
+            <a href="#oferta-final" class="cta-primary" style="font-size: 18px; padding: 1.5rem 3rem;">
                 Quero dominar os 7 pilares →
             </a>
-            <p style="margin-top: 1rem; font-size: 14px; color: #666;">
+            <p style="margin-top: 1rem; font-size: 14px; color: var(--text-secondary);">
                 R$ 29,90 • Parcelamento disponível em até 12x
             </p>
         </div>
@@ -1757,7 +1769,7 @@
             </div>
             
             <!-- Botão CTA GIGANTE -->
-            <a  class="cta-primary glow-effect pulse-effect" style="font-size: clamp(16px, 4vw, 20px); padding: clamp(1.2rem, 4vw, 1.8rem) clamp(2rem, 8vw, 4rem); background: var(--gold); color: #000; font-weight: 700; display: inline-block; width: 100%; max-width: 400px; border-radius: 12px; text-decoration: none; box-shadow: 0 10px 40px rgba(212, 175, 55, 0.4); transition: all 0.3s ease;">
+            <a href="https://pay.kiwify.com.br/CqHb4jr" class="cta-primary glow-effect pulse-effect" style="font-size: clamp(16px, 4vw, 20px); padding: clamp(1.2rem, 4vw, 1.8rem) clamp(2rem, 8vw, 4rem); background: var(--gold); color: #000; font-weight: 700; display: inline-block; width: 100%; max-width: 400px; border-radius: 12px; text-decoration: none; box-shadow: 0 10px 40px rgba(212, 175, 55, 0.4); transition: all 0.3s ease;">
                 ⚡ GARANTIR MEU ACESSO AGORA
             </a>
             
@@ -1781,7 +1793,7 @@
     <!-- ========================================
          PROVA SOCIAL
          ======================================== -->
-    <section class="section" style="background: #f8f9fa; padding: 100px 2rem; margin: 0 -2rem;">
+    <section class="section" style="background: var(--surface-dark); padding: 100px 2rem; margin: 0 -2rem; border: 1px solid rgba(255, 255, 255, 0.08);">
         <div style="max-width: 1100px; margin: 0 auto;">
             <h2 class="section-title">
                 Mentes Que Já Pensam Geometricamente
@@ -1815,10 +1827,10 @@
             
             <!-- CTA após depoimentos -->
             <div style="text-align: center; margin-top: 4rem;">
-                <a  class="cta-primary glow-effect" style="font-size: 18px; padding: 1.5rem 3rem; background: #000; color: #fff;">
+                <a href="#oferta-final" class="cta-primary glow-effect" style="font-size: 18px; padding: 1.5rem 3rem;">
                     Junte-se a quem já pensa com estrutura →
                 </a>
-                <p style="margin-top: 1rem; font-size: 14px; color: #666;">
+                <p style="margin-top: 1rem; font-size: 14px; color: var(--text-secondary);">
                     ✨ Acesso imediato • <span class="gold-badge" style="padding: 0.3rem 0.8rem; font-size: 12px;">12x sem juros</span>
                 </p>
             </div>
@@ -1880,7 +1892,7 @@
             </div>
             
             <!-- Botão CTA GIGANTE -->
-            <a  class="cta-primary glow-effect pulse-effect" style="font-size: clamp(16px, 4vw, 20px); padding: clamp(1.2rem, 4vw, 1.8rem) clamp(2rem, 8vw, 4rem); background: var(--gold); color: #000; font-weight: 700; display: inline-block; width: 100%; max-width: 400px; border-radius: 12px; text-decoration: none; box-shadow: 0 10px 40px rgba(212, 175, 55, 0.4); transition: all 0.3s ease;">
+            <a href="https://pay.kiwify.com.br/CqHb4jr" class="cta-primary glow-effect pulse-effect" style="font-size: clamp(16px, 4vw, 20px); padding: clamp(1.2rem, 4vw, 1.8rem) clamp(2rem, 8vw, 4rem); background: var(--gold); color: #000; font-weight: 700; display: inline-block; width: 100%; max-width: 400px; border-radius: 12px; text-decoration: none; box-shadow: 0 10px 40px rgba(212, 175, 55, 0.4); transition: all 0.3s ease;">
                 ⚡ GARANTIR MEU ACESSO AGORA
             </a>
             
@@ -2019,7 +2031,7 @@
             </div>
             
             <!-- CTA principal -->
-            <a  class="cta-primary glow-effect" style="font-size: clamp(16px, 4vw, 18px); padding: clamp(1.2rem, 4vw, 1.75rem) clamp(2rem, 6vw, 3.5rem); background: #ffffff; color: #000000; margin-top: 2rem; display: inline-block; width: 100%; max-width: 400px; border-radius: 12px; font-weight: 700; text-decoration: none; box-shadow: 0 10px 30px rgba(255,255,255,0.2);">
+            <a href="https://pay.kiwify.com.br/CqHb4jr" class="cta-primary glow-effect" style="font-size: clamp(16px, 4vw, 18px); padding: clamp(1.2rem, 4vw, 1.75rem) clamp(2rem, 6vw, 3.5rem); background: var(--gold); color: #000000; margin-top: 2rem; display: inline-block; width: 100%; max-width: 400px; border-radius: 12px; font-weight: 700; text-decoration: none; box-shadow: 0 10px 30px rgba(212, 175, 55, 0.35);">
                 ⚡ ACESSAR O NUCLEOˣ AGORA →
             </a>
             
@@ -2177,7 +2189,7 @@
             Pertence aos mais <strong>estruturados</strong>.
         </p>
         
-        <a  class="cta-primary">
+        <a href="#oferta-final" class="cta-primary">
             Quero pensar com estrutura →
         </a>
     </section>
@@ -2237,7 +2249,7 @@
             </div>
             
             <!-- Botão CTA GIGANTE -->
-            <a  class="cta-primary glow-effect pulse-effect" style="font-size: clamp(16px, 4vw, 20px); padding: clamp(1.2rem, 4vw, 1.8rem) clamp(2rem, 8vw, 4rem); background: var(--gold); color: #000; font-weight: 700; display: inline-block; width: 100%; max-width: 400px; border-radius: 12px; text-decoration: none; box-shadow: 0 10px 40px rgba(212, 175, 55, 0.4); transition: all 0.3s ease;">
+            <a href="https://pay.kiwify.com.br/CqHb4jr" class="cta-primary glow-effect pulse-effect" style="font-size: clamp(16px, 4vw, 20px); padding: clamp(1.2rem, 4vw, 1.8rem) clamp(2rem, 8vw, 4rem); background: var(--gold); color: #000; font-weight: 700; display: inline-block; width: 100%; max-width: 400px; border-radius: 12px; text-decoration: none; box-shadow: 0 10px 40px rgba(212, 175, 55, 0.4); transition: all 0.3s ease;">
                 ⚡ GARANTIR MEU ACESSO AGORA
             </a>
             
@@ -2263,27 +2275,27 @@
          ======================================== -->
     <section class="section">
         <div style="text-align: center; max-width: 800px; margin: 0 auto;">
-            <p style="font-size: 32px; font-weight: 300; line-height: 1.5; color: #000; margin-bottom: 3rem; font-style: italic;">
+            <p style="font-size: 32px; font-weight: 300; line-height: 1.5; color: var(--text-primary); margin-bottom: 3rem; font-style: italic;">
                 "A diferença entre caos e clareza<br>
                 não é inteligência.<br>
                 É geometria."
             </p>
             
-            <p style="font-size: 20px; color: #666; line-height: 1.7; margin-bottom: 3rem;">
+            <p style="font-size: 20px; color: var(--text-secondary); line-height: 1.7; margin-bottom: 3rem;">
                 O mundo premia quem pensa com clareza.<br>
                 A IA amplifica quem pensa com estrutura.<br>
                 O futuro pertence a quem domina ambos.
             </p>
             
-            <div style="font-size: 18px; font-weight: 600; color: #000;">
+            <div style="font-size: 18px; font-weight: 600; color: var(--text-primary);">
                 Junte-se à geometria.
             </div>
             
-            <a  class="cta-primary" style="margin-top: 2rem;">
+            <a href="https://pay.kiwify.com.br/CqHb4jr" class="cta-primary" style="margin-top: 2rem;">
                 Estruturar Meu Pensamento →
             </a>
             
-            <p style="margin-top: 1.5rem; font-size: 14px; color: #999;">
+            <p style="margin-top: 1.5rem; font-size: 14px; color: var(--text-tertiary);">
                 R$ 29,90 pagamento único • ou 12x sem juros • Acesso instantâneo
             </p>
         </div>
@@ -2346,7 +2358,7 @@
             </div>
             
             <!-- Botão CTA GIGANTE -->
-            <a  class="cta-primary glow-effect pulse-effect" style="font-size: clamp(16px, 4vw, 20px); padding: clamp(1.2rem, 4vw, 1.8rem) clamp(2rem, 8vw, 4rem); background: var(--gold); color: #000; font-weight: 700; display: inline-block; width: 100%; max-width: 400px; border-radius: 12px; text-decoration: none; box-shadow: 0 10px 40px rgba(212, 175, 55, 0.4); transition: all 0.3s ease;">
+            <a href="https://pay.kiwify.com.br/CqHb4jr" class="cta-primary glow-effect pulse-effect" style="font-size: clamp(16px, 4vw, 20px); padding: clamp(1.2rem, 4vw, 1.8rem) clamp(2rem, 8vw, 4rem); background: var(--gold); color: #000; font-weight: 700; display: inline-block; width: 100%; max-width: 400px; border-radius: 12px; text-decoration: none; box-shadow: 0 10px 40px rgba(212, 175, 55, 0.4); transition: all 0.3s ease;">
                 ⚡ GARANTIR MEU ACESSO AGORA
             </a>
             
@@ -2439,7 +2451,7 @@
             </div>
             
             <!-- Botão CTA GIGANTE -->
-            <a  class="cta-primary glow-effect pulse-effect" style="font-size: clamp(16px, 4vw, 20px); padding: clamp(1.2rem, 4vw, 1.8rem) clamp(2rem, 8vw, 4rem); background: var(--gold); color: #000; font-weight: 700; display: inline-block; width: 100%; max-width: 400px; border-radius: 12px; text-decoration: none; box-shadow: 0 10px 40px rgba(212, 175, 55, 0.4); transition: all 0.3s ease;">
+            <a href="https://pay.kiwify.com.br/CqHb4jr" class="cta-primary glow-effect pulse-effect" style="font-size: clamp(16px, 4vw, 20px); padding: clamp(1.2rem, 4vw, 1.8rem) clamp(2rem, 8vw, 4rem); background: var(--gold); color: #000; font-weight: 700; display: inline-block; width: 100%; max-width: 400px; border-radius: 12px; text-decoration: none; box-shadow: 0 10px 40px rgba(212, 175, 55, 0.4); transition: all 0.3s ease;">
                 ⚡ GARANTIR MEU ACESSO AGORA
             </a>
             
