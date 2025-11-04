@@ -759,9 +759,161 @@
         html {
             scroll-behavior: smooth;
         }
+    
+        /* ========================================
+           LOGO NUCLEOˣ E BACKGROUND ATÔMICO
+           ======================================== */
+        
+        .nucleox-logo {
+            font-family: 'Inter', sans-serif;
+            font-size: clamp(32px, 8vw, 48px);
+            font-weight: 900;
+            letter-spacing: -1px;
+            background: linear-gradient(135deg, #ffffff 0%, var(--gold) 50%, #ffffff 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-shadow: 0 0 30px rgba(212, 175, 55, 0.3);
+            position: relative;
+            display: inline-block;
+        }
+        
+        .nucleox-logo sup {
+            font-size: 0.6em;
+            font-weight: 900;
+            color: var(--gold);
+            -webkit-text-fill-color: var(--gold);
+        }
+        
+        /* Background atômico animado */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                radial-gradient(circle at 20% 30%, rgba(212, 175, 55, 0.03) 0%, transparent 50%),
+                radial-gradient(circle at 80% 60%, rgba(212, 175, 55, 0.02) 0%, transparent 50%),
+                radial-gradient(circle at 40% 80%, rgba(255, 255, 255, 0.01) 0%, transparent 40%);
+            pointer-events: none;
+            z-index: 0;
+        }
+        
+        /* Orbitais atômicos decorativos */
+        .atomic-orbital {
+            position: fixed;
+            border: 1px solid rgba(212, 175, 55, 0.1);
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 0;
+        }
+        
+        .orbital-1 {
+            width: 400px;
+            height: 400px;
+            top: 10%;
+            right: -100px;
+            animation: rotate-orbital 20s linear infinite;
+        }
+        
+        .orbital-2 {
+            width: 600px;
+            height: 300px;
+            bottom: 10%;
+            left: -150px;
+            animation: rotate-orbital-reverse 25s linear infinite;
+            transform: rotate(45deg);
+        }
+        
+        .orbital-3 {
+            width: 350px;
+            height: 350px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            animation: pulse-orbital 15s ease-in-out infinite;
+        }
+        
+        @keyframes rotate-orbital {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        
+        @keyframes rotate-orbital-reverse {
+            from { transform: rotate(45deg); }
+            to { transform: rotate(405deg); }
+        }
+        
+        @keyframes pulse-orbital {
+            0%, 100% { 
+                opacity: 0.05;
+                transform: translate(-50%, -50%) scale(1);
+            }
+            50% { 
+                opacity: 0.15;
+                transform: translate(-50%, -50%) scale(1.1);
+            }
+        }
+        
+        /* Partículas atômicas flutuantes */
+        .atomic-particle {
+            position: fixed;
+            width: 3px;
+            height: 3px;
+            background: var(--gold);
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 0;
+            box-shadow: 0 0 10px rgba(212, 175, 55, 0.5);
+            animation: float-particle 8s ease-in-out infinite;
+        }
+        
+        @keyframes float-particle {
+            0%, 100% { 
+                transform: translateY(0) translateX(0);
+                opacity: 0.2;
+            }
+            25% { 
+                transform: translateY(-30px) translateX(20px);
+                opacity: 0.5;
+            }
+            50% { 
+                transform: translateY(-10px) translateX(-15px);
+                opacity: 0.3;
+            }
+            75% { 
+                transform: translateY(-40px) translateX(10px);
+                opacity: 0.6;
+            }
+        }
+        
+        /* Garantir que conteúdo fique acima do background */
+        .container, section, header {
+            position: relative;
+            z-index: 1;
+        }
+        
     </style>
 </head>
 <body>
+    <!-- Orbitais Atômicos Decorativos -->
+    <div class="atomic-orbital orbital-1"></div>
+    <div class="atomic-orbital orbital-2"></div>
+    <div class="atomic-orbital orbital-3"></div>
+    
+    <!-- Partículas Atômicas -->
+    <div class="atomic-particle" style="top: 20%; left: 15%; animation-delay: 0s;"></div>
+    <div class="atomic-particle" style="top: 40%; left: 80%; animation-delay: 1s;"></div>
+    <div class="atomic-particle" style="top: 60%; left: 30%; animation-delay: 2s;"></div>
+    <div class="atomic-particle" style="top: 75%; left: 70%; animation-delay: 3s;"></div>
+    <div class="atomic-particle" style="top: 15%; left: 60%; animation-delay: 4s;"></div>
+    <div class="atomic-particle" style="top: 85%; left: 25%; animation-delay: 5s;"></div>
+    <div class="atomic-particle" style="top: 50%; left: 90%; animation-delay: 6s;"></div>
+    <div class="atomic-particle" style="top: 30%; left: 45%; animation-delay: 7s;"></div>
+
+
     <!-- ========================================
          PILAR 1: ABERTURA MAGNÉTICA
          ======================================== -->
