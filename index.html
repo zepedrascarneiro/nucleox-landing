@@ -895,6 +895,128 @@
             z-index: 1;
         }
         
+    
+        /* ========================================
+           LOGO OFICIAL NUCLEOˣ
+           ======================================== */
+        
+        .nucleox-logo-official {
+            display: flex;
+            align-items: center;
+            gap: clamp(1rem, 3vw, 2rem);
+            justify-content: center;
+            margin: 2rem auto;
+        }
+        
+        .atomic-brain-icon {
+            width: clamp(60px, 15vw, 120px);
+            height: clamp(60px, 15vw, 120px);
+            position: relative;
+            animation: rotate-slow 40s linear infinite;
+        }
+        
+        .atomic-brain-icon svg {
+            width: 100%;
+            height: 100%;
+        }
+        
+        .logo-text-group {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+        
+        .logo-nucleo {
+            font-family: 'Inter', sans-serif;
+            font-size: clamp(36px, 10vw, 72px);
+            font-weight: 900;
+            letter-spacing: -2px;
+            color: #ffffff;
+            line-height: 1;
+        }
+        
+        .logo-nucleo sup {
+            font-size: 0.5em;
+            color: var(--gold);
+            font-weight: 900;
+        }
+        
+        .logo-tagline {
+            font-family: 'Inter', sans-serif;
+            font-size: clamp(10px, 2.5vw, 16px);
+            font-weight: 300;
+            letter-spacing: 3px;
+            color: rgba(255, 255, 255, 0.7);
+            text-transform: uppercase;
+        }
+        
+        @keyframes rotate-slow {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        
+        /* ========================================
+           ÍCONES GEOMÉTRICOS DOS 6 PRINCÍPIOS
+           ======================================== */
+        
+        .geometric-icon {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .geometric-icon svg {
+            width: 100%;
+            height: 100%;
+        }
+        
+        .principle-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 16px;
+            padding: 2rem 1.5rem;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+        
+        .principle-card:hover {
+            background: rgba(255, 255, 255, 0.05);
+            border-color: var(--gold);
+            transform: translateY(-5px);
+        }
+        
+        .principle-letter {
+            font-size: 48px;
+            font-weight: 900;
+            color: var(--gold);
+            margin: 1rem 0;
+        }
+        
+        .principle-title {
+            font-size: 14px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: #ffffff;
+            margin-bottom: 0.5rem;
+        }
+        
+        .principle-subtitle {
+            font-size: 12px;
+            font-weight: 600;
+            color: rgba(255, 255, 255, 0.6);
+            margin-bottom: 1rem;
+        }
+        
+        .principle-description {
+            font-size: 14px;
+            line-height: 1.6;
+            color: rgba(255, 255, 255, 0.7);
+        }
+        
     </style>
 </head>
 <body>
@@ -1883,6 +2005,111 @@
 
         </div>
     </section>
+    
+    <!-- ========================================
+         OS 6 PRINCÍPIOS NUCLEOX (N-C-L-E-E-O)
+         ======================================== -->
+    <section id="principios" class="container" style="padding: 4rem 1rem; margin: 4rem auto;">
+        <h2 style="text-align: center; font-size: clamp(28px, 6vw, 42px); margin-bottom: 1rem;">
+            Os 6 Princípios Fundamentais
+        </h2>
+        <p style="text-align: center; font-size: clamp(14px, 3.5vw, 18px); opacity: 0.7; margin-bottom: 4rem; max-width: 700px; margin-left: auto; margin-right: auto;">
+            A geometria do pensamento estruturado em seis pilares atemporais
+        </p>
+        
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; max-width: 1200px; margin: 0 auto;">
+            
+            <!-- N: NAME THE PURPOSE -->
+            <div class="principle-card">
+                <div class="geometric-icon">
+                    <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="50" cy="50" r="35" fill="none" stroke="#ffffff" stroke-width="3"/>
+                    </svg>
+                </div>
+                <div class="principle-letter">N</div>
+                <div class="principle-title">Nomeie</div>
+                <div class="principle-subtitle">O Propósito</div>
+                <div class="principle-description">Um objetivo claro é o rótulo para o aprendizado</div>
+            </div>
+            
+            <!-- C: USE VERIFIABLE CRITERIA -->
+            <div class="principle-card">
+                <div class="geometric-icon">
+                    <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                        <polygon points="50,20 80,70 20,70" fill="none" stroke="#ffffff" stroke-width="3"/>
+                        <line x1="30" y1="62" x2="70" y2="62" stroke="#ffffff" stroke-width="3"/>
+                        <circle cx="50" cy="62" r="5" fill="#ffffff"/>
+                    </svg>
+                </div>
+                <div class="principle-letter">C</div>
+                <div class="principle-title">Use</div>
+                <div class="principle-subtitle">Critérios Verificáveis</div>
+                <div class="principle-description">Sem avaliação, o sucesso é apenas ruído</div>
+            </div>
+            
+            <!-- L: LIMIT THE SCOPE -->
+            <div class="principle-card">
+                <div class="geometric-icon">
+                    <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="25" y="25" width="50" height="50" fill="none" stroke="#ffffff" stroke-width="3"/>
+                    </svg>
+                </div>
+                <div class="principle-letter">L</div>
+                <div class="principle-title">Limite</div>
+                <div class="principle-subtitle">O Escopo</div>
+                <div class="principle-description">Fronteiras dão liberdade para criar</div>
+            </div>
+            
+            <!-- E: ESPECIFY CONSTRAINTS -->
+            <div class="principle-card">
+                <div class="geometric-icon">
+                    <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                        <polygon points="50,20 75,35 75,65 50,80 25,65 25,35" fill="none" stroke="#ffffff" stroke-width="3"/>
+                        <polygon points="50,35 65,43 65,57 50,65 35,57 35,43" fill="none" stroke="#ffffff" stroke-width="2"/>
+                    </svg>
+                </div>
+                <div class="principle-letter">E</div>
+                <div class="principle-title">Especifique</div>
+                <div class="principle-subtitle">As Restrições</div>
+                <div class="principle-description">A invenção é ficção contra limites</div>
+            </div>
+            
+            <!-- E: ORDER LOGICALLY -->
+            <div class="principle-card">
+                <div class="geometric-icon">
+                    <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="50" cy="50" r="35" fill="none" stroke="#ffffff" stroke-width="3"/>
+                        <line x1="20" y1="50" x2="80" y2="50" stroke="var(--gold)" stroke-width="4" transform="rotate(45 50 50)"/>
+                    </svg>
+                </div>
+                <div class="principle-letter">E</div>
+                <div class="principle-title">Ordene</div>
+                <div class="principle-subtitle">Logicamente</div>
+                <div class="principle-description">A clareza vive na sequência, não na confusão</div>
+            </div>
+            
+            <!-- O: 6XPAID EXPONENTIALLY -->
+            <div class="principle-card">
+                <div class="geometric-icon">
+                    <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="30" cy="70" r="5" fill="#ffffff"/>
+                        <circle cx="50" cy="50" r="5" fill="#ffffff"/>
+                        <circle cx="70" cy="25" r="5" fill="#ffffff"/>
+                        <line x1="30" y1="70" x2="50" y2="50" stroke="#ffffff" stroke-width="2"/>
+                        <line x1="50" y1="50" x2="70" y2="25" stroke="#ffffff" stroke-width="2"/>
+                        <polyline points="60,25 70,25 70,35" fill="none" stroke="var(--gold)" stroke-width="2"/>
+                    </svg>
+                </div>
+                <div class="principle-letter">O</div>
+                <div class="principle-title">6xpanda</div>
+                <div class="principle-subtitle">Exponencialmente</div>
+                <div class="principle-description">O crescimento é o objetivo que se ensina</div>
+            </div>
+            
+        </div>
+    </section>
+
+
     <!-- ========================================
          PILAR 7: COMUNIDADE E CONTINUIDADE
          ======================================== -->
