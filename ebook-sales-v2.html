@@ -1,0 +1,1006 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NUCLEOˣ - A Geometria do Pensamento | Ebook</title>
+    <meta name="description" content="O sistema de pensamento estruturado usado por Da Vinci, Einstein e Elon Musk. Transforme caos em clareza em 21 dias.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        :root {
+            --primary: #0066cc;
+            --primary-dark: #0052a3;
+            --secondary: #00f;
+            --bg: #ffffff;
+            --bg-alt: #f8f9fa;
+            --text: #1a1a1a;
+            --text-light: #666;
+            --border: #e5e7eb;
+            --shadow: rgba(0, 0, 0, 0.08);
+            --accent: #ff3366;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            color: var(--text);
+            line-height: 1.6;
+            background: var(--bg);
+            -webkit-font-smoothing: antialiased;
+        }
+        
+        /* Typography */
+        h1, h2, h3, h4 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 700;
+            line-height: 1.2;
+        }
+        
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #0066cc 0%, #0052a3 100%);
+            position: relative;
+            overflow: hidden;
+            padding: 60px 20px;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            width: 200%;
+            height: 200%;
+            top: -50%;
+            left: -50%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 1px, transparent 1px);
+            background-size: 40px 40px;
+            animation: grid 20s linear infinite;
+        }
+        
+        @keyframes grid {
+            0% { transform: translate(0, 0); }
+            100% { transform: translate(40px, 40px); }
+        }
+        
+        .hero-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .logo {
+            font-size: 48px;
+            font-weight: 800;
+            color: #fff;
+            margin-bottom: 20px;
+            letter-spacing: -1px;
+            font-family: 'Space Grotesk', sans-serif;
+        }
+        
+        .logo sup {
+            font-size: 28px;
+            font-weight: 300;
+        }
+        
+        .subtitle {
+            font-size: 24px;
+            color: rgba(255,255,255,0.95);
+            margin-bottom: 40px;
+            font-weight: 300;
+        }
+        
+        .headline {
+            font-size: 56px;
+            color: #fff;
+            margin-bottom: 24px;
+            font-weight: 800;
+            line-height: 1.1;
+        }
+        
+        .subheadline {
+            font-size: 24px;
+            color: rgba(255,255,255,0.9);
+            margin-bottom: 48px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        /* CTA Button */
+        .cta-primary {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            padding: 20px 48px;
+            background: #fff;
+            color: var(--primary);
+            font-size: 18px;
+            font-weight: 700;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+        }
+        
+        .cta-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 15px 50px rgba(0,0,0,0.3);
+        }
+        
+        .price-badge {
+            display: inline-block;
+            background: rgba(255,255,255,0.15);
+            backdrop-filter: blur(10px);
+            padding: 12px 24px;
+            border-radius: 30px;
+            color: #fff;
+            font-size: 14px;
+            margin-top: 24px;
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+        
+        .price {
+            font-size: 32px;
+            font-weight: 800;
+            margin: 0 8px;
+        }
+        
+        /* Social Proof */
+        .social-proof {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 24px;
+            margin-top: 40px;
+            color: rgba(255,255,255,0.9);
+            font-size: 14px;
+        }
+        
+        .proof-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        /* Content Sections */
+        .section {
+            padding: 100px 20px;
+        }
+        
+        .section-alt {
+            background: var(--bg-alt);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .section-title {
+            font-size: 48px;
+            text-align: center;
+            margin-bottom: 16px;
+            color: var(--text);
+        }
+        
+        .section-subtitle {
+            text-align: center;
+            font-size: 20px;
+            color: var(--text-light);
+            margin-bottom: 60px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        /* Problem Section */
+        .problem-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 32px;
+            margin-top: 60px;
+        }
+        
+        .problem-card {
+            background: #fff;
+            padding: 32px;
+            border-radius: 16px;
+            border: 1px solid var(--border);
+            transition: all 0.3s ease;
+        }
+        
+        .problem-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 40px var(--shadow);
+        }
+        
+        .problem-icon {
+            font-size: 48px;
+            margin-bottom: 16px;
+        }
+        
+        .problem-title {
+            font-size: 20px;
+            margin-bottom: 12px;
+            font-weight: 600;
+        }
+        
+        .problem-text {
+            color: var(--text-light);
+            line-height: 1.7;
+        }
+        
+        /* Solution */
+        .solution-box {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            color: #fff;
+            padding: 60px;
+            border-radius: 24px;
+            text-align: center;
+            margin: 60px 0;
+        }
+        
+        .solution-title {
+            font-size: 42px;
+            margin-bottom: 24px;
+        }
+        
+        .solution-text {
+            font-size: 20px;
+            opacity: 0.95;
+            line-height: 1.8;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        /* Features */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+            margin-top: 60px;
+        }
+        
+        .feature {
+            text-align: center;
+        }
+        
+        .feature-number {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 32px;
+            font-weight: 800;
+            margin: 0 auto 24px;
+        }
+        
+        .feature-title {
+            font-size: 24px;
+            margin-bottom: 12px;
+        }
+        
+        .feature-text {
+            color: var(--text-light);
+            line-height: 1.7;
+        }
+        
+        /* Testimonials */
+        .testimonial {
+            background: #fff;
+            padding: 40px;
+            border-radius: 16px;
+            border: 1px solid var(--border);
+            margin-bottom: 32px;
+        }
+        
+        .testimonial-text {
+            font-size: 18px;
+            line-height: 1.8;
+            margin-bottom: 20px;
+            font-style: italic;
+        }
+        
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+        
+        .author-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: var(--primary);
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 20px;
+        }
+        
+        .author-info h4 {
+            font-size: 16px;
+            margin-bottom: 4px;
+        }
+        
+        .author-info p {
+            font-size: 14px;
+            color: var(--text-light);
+        }
+        
+        /* Guarantee */
+        .guarantee-box {
+            background: #fff;
+            border: 2px solid var(--primary);
+            border-radius: 16px;
+            padding: 48px;
+            text-align: center;
+            margin: 60px 0;
+        }
+        
+        .guarantee-badge {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background: var(--primary);
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 24px;
+            font-size: 48px;
+        }
+        
+        .guarantee-title {
+            font-size: 32px;
+            margin-bottom: 16px;
+        }
+        
+        .guarantee-text {
+            font-size: 18px;
+            color: var(--text-light);
+            line-height: 1.8;
+        }
+        
+        /* Pricing */
+        .pricing-box {
+            background: #fff;
+            border: 2px solid var(--primary);
+            border-radius: 24px;
+            padding: 60px;
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        .pricing-header {
+            margin-bottom: 40px;
+        }
+        
+        .pricing-value {
+            font-size: 18px;
+            color: var(--text-light);
+            margin-bottom: 16px;
+        }
+        
+        .pricing-price {
+            font-size: 72px;
+            font-weight: 800;
+            color: var(--primary);
+            margin-bottom: 16px;
+        }
+        
+        .pricing-subtitle {
+            font-size: 16px;
+            color: var(--text-light);
+        }
+        
+        .pricing-features {
+            list-style: none;
+            margin: 40px 0;
+            text-align: left;
+        }
+        
+        .pricing-features li {
+            padding: 16px 0;
+            border-bottom: 1px solid var(--border);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 16px;
+        }
+        
+        .pricing-features li:first-child {
+            border-top: 1px solid var(--border);
+        }
+        
+        .check-icon {
+            color: var(--primary);
+            font-size: 20px;
+            font-weight: 700;
+        }
+        
+        /* FAQ */
+        .faq-item {
+            background: #fff;
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            margin-bottom: 16px;
+            overflow: hidden;
+        }
+        
+        .faq-question {
+            padding: 24px;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 18px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .faq-answer {
+            padding: 0 24px 24px;
+            color: var(--text-light);
+            line-height: 1.8;
+        }
+        
+        /* Footer */
+        footer {
+            background: var(--text);
+            color: #fff;
+            padding: 60px 20px 40px;
+            text-align: center;
+        }
+        
+        footer a {
+            color: #fff;
+            text-decoration: none;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .headline {
+                font-size: 36px;
+            }
+            
+            .subheadline {
+                font-size: 18px;
+            }
+            
+            .features-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+            
+            .problem-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .section {
+                padding: 60px 20px;
+            }
+            
+            .section-title {
+                font-size: 32px;
+            }
+            
+            .pricing-price {
+                font-size: 56px;
+            }
+        }
+        
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .fade-in {
+            animation: fadeIn 0.6s ease-out;
+        }
+        
+        /* Sticky CTA Bar */
+        .sticky-cta {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: #fff;
+            padding: 20px;
+            box-shadow: 0 -4px 20px var(--shadow);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 24px;
+            z-index: 1000;
+            transform: translateY(100%);
+            transition: transform 0.3s ease;
+        }
+        
+        .sticky-cta.visible {
+            transform: translateY(0);
+        }
+        
+        .sticky-cta-text {
+            font-weight: 600;
+            font-size: 18px;
+        }
+        
+        .sticky-cta-price {
+            color: var(--primary);
+            font-size: 24px;
+            font-weight: 800;
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content fade-in">
+            <div class="logo">NUCLEO<sup>ˣ</sup></div>
+            <div class="subtitle">A Geometria do Pensamento</div>
+            
+            <h1 class="headline">
+                O Sistema de Pensamento<br>
+                Usado por Gênios
+            </h1>
+            
+            <p class="subheadline">
+                Descubra a estrutura oculta que Da Vinci, Einstein e Elon Musk usaram<br>
+                para transformar ideias complexas em realizações extraordinárias
+            </p>
+            
+            <a href="#comprar" class="cta-primary">
+                <span>Quero Transformar Meu Pensamento</span>
+                <span>→</span>
+            </a>
+            
+            <div class="price-badge">
+                Apenas <span class="price">US$ 9,90</span> hoje
+            </div>
+            
+            <div class="social-proof">
+                <div class="proof-item">
+                    <span>✓</span>
+                    <span>147 páginas</span>
+                </div>
+                <div class="proof-item">
+                    <span>✓</span>
+                    <span>50+ estudos científicos</span>
+                </div>
+                <div class="proof-item">
+                    <span>✓</span>
+                    <span>20+ casos reais</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problem Section -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">Você Está Vivendo o Paradoxo Brutal</h2>
+            <p class="section-subtitle">
+                Nunca tivemos tanto acesso a informação. E nunca estivemos tão paralisados.
+            </p>
+            
+            <div class="problem-grid">
+                <div class="problem-card">
+                    <div class="problem-icon">🧠</div>
+                    <h3 class="problem-title">Sobrecarga Cognitiva</h3>
+                    <p class="problem-text">
+                        47 abas abertas. 89 tarefas "importantes". 23 cursos começados. 
+                        Seu cérebro processa mais informação em um dia do que um medieval processava na vida inteira.
+                    </p>
+                </div>
+                
+                <div class="problem-card">
+                    <div class="problem-icon">⚡</div>
+                    <h3 class="problem-title">Fragmentação Mental</h3>
+                    <p class="problem-text">
+                        Cada troca de contexto custa 23 minutos de capacidade mental. 
+                        Você perde 7,6 horas de poder cognitivo apenas mudando de foco.
+                    </p>
+                </div>
+                
+                <div class="problem-card">
+                    <div class="problem-icon">🎯</div>
+                    <h3 class="problem-title">Paralisia por Análise</h3>
+                    <p class="problem-text">
+                        Você sabe demais e faz de menos. Não é falta de capacidade. 
+                        É falta de estrutura.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solution -->
+    <section class="section section-alt">
+        <div class="container">
+            <div class="solution-box">
+                <h2 class="solution-title">A Solução Não É Mais Informação</h2>
+                <p class="solution-text">
+                    É um sistema de processamento superior. Uma estrutura mental que transforma 
+                    caos em clareza, complexidade em geometria, paralisia em ação precisa. 
+                    <strong>O mesmo sistema usado por mentes que mudaram o mundo.</strong>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- What is NUCLEOˣ -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">O Que É NUCLEO<sup>ˣ</sup>?</h2>
+            <p class="section-subtitle">
+                Um sistema científico de 7 pilares que transforma qualquer problema complexo 
+                em uma estrutura executável
+            </p>
+            
+            <div class="features-grid">
+                <div class="feature">
+                    <div class="feature-number">N</div>
+                    <h3 class="feature-title">Name</h3>
+                    <p class="feature-text">Nomear o propósito único com precisão cirúrgica</p>
+                </div>
+                
+                <div class="feature">
+                    <div class="feature-number">Ú</div>
+                    <h3 class="feature-title">Use</h3>
+                    <p class="feature-text">Usar critérios verificáveis e mensuráveis</p>
+                </div>
+                
+                <div class="feature">
+                    <div class="feature-number">C</div>
+                    <h3 class="feature-title">Contextualize</h3>
+                    <p class="feature-text">Contextualizar apenas o essencial</p>
+                </div>
+                
+                <div class="feature">
+                    <div class="feature-number">L</div>
+                    <h3 class="feature-title">Limit</h3>
+                    <p class="feature-text">Limitar o escopo deliberadamente</p>
+                </div>
+                
+                <div class="feature">
+                    <div class="feature-number">E</div>
+                    <h3 class="feature-title">Especify</h3>
+                    <p class="feature-text">Especificar restrições claras</p>
+                </div>
+                
+                <div class="feature">
+                    <div class="feature-number">O</div>
+                    <h3 class="feature-title">Order</h3>
+                    <p class="feature-text">Ordenar logicamente em sequência</p>
+                </div>
+                
+                <div class="feature">
+                    <div class="feature-number">X</div>
+                    <h3 class="feature-title">Expand</h3>
+                    <p class="feature-text">Expandir exponencialmente após validação</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="section section-alt">
+        <div class="container">
+            <h2 class="section-title">O Que Você Vai Descobrir</h2>
+            <p class="section-subtitle">147 páginas que mudarão para sempre como você pensa</p>
+            
+            <div class="testimonial">
+                <p class="testimonial-text">
+                    "Este livro não é teoria. É um manual de operações mentais. 
+                    Cada capítulo remove uma camada de ambiguidade e revela a geometria oculta 
+                    do pensamento estruturado."
+                </p>
+                <div class="testimonial-author">
+                    <div class="author-avatar">📚</div>
+                    <div class="author-info">
+                        <h4>Capítulo 1</h4>
+                        <p>O Padrão Escondido à Vista de Todos</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="testimonial">
+                <p class="testimonial-text">
+                    "Cada pilar do NUCLEOˣ é respaldado por neurociência, psicologia cognitiva 
+                    e análise de padrões em gênios. Nenhuma teoria vazia. Apenas estrutura validada."
+                </p>
+                <div class="testimonial-author">
+                    <div class="author-avatar">🧬</div>
+                    <div class="author-info">
+                        <h4>Capítulo 2</h4>
+                        <p>Os 7 Pilares do Sistema (50 páginas)</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="testimonial">
+                <p class="testimonial-text">
+                    "Aplicações reais em negócios, relacionamentos, criatividade e decisões. 
+                    Você verá o sistema em ação — não em teoria abstrata, mas em transformações mensuráveis."
+                </p>
+                <div class="testimonial-author">
+                    <div class="author-avatar">⚡</div>
+                    <div class="author-info">
+                        <h4>Capítulo 3</h4>
+                        <p>Do Sistema à Prática (40 páginas)</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="testimonial">
+                <p class="testimonial-text">
+                    "Protocolo de 21 dias. Ritual diário de 7 minutos. Sistema de tracking. 
+                    Tudo que você precisa para implementar e tornar o NUCLEOˣ sua segunda natureza."
+                </p>
+                <div class="testimonial-author">
+                    <div class="author-avatar">🎯</div>
+                    <div class="author-info">
+                        <h4>Capítulo 4</h4>
+                        <p>Transformação em 21 Dias (27 páginas)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Guarantee -->
+    <section class="section">
+        <div class="container">
+            <div class="guarantee-box">
+                <div class="guarantee-badge">🛡️</div>
+                <h3 class="guarantee-title">Garantia Incondicional de 30 Dias</h3>
+                <p class="guarantee-text">
+                    Leia o livro. Aplique o sistema. Se você não sentir uma mudança clara 
+                    em como você pensa e executa, devolvemos 100% do seu investimento. 
+                    Sem perguntas. Sem burocracia.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing -->
+    <section class="section section-alt" id="comprar">
+        <div class="container">
+            <h2 class="section-title">Invista em Clareza Mental</h2>
+            <p class="section-subtitle">
+                O mesmo preço de um café na Starbucks. O valor de uma vida inteira de pensamento estruturado.
+            </p>
+            
+            <div class="pricing-box">
+                <div class="pricing-header">
+                    <p class="pricing-value">Um sistema validado por:</p>
+                    <div class="pricing-price">US$ 9,90</div>
+                    <p class="pricing-subtitle">Pagamento único • Acesso vitalício</p>
+                </div>
+                
+                <ul class="pricing-features">
+                    <li><span class="check-icon">✓</span> Ebook completo em PDF (147 páginas)</li>
+                    <li><span class="check-icon">✓</span> Versões em Português e Inglês</li>
+                    <li><span class="check-icon">✓</span> 50+ estudos científicos citados</li>
+                    <li><span class="check-icon">✓</span> 20+ casos reais de aplicação</li>
+                    <li><span class="check-icon">✓</span> Protocolo de 21 dias passo-a-passo</li>
+                    <li><span class="check-icon">✓</span> Ritual diário de 7 minutos</li>
+                    <li><span class="check-icon">✓</span> Sistema de tracking completo</li>
+                    <li><span class="check-icon">✓</span> Atualizações futuras gratuitas</li>
+                    <li><span class="check-icon">✓</span> Garantia de 30 dias</li>
+                </ul>
+                
+                <a href="#checkout" class="cta-primary" style="width: 100%; justify-content: center;">
+                    <span>Comprar Agora</span>
+                    <span>→</span>
+                </a>
+                
+                <p style="margin-top: 24px; font-size: 14px; color: var(--text-light);">
+                    🔒 Pagamento 100% seguro via Stripe/Gumroad
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">Perguntas Frequentes</h2>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    Para quem é este livro?
+                    <span>+</span>
+                </div>
+                <div class="faq-answer">
+                    Para qualquer pessoa que sente que pensa demais e executa de menos. 
+                    Empreendedores, executivos, criativos, estudantes — qualquer um que 
+                    precise transformar complexidade em clareza.
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    Preciso de conhecimento prévio?
+                    <span>+</span>
+                </div>
+                <div class="faq-answer">
+                    Zero. O livro começa do fundamento e constrói o sistema passo-a-passo. 
+                    Se você consegue pensar, consegue aplicar NUCLEOˣ.
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    Quanto tempo leva para ver resultados?
+                    <span>+</span>
+                </div>
+                <div class="faq-answer">
+                    Você sentirá clareza imediata na primeira aplicação. 
+                    Transformação completa: 21 dias de prática consistente.
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    Como recebo o ebook?
+                    <span>+</span>
+                </div>
+                <div class="faq-answer">
+                    Após o pagamento, você recebe instantaneamente um email com o link 
+                    de download para PDF em português e inglês.
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    Posso pedir reembolso?
+                    <span>+</span>
+                </div>
+                <div class="faq-answer">
+                    Sim. Você tem 30 dias para ler, aplicar e decidir. 
+                    Se não funcionar para você, devolvemos 100% sem perguntas.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="section section-alt">
+        <div class="container" style="text-align: center; max-width: 800px; margin: 0 auto;">
+            <h2 class="section-title">A Escolha É Sua</h2>
+            <p class="section-subtitle" style="margin-bottom: 40px;">
+                Você pode continuar acumulando informação sem estrutura. 
+                Ou pode aprender o sistema que transforma caos em geometria.
+            </p>
+            
+            <a href="#comprar" class="cta-primary" style="font-size: 20px; padding: 24px 56px;">
+                <span>Sim, Quero Pensar Como Um Gênio</span>
+                <span>→</span>
+            </a>
+            
+            <p style="margin-top: 32px; color: var(--text-light); font-size: 14px;">
+                US$ 9,90 • Acesso vitalício • Garantia de 30 dias
+            </p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="logo" style="margin-bottom: 24px;">NUCLEO<sup>ˣ</sup></div>
+            <p style="opacity: 0.8; margin-bottom: 32px;">
+                A Geometria do Pensamento
+            </p>
+            <p style="font-size: 14px; opacity: 0.6;">
+                © 2025 José Felipe Carneiro. Todos os direitos reservados.
+            </p>
+            <p style="font-size: 14px; opacity: 0.6; margin-top: 16px;">
+                <a href="#privacidade">Privacidade</a> • 
+                <a href="#termos">Termos</a> • 
+                <a href="mailto:contato@nucleox.com">Contato</a>
+            </p>
+        </div>
+    </footer>
+
+    <!-- Sticky CTA Bar -->
+    <div class="sticky-cta" id="stickyCta">
+        <div class="sticky-cta-text">
+            NUCLEO<sup>ˣ</sup> Ebook
+        </div>
+        <div class="sticky-cta-price">US$ 9,90</div>
+        <a href="#comprar" class="cta-primary" style="padding: 12px 32px; font-size: 16px;">
+            Comprar Agora
+        </a>
+    </div>
+
+    <script>
+        // Sticky CTA Bar
+        window.addEventListener('scroll', function() {
+            const stickyCta = document.getElementById('stickyCta');
+            const heroHeight = document.querySelector('.hero').offsetHeight;
+            
+            if (window.scrollY > heroHeight) {
+                stickyCta.classList.add('visible');
+            } else {
+                stickyCta.classList.remove('visible');
+            }
+        });
+
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // FAQ Toggle
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', function() {
+                const answer = this.nextElementSibling;
+                const icon = this.querySelector('span');
+                
+                if (answer.style.display === 'block') {
+                    answer.style.display = 'none';
+                    icon.textContent = '+';
+                } else {
+                    // Fechar outros
+                    document.querySelectorAll('.faq-answer').forEach(a => a.style.display = 'none');
+                    document.querySelectorAll('.faq-question span').forEach(i => i.textContent = '+');
+                    
+                    answer.style.display = 'block';
+                    icon.textContent = '−';
+                }
+            });
+        });
+
+        // Analytics tracking (adicionar seu código do Google Analytics aqui)
+        function trackPurchaseIntent() {
+            // gtag('event', 'begin_checkout', {});
+            console.log('Purchase intent tracked');
+        }
+
+        document.querySelectorAll('.cta-primary').forEach(btn => {
+            btn.addEventListener('click', trackPurchaseIntent);
+        });
+    </script>
+</body>
+</html>

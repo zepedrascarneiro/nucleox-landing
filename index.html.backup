@@ -379,7 +379,7 @@
         }
         
         .section-subtitle {
-            font-size: 28px;
+            font-size: 20px;
             color: var(--text-secondary);
             text-align: center;
             max-width: 700px;
@@ -424,7 +424,7 @@
         }
         
         .origin-text {
-            font-size: 28px;
+            font-size: 20px;
             line-height: 1.8;
             color: var(--text-secondary);
             margin-bottom: 1.5rem;
@@ -488,7 +488,7 @@
         }
         
         .transform-text {
-            font-size: 28px;
+            font-size: 20px;
             line-height: 1.7;
             color: var(--text-secondary);
         }
@@ -502,62 +502,49 @@
         }
         
         .pillar-card {
-            padding: 3rem 2rem;
-            background: #000000;
-            border: 2px solid rgba(255, 255, 255, 0.15);
-            border-radius: 16px;
-            transition: all 0.4s ease;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
+            padding: 2.5rem;
+            background: var(--surface-dark);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            text-align: left;
         }
         
         .pillar-card:hover {
-            border-color: rgba(255, 255, 255, 0.4);
-            transform: translateY(-8px);
-            box-shadow: 0 20px 60px rgba(255, 255, 255, 0.1);
-            background: #0a0a0a;
+            border-color: var(--gold);
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(212, 175, 55, 0.15);
         }
         
         .pillar-number {
-            width: 80px;
-            height: 80px;
-            background: transparent;
+            width: 50px;
+            height: 50px;
+            background: #000000;
             color: #ffffff;
-            border: 3px solid #ffffff;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 32px;
+            font-size: 20px;
             font-weight: 900;
-            margin: 0 auto 2rem auto;
-            transition: all 0.3s ease;
-        }
-        
-        .pillar-card:hover .pillar-number {
-            transform: scale(1.1);
-            border-color: var(--gold);
-            color: var(--gold);
-        }
-        
-        .pillar-title {
-            font-size: 28px;
-            font-weight: 700;
-            margin-bottom: 1rem;
-            color: #ffffff;
-            letter-spacing: 1px;
-        }
-        
-        .pillar-description {
-            font-size: 15px;
-            color: rgba(255, 255, 255, 0.7);
-            line-height: 1.7;
             margin-bottom: 1.5rem;
         }
         
+        .pillar-title {
+            font-size: 22px;
+            font-weight: 700;
+            margin-bottom: 0.75rem;
+        }
+        
+        .pillar-description {
+            font-size: 16px;
+            color: var(--text-secondary);
+            line-height: 1.6;
+            margin-bottom: 1rem;
+        }
+        
         .pillar-result {
-            font-size: 13px;
+            font-size: 14px;
             text-transform: uppercase;
             letter-spacing: 2px;
             color: var(--gold);
@@ -652,11 +639,6 @@
         
         .price-box {
             margin: 3rem 0;
-            background: rgba(212, 175, 55, 0.08);
-            border: 2px solid rgba(212, 175, 55, 0.3);
-            border-radius: 20px;
-            padding: 3rem 2rem;
-            box-shadow: 0 10px 40px rgba(212, 175, 55, 0.2);
         }
         
         .price-label {
@@ -671,8 +653,6 @@
             font-size: 72px;
             font-weight: 900;
             letter-spacing: -2px;
-            color: var(--gold);
-            text-shadow: 0 4px 20px rgba(212, 175, 55, 0.4);
         }
         
         .price-currency {
@@ -735,7 +715,7 @@
         }
         
         .community-text {
-            font-size: 28px;
+            font-size: 20px;
             color: var(--text-secondary);
             max-width: 700px;
             margin: 0 auto 3rem;
@@ -1074,181 +1054,9 @@
             color: rgba(255, 255, 255, 0.7);
         }
         
-
-        /* ================================
-           HEADER FIXO COM LOGO
-           ================================ */
-        .site-header {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            z-index: 9999;
-            background: rgba(0, 0, 0, 0.85);
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
-            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-            padding: 1rem 0;
-            transition: all 0.3s ease;
-        }
-        
-        .site-header.scrolled {
-            background: rgba(0, 0, 0, 0.95);
-            padding: 0.75rem 0;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-        }
-        
-        .header-container {
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: 0 2rem;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-        
-        .header-logo {
-            display: flex;
-            align-items: center;
-            gap: 0;
-            text-decoration: none;
-            transition: all 0.3s ease;
-        }
-        
-        .header-logo:hover {
-            transform: scale(1.02);
-        }
-        
-        .header-logo img {
-            height: 50px;
-            width: auto;
-            transition: all 0.3s ease;
-        }
-        
-        .site-header.scrolled .header-logo img {
-            height: 40px;
-        }
-        
-        .header-cta {
-            background: var(--gold);
-            color: #000000;
-            padding: 0.75rem 1.5rem;
-            border-radius: 8px;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 14px;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
-        }
-        
-        .header-cta:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 25px rgba(212, 175, 55, 0.5);
-        }
-        
-        /* Responsivo */
-        @media (max-width: 768px) {
-            .header-logo img {
-                height: 40px;
-            }
-            
-            .site-header.scrolled .header-logo img {
-                height: 35px;
-            }
-            
-            .header-cta {
-                padding: 0.6rem 1.2rem;
-                font-size: 13px;
-            }
-        }
-
     </style>
 </head>
 <body>
-    <!-- ================================
-         BARRA DE URGÊNCIA - TEMPO LIMITADO
-         ================================ -->
-    <div id="countdown-bar" style="
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        background: linear-gradient(135deg, #D4AF37 0%, #B8941F 100%);
-        color: #000000;
-        padding: 12px 20px;
-        text-align: center;
-        font-family: 'Inter', sans-serif;
-        font-weight: 700;
-        font-size: 16px;
-        z-index: 99999;
-        box-shadow: 0 2px 10px rgba(212, 175, 55, 0.3);
-        animation: pulse 2s ease-in-out infinite;
-    ">
-        <span style="margin-right: 15px;">⏰ OFERTA EXPIRA EM:</span>
-        <span id="countdown-timer" style="
-            font-size: 28px;
-            font-weight: 900;
-            letter-spacing: 2px;
-            color: #000000;
-        ">06:59</span>
-    </div>
-
-    <style>
-        @keyframes pulse {
-            0%, 100% { transform: scale(1); }
-            50% { transform: scale(1.02); }
-        }
-        
-        body {
-            padding-top: 50px !important;
-        }
-        
-        .site-header {
-            top: 50px !important;
-        }
-    </style>
-
-    <script>
-        // Contagem regressiva de 24 horas
-        let timeLeft = 7 * 60; // 24 horas em segundos
-        
-        function updateCountdown() {
-            const hours = Math.floor(timeLeft / 3600);
-            const minutes = Math.floor((timeLeft % 3600) / 60);
-            const seconds = timeLeft % 60;
-            
-            const display = 
-                String(hours).padStart(2, '0') + ':' +
-                String(minutes).padStart(2, '0') + ':' +
-                String(seconds).padStart(2, '0');
-            
-            document.getElementById('countdown-timer').textContent = display;
-            
-            if (timeLeft > 0) {
-                timeLeft--;
-            } else {
-                timeLeft = 24 * 60 * 60; // Reinicia
-            }
-        }
-        
-        // Atualiza a cada segundo
-        setInterval(updateCountdown, 1000);
-        updateCountdown();
-    </script>
-    <!-- ================================
-         HEADER FIXO COM LOGO
-         ================================ -->
-    <header class="site-header">
-        <div class="header-container">
-            <a href="#" class="header-logo">
-                <img src="assets/nucleox-logo.png" alt="NUCLEOˣ - A Geometria do Pensamento">
-            </a>
-            <a href="https://pay.voompcreators.com.br/11811" class="header-cta">
-                Começar Agora
-            </a>
-        </div>
-    </header>
-
     <!-- Orbitais Atômicos Decorativos -->
     <div class="atomic-orbital orbital-1"></div>
     <div class="atomic-orbital orbital-2"></div>
@@ -1290,38 +1098,12 @@
                 🔥 OFERTA LIMITADA • 40% OFF termina em breve
             </div>
             
-            <div class="hero-brand" style="display: flex; flex-direction: column; align-items: center; gap: 2rem; margin: 4rem auto;">
-                <!-- Ícone SVG do átomo com cérebro -->
-                <svg width="280" height="280" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" style="filter: drop-shadow(0 10px 30px rgba(76, 175, 80, 0.4));">
-                    <!-- Orbitais -->
-                    <ellipse cx="100" cy="100" rx="80" ry="30" fill="none" stroke="#ffffff" stroke-width="2.5" opacity="0.8"/>
-                    <ellipse cx="100" cy="100" rx="80" ry="30" fill="none" stroke="#ffffff" stroke-width="2.5" opacity="0.8" transform="rotate(60 100 100)"/>
-                    <ellipse cx="100" cy="100" rx="80" ry="30" fill="none" stroke="#ffffff" stroke-width="2.5" opacity="0.8" transform="rotate(120 100 100)"/>
-                    
-                    <!-- Cérebro central simplificado -->
-                    <path d="M85 90 Q80 85 80 80 Q80 70 90 70 Q95 65 100 65 Q105 65 110 70 Q120 70 120 80 Q120 85 115 90 L112 95 Q110 100 108 105 L100 110 L92 105 Q90 100 88 95 Z" fill="#4CAF50" stroke="#4CAF50" stroke-width="1.5"/>
-                    <path d="M90 75 Q92 73 95 75 M105 75 Q107 73 110 75" stroke="#2d5f2e" stroke-width="1.2" fill="none"/>
-                    <path d="M95 82 L95 95 M105 82 L105 95" stroke="#2d5f2e" stroke-width="1.2"/>
-                    
-                    <!-- Núcleo -->
-                    <circle cx="100" cy="100" r="6" fill="#4CAF50" opacity="0.3"/>
-                </svg>
-                
-                <!-- Texto da logo -->
-                <div style="text-align: center;">
-                    <h1 style="font-size: clamp(48px, 12vw, 96px); font-weight: 900; letter-spacing: -1px; color: #ffffff; margin: 0; line-height: 1;">
-                        NUCLEO<sup style="font-size: 0.6em; color: #D4AF37;">ˣ</sup>
-                    </h1>
-                    <p style="font-size: clamp(14px, 3vw, 20px); color: rgba(255, 255, 255, 0.8); letter-spacing: 3px; margin-top: 1rem; font-weight: 500;">
-                        A GEOMETRIA DO PENSAMENTO
-                    </p>
-                </div>
+            <div class="hero-brand">
+                NUCLEO<span class="brand-x">ˣ</span>
             </div>
             
             <h1 class="hero-headline">
-                <strong class="highlight-glow">A única metodologia</strong> que transforma<br>
-                pensadores comuns em<br>
-                <strong class="highlight-glow">mentes estruturalmente superiores</strong>
+                E se a confusão na sua mente<br>não fosse falha, mas apenas uma<br><strong class="highlight-glow">geometria mal desenhada</strong>?
             </h1>
             
             <p class="hero-subheadline">
@@ -1332,7 +1114,7 @@
             <a href="#pilares" class="cta-secondary">Conhecer o Método</a>
             
             <div style="margin-top: 3rem; font-size: 14px; color: var(--text-tertiary);">
-                o Ebook · 7 pilares · 21 dias de transformação
+                147 páginas · 7 pilares · 21 dias de transformação
             </div>
         </div>
     </section>
@@ -1354,28 +1136,19 @@
             </h2>
             
             <!-- Box de preço destacado -->
-            <div style="background: linear-gradient(135deg, rgba(212, 175, 55, 0.15) 0%, rgba(212, 175, 55, 0.05) 100%); 
-                backdrop-filter: blur(15px); 
-                border-radius: 24px; 
-                padding: 3rem 2.5rem; 
-                margin: 3rem 0; 
-                border: 3px solid rgba(212, 175, 55, 0.6); 
-                box-shadow: 0 20px 60px rgba(212, 175, 55, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.1);
-                position: relative;
-                overflow: hidden;">
+            <div style="background: rgba(255,255,255,0.1); backdrop-filter: blur(10px); border-radius: 20px; padding: 2rem 1.5rem; margin: 2rem 0; border: 2px solid rgba(212, 175, 55, 0.3); box-shadow: 0 10px 40px rgba(0,0,0,0.3);">
                 
                 <!-- Preço riscado menor -->
                 <div style="margin-bottom: 0.5rem;">
-                    <span style="font-size: clamp(20px, 4.5vw, 28px); text-decoration: line-through; opacity: 0.7; font-weight: 600; color: #FFD700;">De R$ 49,90</span>
+                    <span style="font-size: clamp(18px, 4vw, 24px); text-decoration: line-through; opacity: 0.5; font-weight: 500;">De R$ 49,90</span>
                 </div>
                 
                 <!-- Preço principal GIGANTE -->
                 <div style="margin-bottom: 1rem;">
-                    <div style="display: inline-block; font-size: clamp(18px, 3.5vw, 24px); opacity: 0.9; margin-bottom: 0.8rem; color: #FFD700; font-weight: 600;">Por apenas</div>
-                    <div style="font-size: clamp(64px, 16vw, 88px); font-weight: 900; color: #FFD700; line-height: 1; letter-spacing: -2px; margin: 0.5rem 0; text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000, 0 0 0 #000;">
+                    <div style="display: inline-block; font-size: clamp(16px, 3vw, 20px); opacity: 0.8; margin-bottom: 0.5rem;">Por apenas</div>
+                    <div class="animated-number" style="font-size: clamp(56px, 15vw, 72px); font-weight: 900; color: var(--gold); line-height: 1; text-shadow: 0 4px 20px rgba(212, 175, 55, 0.4);">
                         R$ 29,90
                     </div>
-                    
                 </div>
                 
                 <!-- Badge de economia -->
@@ -1392,7 +1165,7 @@
             <!-- Detalhes do produto -->
             <div style="margin-bottom: 2rem; padding: 0 1rem;">
                 <p style="font-size: clamp(14px, 3.5vw, 16px); opacity: 0.85; line-height: 1.6;">
-                    ✨ o Ebook de neurociência aplicada<br>
+                    ✨ 147 páginas de neurociência aplicada<br>
                     ⚡ 7 pilares do pensamento estruturado<br>
                     🚀 21 dias de transformação mental<br>
                     🌍 Bilíngue (PT-BR + EN)<br>
@@ -1408,9 +1181,11 @@
             <!-- Garantias -->
             <div style="margin-top: 2rem; padding: 1.5rem; background: rgba(0,0,0,0.3); border-radius: 12px; border: 1px solid rgba(255,255,255,0.1);">
                 <p style="font-size: clamp(13px, 3vw, 15px); opacity: 0.8; line-height: 1.8;">
-                    ✓ Pagamento 100% seguro<br>
+                    ✓ Pagamento 100% seguro (Kiwify)<br>
                     ✓ Parcelamento em até 12x sem juros<br>
-                    ✓ Garantia incondicional de 7 dias<br></p>
+                    ✓ Garantia incondicional de 30 dias<br>
+                    ✓ Suporte via e-mail incluído
+                </p>
             </div>
             
             <!-- Urgência final -->
@@ -1440,28 +1215,19 @@
             </h2>
             
             <!-- Box de preço destacado -->
-            <div style="background: linear-gradient(135deg, rgba(212, 175, 55, 0.15) 0%, rgba(212, 175, 55, 0.05) 100%); 
-                backdrop-filter: blur(15px); 
-                border-radius: 24px; 
-                padding: 3rem 2.5rem; 
-                margin: 3rem 0; 
-                border: 3px solid rgba(212, 175, 55, 0.6); 
-                box-shadow: 0 20px 60px rgba(212, 175, 55, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.1);
-                position: relative;
-                overflow: hidden;">
+            <div style="background: rgba(255,255,255,0.1); backdrop-filter: blur(10px); border-radius: 20px; padding: 2rem 1.5rem; margin: 2rem 0; border: 2px solid rgba(212, 175, 55, 0.3); box-shadow: 0 10px 40px rgba(0,0,0,0.3);">
                 
                 <!-- Preço riscado menor -->
                 <div style="margin-bottom: 0.5rem;">
-                    <span style="font-size: clamp(20px, 4.5vw, 28px); text-decoration: line-through; opacity: 0.7; font-weight: 600; color: #FFD700;">De R$ 49,90</span>
+                    <span style="font-size: clamp(18px, 4vw, 24px); text-decoration: line-through; opacity: 0.5; font-weight: 500;">De R$ 49,90</span>
                 </div>
                 
                 <!-- Preço principal GIGANTE -->
                 <div style="margin-bottom: 1rem;">
-                    <div style="display: inline-block; font-size: clamp(18px, 3.5vw, 24px); opacity: 0.9; margin-bottom: 0.8rem; color: #FFD700; font-weight: 600;">Por apenas</div>
-                    <div style="font-size: clamp(64px, 16vw, 88px); font-weight: 900; color: #FFD700; line-height: 1; letter-spacing: -2px; margin: 0.5rem 0; text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000, 0 0 0 #000;">
+                    <div style="display: inline-block; font-size: clamp(16px, 3vw, 20px); opacity: 0.8; margin-bottom: 0.5rem;">Por apenas</div>
+                    <div class="animated-number" style="font-size: clamp(56px, 15vw, 72px); font-weight: 900; color: var(--gold); line-height: 1; text-shadow: 0 4px 20px rgba(212, 175, 55, 0.4);">
                         R$ 29,90
                     </div>
-                    
                 </div>
                 
                 <!-- Badge de economia -->
@@ -1478,7 +1244,7 @@
             <!-- Detalhes do produto -->
             <div style="margin-bottom: 2rem; padding: 0 1rem;">
                 <p style="font-size: clamp(14px, 3.5vw, 16px); opacity: 0.85; line-height: 1.6;">
-                    ✨ o Ebook de neurociência aplicada<br>
+                    ✨ 147 páginas de neurociência aplicada<br>
                     ⚡ 7 pilares do pensamento estruturado<br>
                     🚀 21 dias de transformação mental<br>
                     🌍 Bilíngue (PT-BR + EN)<br>
@@ -1494,9 +1260,11 @@
             <!-- Garantias -->
             <div style="margin-top: 2rem; padding: 1.5rem; background: rgba(0,0,0,0.3); border-radius: 12px; border: 1px solid rgba(255,255,255,0.1);">
                 <p style="font-size: clamp(13px, 3vw, 15px); opacity: 0.8; line-height: 1.8;">
-                    ✓ Pagamento 100% seguro<br>
+                    ✓ Pagamento 100% seguro (Kiwify)<br>
                     ✓ Parcelamento em até 12x sem juros<br>
-                    ✓ Garantia incondicional de 7 dias<br></p>
+                    ✓ Garantia incondicional de 30 dias<br>
+                    ✓ Suporte via e-mail incluído
+                </p>
             </div>
             
             <!-- Urgência final -->
@@ -1556,28 +1324,19 @@
             </h2>
             
             <!-- Box de preço destacado -->
-            <div style="background: linear-gradient(135deg, rgba(212, 175, 55, 0.15) 0%, rgba(212, 175, 55, 0.05) 100%); 
-                backdrop-filter: blur(15px); 
-                border-radius: 24px; 
-                padding: 3rem 2.5rem; 
-                margin: 3rem 0; 
-                border: 3px solid rgba(212, 175, 55, 0.6); 
-                box-shadow: 0 20px 60px rgba(212, 175, 55, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.1);
-                position: relative;
-                overflow: hidden;">
+            <div style="background: rgba(255,255,255,0.1); backdrop-filter: blur(10px); border-radius: 20px; padding: 2rem 1.5rem; margin: 2rem 0; border: 2px solid rgba(212, 175, 55, 0.3); box-shadow: 0 10px 40px rgba(0,0,0,0.3);">
                 
                 <!-- Preço riscado menor -->
                 <div style="margin-bottom: 0.5rem;">
-                    <span style="font-size: clamp(20px, 4.5vw, 28px); text-decoration: line-through; opacity: 0.7; font-weight: 600; color: #FFD700;">De R$ 49,90</span>
+                    <span style="font-size: clamp(18px, 4vw, 24px); text-decoration: line-through; opacity: 0.5; font-weight: 500;">De R$ 49,90</span>
                 </div>
                 
                 <!-- Preço principal GIGANTE -->
                 <div style="margin-bottom: 1rem;">
-                    <div style="display: inline-block; font-size: clamp(18px, 3.5vw, 24px); opacity: 0.9; margin-bottom: 0.8rem; color: #FFD700; font-weight: 600;">Por apenas</div>
-                    <div style="font-size: clamp(64px, 16vw, 88px); font-weight: 900; color: #FFD700; line-height: 1; letter-spacing: -2px; margin: 0.5rem 0; text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000, 0 0 0 #000;">
+                    <div style="display: inline-block; font-size: clamp(16px, 3vw, 20px); opacity: 0.8; margin-bottom: 0.5rem;">Por apenas</div>
+                    <div class="animated-number" style="font-size: clamp(56px, 15vw, 72px); font-weight: 900; color: var(--gold); line-height: 1; text-shadow: 0 4px 20px rgba(212, 175, 55, 0.4);">
                         R$ 29,90
                     </div>
-                    
                 </div>
                 
                 <!-- Badge de economia -->
@@ -1594,7 +1353,7 @@
             <!-- Detalhes do produto -->
             <div style="margin-bottom: 2rem; padding: 0 1rem;">
                 <p style="font-size: clamp(14px, 3.5vw, 16px); opacity: 0.85; line-height: 1.6;">
-                    ✨ o Ebook de neurociência aplicada<br>
+                    ✨ 147 páginas de neurociência aplicada<br>
                     ⚡ 7 pilares do pensamento estruturado<br>
                     🚀 21 dias de transformação mental<br>
                     🌍 Bilíngue (PT-BR + EN)<br>
@@ -1610,9 +1369,11 @@
             <!-- Garantias -->
             <div style="margin-top: 2rem; padding: 1.5rem; background: rgba(0,0,0,0.3); border-radius: 12px; border: 1px solid rgba(255,255,255,0.1);">
                 <p style="font-size: clamp(13px, 3vw, 15px); opacity: 0.8; line-height: 1.8;">
-                    ✓ Pagamento 100% seguro<br>
+                    ✓ Pagamento 100% seguro (Kiwify)<br>
                     ✓ Parcelamento em até 12x sem juros<br>
-                    ✓ Garantia incondicional de 7 dias<br></p>
+                    ✓ Garantia incondicional de 30 dias<br>
+                    ✓ Suporte via e-mail incluído
+                </p>
             </div>
             
             <!-- Urgência final -->
@@ -1676,28 +1437,19 @@
             </h2>
             
             <!-- Box de preço destacado -->
-            <div style="background: linear-gradient(135deg, rgba(212, 175, 55, 0.15) 0%, rgba(212, 175, 55, 0.05) 100%); 
-                backdrop-filter: blur(15px); 
-                border-radius: 24px; 
-                padding: 3rem 2.5rem; 
-                margin: 3rem 0; 
-                border: 3px solid rgba(212, 175, 55, 0.6); 
-                box-shadow: 0 20px 60px rgba(212, 175, 55, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.1);
-                position: relative;
-                overflow: hidden;">
+            <div style="background: rgba(255,255,255,0.1); backdrop-filter: blur(10px); border-radius: 20px; padding: 2rem 1.5rem; margin: 2rem 0; border: 2px solid rgba(212, 175, 55, 0.3); box-shadow: 0 10px 40px rgba(0,0,0,0.3);">
                 
                 <!-- Preço riscado menor -->
                 <div style="margin-bottom: 0.5rem;">
-                    <span style="font-size: clamp(20px, 4.5vw, 28px); text-decoration: line-through; opacity: 0.7; font-weight: 600; color: #FFD700;">De R$ 49,90</span>
+                    <span style="font-size: clamp(18px, 4vw, 24px); text-decoration: line-through; opacity: 0.5; font-weight: 500;">De R$ 49,90</span>
                 </div>
                 
                 <!-- Preço principal GIGANTE -->
                 <div style="margin-bottom: 1rem;">
-                    <div style="display: inline-block; font-size: clamp(18px, 3.5vw, 24px); opacity: 0.9; margin-bottom: 0.8rem; color: #FFD700; font-weight: 600;">Por apenas</div>
-                    <div style="font-size: clamp(64px, 16vw, 88px); font-weight: 900; color: #FFD700; line-height: 1; letter-spacing: -2px; margin: 0.5rem 0; text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000, 0 0 0 #000;">
+                    <div style="display: inline-block; font-size: clamp(16px, 3vw, 20px); opacity: 0.8; margin-bottom: 0.5rem;">Por apenas</div>
+                    <div class="animated-number" style="font-size: clamp(56px, 15vw, 72px); font-weight: 900; color: var(--gold); line-height: 1; text-shadow: 0 4px 20px rgba(212, 175, 55, 0.4);">
                         R$ 29,90
                     </div>
-                    
                 </div>
                 
                 <!-- Badge de economia -->
@@ -1714,7 +1466,7 @@
             <!-- Detalhes do produto -->
             <div style="margin-bottom: 2rem; padding: 0 1rem;">
                 <p style="font-size: clamp(14px, 3.5vw, 16px); opacity: 0.85; line-height: 1.6;">
-                    ✨ o Ebook de neurociência aplicada<br>
+                    ✨ 147 páginas de neurociência aplicada<br>
                     ⚡ 7 pilares do pensamento estruturado<br>
                     🚀 21 dias de transformação mental<br>
                     🌍 Bilíngue (PT-BR + EN)<br>
@@ -1723,16 +1475,18 @@
             </div>
             
             <!-- Botão CTA GIGANTE -->
-            <a href="https://pay.voompcreators.com.br/11811" target="_blank" rel="noopener noreferrer" class="cta-primary glow-effect pulse-effect" style="font-size: clamp(16px, 4vw, 20px); padding: clamp(1.2rem, 4vw, 1.8rem) clamp(2rem, 8vw, 4rem); background: var(--gold); color: #000; font-weight: 700; display: inline-block; width: 100%; max-width: 400px; border-radius: 12px; text-decoration: none; box-shadow: 0 10px 40px rgba(212, 175, 55, 0.4); transition: all 0.3s ease;">
+            <a href="#oferta-final" class="cta-primary glow-effect pulse-effect" style="font-size: clamp(16px, 4vw, 20px); padding: clamp(1.2rem, 4vw, 1.8rem) clamp(2rem, 8vw, 4rem); background: var(--gold); color: #000; font-weight: 700; display: inline-block; width: 100%; max-width: 400px; border-radius: 12px; text-decoration: none; box-shadow: 0 10px 40px rgba(212, 175, 55, 0.4); transition: all 0.3s ease;">
                 ⚡ GARANTIR MEU ACESSO AGORA
             </a>
             
             <!-- Garantias -->
             <div style="margin-top: 2rem; padding: 1.5rem; background: rgba(0,0,0,0.3); border-radius: 12px; border: 1px solid rgba(255,255,255,0.1);">
                 <p style="font-size: clamp(13px, 3vw, 15px); opacity: 0.8; line-height: 1.8;">
-                    ✓ Pagamento 100% seguro<br>
+                    ✓ Pagamento 100% seguro (Kiwify)<br>
                     ✓ Parcelamento em até 12x sem juros<br>
-                    ✓ Garantia incondicional de 7 dias<br></p>
+                    ✓ Garantia incondicional de 30 dias<br>
+                    ✓ Suporte via e-mail incluído
+                </p>
             </div>
             
             <!-- Urgência final -->
@@ -1787,7 +1541,7 @@
         
         <!-- CTA após insights -->
         <div style="text-align: center; margin-top: 4rem;">
-            <a href="https://pay.voompcreators.com.br/11811" target="_blank" rel="noopener noreferrer" class="cta-primary" style="font-size: 18px; padding: 1.5rem 3rem;">
+            <a href="#oferta-final" class="cta-primary" style="font-size: 18px; padding: 1.5rem 3rem;">
                 Quero transformar meu pensamento →
             </a>
             <p style="margin-top: 1rem; font-size: 14px; color: var(--text-secondary);">
@@ -1813,28 +1567,19 @@
             </h2>
             
             <!-- Box de preço destacado -->
-            <div style="background: linear-gradient(135deg, rgba(212, 175, 55, 0.15) 0%, rgba(212, 175, 55, 0.05) 100%); 
-                backdrop-filter: blur(15px); 
-                border-radius: 24px; 
-                padding: 3rem 2.5rem; 
-                margin: 3rem 0; 
-                border: 3px solid rgba(212, 175, 55, 0.6); 
-                box-shadow: 0 20px 60px rgba(212, 175, 55, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.1);
-                position: relative;
-                overflow: hidden;">
+            <div style="background: rgba(255,255,255,0.1); backdrop-filter: blur(10px); border-radius: 20px; padding: 2rem 1.5rem; margin: 2rem 0; border: 2px solid rgba(212, 175, 55, 0.3); box-shadow: 0 10px 40px rgba(0,0,0,0.3);">
                 
                 <!-- Preço riscado menor -->
                 <div style="margin-bottom: 0.5rem;">
-                    <span style="font-size: clamp(20px, 4.5vw, 28px); text-decoration: line-through; opacity: 0.7; font-weight: 600; color: #FFD700;">De R$ 49,90</span>
+                    <span style="font-size: clamp(18px, 4vw, 24px); text-decoration: line-through; opacity: 0.5; font-weight: 500;">De R$ 49,90</span>
                 </div>
                 
                 <!-- Preço principal GIGANTE -->
                 <div style="margin-bottom: 1rem;">
-                    <div style="display: inline-block; font-size: clamp(18px, 3.5vw, 24px); opacity: 0.9; margin-bottom: 0.8rem; color: #FFD700; font-weight: 600;">Por apenas</div>
-                    <div style="font-size: clamp(64px, 16vw, 88px); font-weight: 900; color: #FFD700; line-height: 1; letter-spacing: -2px; margin: 0.5rem 0; text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000, 0 0 0 #000;">
+                    <div style="display: inline-block; font-size: clamp(16px, 3vw, 20px); opacity: 0.8; margin-bottom: 0.5rem;">Por apenas</div>
+                    <div class="animated-number" style="font-size: clamp(56px, 15vw, 72px); font-weight: 900; color: var(--gold); line-height: 1; text-shadow: 0 4px 20px rgba(212, 175, 55, 0.4);">
                         R$ 29,90
                     </div>
-                    
                 </div>
                 
                 <!-- Badge de economia -->
@@ -1851,7 +1596,7 @@
             <!-- Detalhes do produto -->
             <div style="margin-bottom: 2rem; padding: 0 1rem;">
                 <p style="font-size: clamp(14px, 3.5vw, 16px); opacity: 0.85; line-height: 1.6;">
-                    ✨ o Ebook de neurociência aplicada<br>
+                    ✨ 147 páginas de neurociência aplicada<br>
                     ⚡ 7 pilares do pensamento estruturado<br>
                     🚀 21 dias de transformação mental<br>
                     🌍 Bilíngue (PT-BR + EN)<br>
@@ -1860,16 +1605,18 @@
             </div>
             
             <!-- Botão CTA GIGANTE -->
-            <a href="https://pay.voompcreators.com.br/11811" class="cta-primary glow-effect pulse-effect" style="font-size: clamp(16px, 4vw, 20px); padding: clamp(1.2rem, 4vw, 1.8rem) clamp(2rem, 8vw, 4rem); background: var(--gold); color: #000; font-weight: 700; display: inline-block; width: 100%; max-width: 400px; border-radius: 12px; text-decoration: none; box-shadow: 0 10px 40px rgba(212, 175, 55, 0.4); transition: all 0.3s ease;">
+            <a href="https://pay.kiwify.com.br/CqHb4jr" class="cta-primary glow-effect pulse-effect" style="font-size: clamp(16px, 4vw, 20px); padding: clamp(1.2rem, 4vw, 1.8rem) clamp(2rem, 8vw, 4rem); background: var(--gold); color: #000; font-weight: 700; display: inline-block; width: 100%; max-width: 400px; border-radius: 12px; text-decoration: none; box-shadow: 0 10px 40px rgba(212, 175, 55, 0.4); transition: all 0.3s ease;">
                 ⚡ GARANTIR MEU ACESSO AGORA
             </a>
             
             <!-- Garantias -->
             <div style="margin-top: 2rem; padding: 1.5rem; background: rgba(0,0,0,0.3); border-radius: 12px; border: 1px solid rgba(255,255,255,0.1);">
                 <p style="font-size: clamp(13px, 3vw, 15px); opacity: 0.8; line-height: 1.8;">
-                    ✓ Pagamento 100% seguro<br>
+                    ✓ Pagamento 100% seguro (Kiwify)<br>
                     ✓ Parcelamento em até 12x sem juros<br>
-                    ✓ Garantia incondicional de 7 dias<br></p>
+                    ✓ Garantia incondicional de 30 dias<br>
+                    ✓ Suporte via e-mail incluído
+                </p>
             </div>
             
             <!-- Urgência final -->
@@ -1903,7 +1650,7 @@
             
             <div class="pillar-card">
                 <div class="pillar-number">Ú</div>
-                <h3 class="pillar-title">USE VERIFIABLE CRITERIA (Usar Critérios Verificáveis)</h3>
+                <h3 class="pillar-title">USE (Usar)</h3>
                 <p class="pillar-description">
                     Domine critérios verificáveis que eliminam vieses cognitivos e dúvidas paralisantes. Decisões baseadas em estrutura, não emoção.
                 </p>
@@ -1912,7 +1659,7 @@
             
             <div class="pillar-card">
                 <div class="pillar-number">C</div>
-                <h3 class="pillar-title">CONTEXTUALIZE THE ESSENTIAL (Contextualizar o Essencial)</h3>
+                <h3 class="pillar-title">CONTEXTUALIZE (Contextualizar)</h3>
                 <p class="pillar-description">
                     Separe o essencial do ruído em segundos. Contextualização é a geometria da relevância.
                 </p>
@@ -1921,7 +1668,7 @@
             
             <div class="pillar-card">
                 <div class="pillar-number">L</div>
-                <h3 class="pillar-title">LIMIT THE SCOPE (Limitar o Escopo)</h3>
+                <h3 class="pillar-title">LIMIT (Limitar)</h3>
                 <p class="pillar-description">
                     Restrinja o escopo e multiplique seus resultados. Limitação não é privação, é <span class="highlight-glow">concentração de poder</span>.
                 </p>
@@ -1930,7 +1677,7 @@
             
             <div class="pillar-card">
                 <div class="pillar-number">E</div>
-                <h3 class="pillar-title">ESPECIFY CONSTRAINTS (Especificar Restrições)</h3>
+                <h3 class="pillar-title">ESPECIFY (Especificar)</h3>
                 <p class="pillar-description">
                     Use restrições para desbloquear criatividade explosiva. Especificação é a mãe da inovação.
                 </p>
@@ -1939,7 +1686,7 @@
             
             <div class="pillar-card">
                 <div class="pillar-number">O</div>
-                <h3 class="pillar-title">ORDER LOGICALLY (Ordenar Logicamente)</h3>
+                <h3 class="pillar-title">ORDER (Ordenar)</h3>
                 <p class="pillar-description">
                     Organize pensamentos em sequências lógicas imparáveis. Ordem não é rigidez, é <span class="highlight-glow">fluidez geometricamente perfeita</span>.
                 </p>
@@ -1948,7 +1695,7 @@
             
             <div class="pillar-card">
                 <div class="pillar-number">X</div>
-                <h3 class="pillar-title">EXPAND EXPONENTIALLY (Expandir Exponencialmente)</h3>
+                <h3 class="pillar-title">EXPAND (Expandir)</h3>
                 <p class="pillar-description">
                     Escale suas ideias exponencialmente sem perder estrutura. Expansão controlada = impacto multiplicado.
                 </p>
@@ -1958,7 +1705,7 @@
         
         <!-- CTA após 7 pilares -->
         <div style="text-align: center; margin-top: 4rem;">
-            <a href="https://pay.voompcreators.com.br/11811" target="_blank" rel="noopener noreferrer" class="cta-primary" style="font-size: 18px; padding: 1.5rem 3rem;">
+            <a href="#oferta-final" class="cta-primary" style="font-size: 18px; padding: 1.5rem 3rem;">
                 Quero dominar os 7 pilares →
             </a>
             <p style="margin-top: 1rem; font-size: 14px; color: var(--text-secondary);">
@@ -1984,28 +1731,19 @@
             </h2>
             
             <!-- Box de preço destacado -->
-            <div style="background: linear-gradient(135deg, rgba(212, 175, 55, 0.15) 0%, rgba(212, 175, 55, 0.05) 100%); 
-                backdrop-filter: blur(15px); 
-                border-radius: 24px; 
-                padding: 3rem 2.5rem; 
-                margin: 3rem 0; 
-                border: 3px solid rgba(212, 175, 55, 0.6); 
-                box-shadow: 0 20px 60px rgba(212, 175, 55, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.1);
-                position: relative;
-                overflow: hidden;">
+            <div style="background: rgba(255,255,255,0.1); backdrop-filter: blur(10px); border-radius: 20px; padding: 2rem 1.5rem; margin: 2rem 0; border: 2px solid rgba(212, 175, 55, 0.3); box-shadow: 0 10px 40px rgba(0,0,0,0.3);">
                 
                 <!-- Preço riscado menor -->
                 <div style="margin-bottom: 0.5rem;">
-                    <span style="font-size: clamp(20px, 4.5vw, 28px); text-decoration: line-through; opacity: 0.7; font-weight: 600; color: #FFD700;">De R$ 49,90</span>
+                    <span style="font-size: clamp(18px, 4vw, 24px); text-decoration: line-through; opacity: 0.5; font-weight: 500;">De R$ 49,90</span>
                 </div>
                 
                 <!-- Preço principal GIGANTE -->
                 <div style="margin-bottom: 1rem;">
-                    <div style="display: inline-block; font-size: clamp(18px, 3.5vw, 24px); opacity: 0.9; margin-bottom: 0.8rem; color: #FFD700; font-weight: 600;">Por apenas</div>
-                    <div style="font-size: clamp(64px, 16vw, 88px); font-weight: 900; color: #FFD700; line-height: 1; letter-spacing: -2px; margin: 0.5rem 0; text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000, 0 0 0 #000;">
+                    <div style="display: inline-block; font-size: clamp(16px, 3vw, 20px); opacity: 0.8; margin-bottom: 0.5rem;">Por apenas</div>
+                    <div class="animated-number" style="font-size: clamp(56px, 15vw, 72px); font-weight: 900; color: var(--gold); line-height: 1; text-shadow: 0 4px 20px rgba(212, 175, 55, 0.4);">
                         R$ 29,90
                     </div>
-                    
                 </div>
                 
                 <!-- Badge de economia -->
@@ -2022,7 +1760,7 @@
             <!-- Detalhes do produto -->
             <div style="margin-bottom: 2rem; padding: 0 1rem;">
                 <p style="font-size: clamp(14px, 3.5vw, 16px); opacity: 0.85; line-height: 1.6;">
-                    ✨ o Ebook de neurociência aplicada<br>
+                    ✨ 147 páginas de neurociência aplicada<br>
                     ⚡ 7 pilares do pensamento estruturado<br>
                     🚀 21 dias de transformação mental<br>
                     🌍 Bilíngue (PT-BR + EN)<br>
@@ -2031,16 +1769,18 @@
             </div>
             
             <!-- Botão CTA GIGANTE -->
-            <a href="https://pay.voompcreators.com.br/11811" class="cta-primary glow-effect pulse-effect" style="font-size: clamp(16px, 4vw, 20px); padding: clamp(1.2rem, 4vw, 1.8rem) clamp(2rem, 8vw, 4rem); background: var(--gold); color: #000; font-weight: 700; display: inline-block; width: 100%; max-width: 400px; border-radius: 12px; text-decoration: none; box-shadow: 0 10px 40px rgba(212, 175, 55, 0.4); transition: all 0.3s ease;">
+            <a href="https://pay.kiwify.com.br/CqHb4jr" class="cta-primary glow-effect pulse-effect" style="font-size: clamp(16px, 4vw, 20px); padding: clamp(1.2rem, 4vw, 1.8rem) clamp(2rem, 8vw, 4rem); background: var(--gold); color: #000; font-weight: 700; display: inline-block; width: 100%; max-width: 400px; border-radius: 12px; text-decoration: none; box-shadow: 0 10px 40px rgba(212, 175, 55, 0.4); transition: all 0.3s ease;">
                 ⚡ GARANTIR MEU ACESSO AGORA
             </a>
             
             <!-- Garantias -->
             <div style="margin-top: 2rem; padding: 1.5rem; background: rgba(0,0,0,0.3); border-radius: 12px; border: 1px solid rgba(255,255,255,0.1);">
                 <p style="font-size: clamp(13px, 3vw, 15px); opacity: 0.8; line-height: 1.8;">
-                    ✓ Pagamento 100% seguro<br>
+                    ✓ Pagamento 100% seguro (Kiwify)<br>
                     ✓ Parcelamento em até 12x sem juros<br>
-                    ✓ Garantia incondicional de 7 dias<br></p>
+                    ✓ Garantia incondicional de 30 dias<br>
+                    ✓ Suporte via e-mail incluído
+                </p>
             </div>
             
             <!-- Urgência final -->
@@ -2087,7 +1827,7 @@
             
             <!-- CTA após depoimentos -->
             <div style="text-align: center; margin-top: 4rem;">
-                <a href="https://pay.voompcreators.com.br/11811" target="_blank" rel="noopener noreferrer" class="cta-primary glow-effect" style="font-size: 18px; padding: 1.5rem 3rem;">
+                <a href="#oferta-final" class="cta-primary glow-effect" style="font-size: 18px; padding: 1.5rem 3rem;">
                     Junte-se a quem já pensa com estrutura →
                 </a>
                 <p style="margin-top: 1rem; font-size: 14px; color: var(--text-secondary);">
@@ -2114,28 +1854,19 @@
             </h2>
             
             <!-- Box de preço destacado -->
-            <div style="background: linear-gradient(135deg, rgba(212, 175, 55, 0.15) 0%, rgba(212, 175, 55, 0.05) 100%); 
-                backdrop-filter: blur(15px); 
-                border-radius: 24px; 
-                padding: 3rem 2.5rem; 
-                margin: 3rem 0; 
-                border: 3px solid rgba(212, 175, 55, 0.6); 
-                box-shadow: 0 20px 60px rgba(212, 175, 55, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.1);
-                position: relative;
-                overflow: hidden;">
+            <div style="background: rgba(255,255,255,0.1); backdrop-filter: blur(10px); border-radius: 20px; padding: 2rem 1.5rem; margin: 2rem 0; border: 2px solid rgba(212, 175, 55, 0.3); box-shadow: 0 10px 40px rgba(0,0,0,0.3);">
                 
                 <!-- Preço riscado menor -->
                 <div style="margin-bottom: 0.5rem;">
-                    <span style="font-size: clamp(20px, 4.5vw, 28px); text-decoration: line-through; opacity: 0.7; font-weight: 600; color: #FFD700;">De R$ 49,90</span>
+                    <span style="font-size: clamp(18px, 4vw, 24px); text-decoration: line-through; opacity: 0.5; font-weight: 500;">De R$ 49,90</span>
                 </div>
                 
                 <!-- Preço principal GIGANTE -->
                 <div style="margin-bottom: 1rem;">
-                    <div style="display: inline-block; font-size: clamp(18px, 3.5vw, 24px); opacity: 0.9; margin-bottom: 0.8rem; color: #FFD700; font-weight: 600;">Por apenas</div>
-                    <div style="font-size: clamp(64px, 16vw, 88px); font-weight: 900; color: #FFD700; line-height: 1; letter-spacing: -2px; margin: 0.5rem 0; text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000, 0 0 0 #000;">
+                    <div style="display: inline-block; font-size: clamp(16px, 3vw, 20px); opacity: 0.8; margin-bottom: 0.5rem;">Por apenas</div>
+                    <div class="animated-number" style="font-size: clamp(56px, 15vw, 72px); font-weight: 900; color: var(--gold); line-height: 1; text-shadow: 0 4px 20px rgba(212, 175, 55, 0.4);">
                         R$ 29,90
                     </div>
-                    
                 </div>
                 
                 <!-- Badge de economia -->
@@ -2152,7 +1883,7 @@
             <!-- Detalhes do produto -->
             <div style="margin-bottom: 2rem; padding: 0 1rem;">
                 <p style="font-size: clamp(14px, 3.5vw, 16px); opacity: 0.85; line-height: 1.6;">
-                    ✨ o Ebook de neurociência aplicada<br>
+                    ✨ 147 páginas de neurociência aplicada<br>
                     ⚡ 7 pilares do pensamento estruturado<br>
                     🚀 21 dias de transformação mental<br>
                     🌍 Bilíngue (PT-BR + EN)<br>
@@ -2161,16 +1892,18 @@
             </div>
             
             <!-- Botão CTA GIGANTE -->
-            <a href="https://pay.voompcreators.com.br/11811" class="cta-primary glow-effect pulse-effect" style="font-size: clamp(16px, 4vw, 20px); padding: clamp(1.2rem, 4vw, 1.8rem) clamp(2rem, 8vw, 4rem); background: var(--gold); color: #000; font-weight: 700; display: inline-block; width: 100%; max-width: 400px; border-radius: 12px; text-decoration: none; box-shadow: 0 10px 40px rgba(212, 175, 55, 0.4); transition: all 0.3s ease;">
+            <a href="https://pay.kiwify.com.br/CqHb4jr" class="cta-primary glow-effect pulse-effect" style="font-size: clamp(16px, 4vw, 20px); padding: clamp(1.2rem, 4vw, 1.8rem) clamp(2rem, 8vw, 4rem); background: var(--gold); color: #000; font-weight: 700; display: inline-block; width: 100%; max-width: 400px; border-radius: 12px; text-decoration: none; box-shadow: 0 10px 40px rgba(212, 175, 55, 0.4); transition: all 0.3s ease;">
                 ⚡ GARANTIR MEU ACESSO AGORA
             </a>
             
             <!-- Garantias -->
             <div style="margin-top: 2rem; padding: 1.5rem; background: rgba(0,0,0,0.3); border-radius: 12px; border: 1px solid rgba(255,255,255,0.1);">
                 <p style="font-size: clamp(13px, 3vw, 15px); opacity: 0.8; line-height: 1.8;">
-                    ✓ Pagamento 100% seguro<br>
+                    ✓ Pagamento 100% seguro (Kiwify)<br>
                     ✓ Parcelamento em até 12x sem juros<br>
-                    ✓ Garantia incondicional de 7 dias<br></p>
+                    ✓ Garantia incondicional de 30 dias<br>
+                    ✓ Suporte via e-mail incluído
+                </p>
             </div>
             
             <!-- Urgência final -->
@@ -2256,7 +1989,7 @@
             <!-- Features modernizadas -->
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1rem; margin: 2rem 0; padding: 0 1rem;">
                 <div style="background: rgba(255,255,255,0.06); padding: 1.25rem; border-radius: 12px; border-left: 3px solid var(--gold);">
-                    <p style="font-size: clamp(14px, 3.5vw, 16px); margin: 0;">✓ o Ebook de neurociência aplicada</p>
+                    <p style="font-size: clamp(14px, 3.5vw, 16px); margin: 0;">✓ 147 páginas de neurociência aplicada</p>
                 </div>
                 <div style="background: rgba(255,255,255,0.06); padding: 1.25rem; border-radius: 12px; border-left: 3px solid var(--gold);">
                     <p style="font-size: clamp(14px, 3.5vw, 16px); margin: 0;">✓ 7 pilares do pensamento estruturado</p>
@@ -2298,7 +2031,7 @@
             </div>
             
             <!-- CTA principal -->
-            <a href="https://pay.voompcreators.com.br/11811" class="cta-primary glow-effect" style="font-size: clamp(16px, 4vw, 18px); padding: clamp(1.2rem, 4vw, 1.75rem) clamp(2rem, 6vw, 3.5rem); background: var(--gold); color: #000000; margin-top: 2rem; display: inline-block; width: 100%; max-width: 400px; border-radius: 12px; font-weight: 700; text-decoration: none; box-shadow: 0 10px 30px rgba(212, 175, 55, 0.35);">
+            <a href="https://pay.kiwify.com.br/CqHb4jr" class="cta-primary glow-effect" style="font-size: clamp(16px, 4vw, 18px); padding: clamp(1.2rem, 4vw, 1.75rem) clamp(2rem, 6vw, 3.5rem); background: var(--gold); color: #000000; margin-top: 2rem; display: inline-block; width: 100%; max-width: 400px; border-radius: 12px; font-weight: 700; text-decoration: none; box-shadow: 0 10px 30px rgba(212, 175, 55, 0.35);">
                 ⚡ ACESSAR O NUCLEOˣ AGORA →
             </a>
             
@@ -2315,7 +2048,7 @@
          ======================================== -->
     <section id="principios" class="container" style="padding: 4rem 1rem; margin: 4rem auto;">
         <h2 style="text-align: center; font-size: clamp(28px, 6vw, 42px); margin-bottom: 1rem;">
-            Os 7 Pilares da Arquitetura Mental
+            Os 6 Princípios Fundamentais
         </h2>
         <p style="text-align: center; font-size: clamp(14px, 3.5vw, 18px); opacity: 0.7; margin-bottom: 4rem; max-width: 700px; margin-left: auto; margin-right: auto;">
             A geometria do pensamento estruturado em seis pilares atemporais
@@ -2336,21 +2069,7 @@
                 <div class="principle-description">Um objetivo claro é o rótulo para o aprendizado</div>
             </div>
             
-            <!-- Ú: USE VERIFIABLE CRITERIA -->
-            <div class="principle-card">
-                <div class="geometric-icon">
-                    <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M 35,30 Q 35,65 50,65 Q 65,65 65,30" fill="none" stroke="#ffffff" stroke-width="3"/>
-                        <circle cx="50" cy="68" r="3" fill="#ffffff"/>
-                    </svg>
-                </div>
-                <div class="principle-letter">Ú</div>
-                <div class="principle-title">Use</div>
-                <div class="principle-subtitle">Critérios Verificáveis</div>
-                <div class="principle-description">Sem avaliação, o sucesso é apenas ruído</div>
-            </div>
-            
-            <!-- C: CONTEXTUALIZE THE ESSENTIAL -->
+            <!-- C: USE VERIFIABLE CRITERIA -->
             <div class="principle-card">
                 <div class="geometric-icon">
                     <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
@@ -2360,8 +2079,8 @@
                     </svg>
                 </div>
                 <div class="principle-letter">C</div>
-                <div class="principle-title">Contextualize</div>
-                <div class="principle-subtitle">O Essencial</div>
+                <div class="principle-title">Use</div>
+                <div class="principle-subtitle">Critérios Verificáveis</div>
                 <div class="principle-description">Sem avaliação, o sucesso é apenas ruído</div>
             </div>
             
@@ -2400,7 +2119,7 @@
                         <line x1="20" y1="50" x2="80" y2="50" stroke="var(--gold)" stroke-width="4" transform="rotate(45 50 50)"/>
                     </svg>
                 </div>
-                <div class="principle-letter">O</div>
+                <div class="principle-letter">E</div>
                 <div class="principle-title">Ordene</div>
                 <div class="principle-subtitle">Logicamente</div>
                 <div class="principle-description">A clareza vive na sequência, não na confusão</div>
@@ -2418,8 +2137,8 @@
                         <polyline points="60,25 70,25 70,35" fill="none" stroke="var(--gold)" stroke-width="2"/>
                     </svg>
                 </div>
-                <div class="principle-letter">X</div>
-                <div class="principle-title">Expanda</div>
+                <div class="principle-letter">O</div>
+                <div class="principle-title">6xpanda</div>
                 <div class="principle-subtitle">Exponencialmente</div>
                 <div class="principle-description">O crescimento é o objetivo que se ensina</div>
             </div>
@@ -2470,7 +2189,7 @@
             Pertence aos mais <strong>estruturados</strong>.
         </p>
         
-        <a href="https://pay.voompcreators.com.br/11811" target="_blank" rel="noopener noreferrer" class="cta-primary">
+        <a href="#oferta-final" class="cta-primary">
             Quero pensar com estrutura →
         </a>
     </section>
@@ -2492,28 +2211,19 @@
             </h2>
             
             <!-- Box de preço destacado -->
-            <div style="background: linear-gradient(135deg, rgba(212, 175, 55, 0.15) 0%, rgba(212, 175, 55, 0.05) 100%); 
-                backdrop-filter: blur(15px); 
-                border-radius: 24px; 
-                padding: 3rem 2.5rem; 
-                margin: 3rem 0; 
-                border: 3px solid rgba(212, 175, 55, 0.6); 
-                box-shadow: 0 20px 60px rgba(212, 175, 55, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.1);
-                position: relative;
-                overflow: hidden;">
+            <div style="background: rgba(255,255,255,0.1); backdrop-filter: blur(10px); border-radius: 20px; padding: 2rem 1.5rem; margin: 2rem 0; border: 2px solid rgba(212, 175, 55, 0.3); box-shadow: 0 10px 40px rgba(0,0,0,0.3);">
                 
                 <!-- Preço riscado menor -->
                 <div style="margin-bottom: 0.5rem;">
-                    <span style="font-size: clamp(20px, 4.5vw, 28px); text-decoration: line-through; opacity: 0.7; font-weight: 600; color: #FFD700;">De R$ 49,90</span>
+                    <span style="font-size: clamp(18px, 4vw, 24px); text-decoration: line-through; opacity: 0.5; font-weight: 500;">De R$ 49,90</span>
                 </div>
                 
                 <!-- Preço principal GIGANTE -->
                 <div style="margin-bottom: 1rem;">
-                    <div style="display: inline-block; font-size: clamp(18px, 3.5vw, 24px); opacity: 0.9; margin-bottom: 0.8rem; color: #FFD700; font-weight: 600;">Por apenas</div>
-                    <div style="font-size: clamp(64px, 16vw, 88px); font-weight: 900; color: #FFD700; line-height: 1; letter-spacing: -2px; margin: 0.5rem 0; text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000, 0 0 0 #000;">
+                    <div style="display: inline-block; font-size: clamp(16px, 3vw, 20px); opacity: 0.8; margin-bottom: 0.5rem;">Por apenas</div>
+                    <div class="animated-number" style="font-size: clamp(56px, 15vw, 72px); font-weight: 900; color: var(--gold); line-height: 1; text-shadow: 0 4px 20px rgba(212, 175, 55, 0.4);">
                         R$ 29,90
                     </div>
-                    
                 </div>
                 
                 <!-- Badge de economia -->
@@ -2530,7 +2240,7 @@
             <!-- Detalhes do produto -->
             <div style="margin-bottom: 2rem; padding: 0 1rem;">
                 <p style="font-size: clamp(14px, 3.5vw, 16px); opacity: 0.85; line-height: 1.6;">
-                    ✨ o Ebook de neurociência aplicada<br>
+                    ✨ 147 páginas de neurociência aplicada<br>
                     ⚡ 7 pilares do pensamento estruturado<br>
                     🚀 21 dias de transformação mental<br>
                     🌍 Bilíngue (PT-BR + EN)<br>
@@ -2539,16 +2249,18 @@
             </div>
             
             <!-- Botão CTA GIGANTE -->
-            <a href="https://pay.voompcreators.com.br/11811" class="cta-primary glow-effect pulse-effect" style="font-size: clamp(16px, 4vw, 20px); padding: clamp(1.2rem, 4vw, 1.8rem) clamp(2rem, 8vw, 4rem); background: var(--gold); color: #000; font-weight: 700; display: inline-block; width: 100%; max-width: 400px; border-radius: 12px; text-decoration: none; box-shadow: 0 10px 40px rgba(212, 175, 55, 0.4); transition: all 0.3s ease;">
+            <a href="https://pay.kiwify.com.br/CqHb4jr" class="cta-primary glow-effect pulse-effect" style="font-size: clamp(16px, 4vw, 20px); padding: clamp(1.2rem, 4vw, 1.8rem) clamp(2rem, 8vw, 4rem); background: var(--gold); color: #000; font-weight: 700; display: inline-block; width: 100%; max-width: 400px; border-radius: 12px; text-decoration: none; box-shadow: 0 10px 40px rgba(212, 175, 55, 0.4); transition: all 0.3s ease;">
                 ⚡ GARANTIR MEU ACESSO AGORA
             </a>
             
             <!-- Garantias -->
             <div style="margin-top: 2rem; padding: 1.5rem; background: rgba(0,0,0,0.3); border-radius: 12px; border: 1px solid rgba(255,255,255,0.1);">
                 <p style="font-size: clamp(13px, 3vw, 15px); opacity: 0.8; line-height: 1.8;">
-                    ✓ Pagamento 100% seguro<br>
+                    ✓ Pagamento 100% seguro (Kiwify)<br>
                     ✓ Parcelamento em até 12x sem juros<br>
-                    ✓ Garantia incondicional de 7 dias<br></p>
+                    ✓ Garantia incondicional de 30 dias<br>
+                    ✓ Suporte via e-mail incluído
+                </p>
             </div>
             
             <!-- Urgência final -->
@@ -2569,7 +2281,7 @@
                 É geometria."
             </p>
             
-            <p style="font-size: 28px; color: var(--text-secondary); line-height: 1.7; margin-bottom: 3rem;">
+            <p style="font-size: 20px; color: var(--text-secondary); line-height: 1.7; margin-bottom: 3rem;">
                 O mundo premia quem pensa com clareza.<br>
                 A IA amplifica quem pensa com estrutura.<br>
                 O futuro pertence a quem domina ambos.
@@ -2579,7 +2291,7 @@
                 Junte-se à geometria.
             </div>
             
-            <a href="https://pay.voompcreators.com.br/11811" class="cta-primary" style="margin-top: 2rem;">
+            <a href="https://pay.kiwify.com.br/CqHb4jr" class="cta-primary" style="margin-top: 2rem;">
                 Estruturar Meu Pensamento →
             </a>
             
@@ -2608,28 +2320,19 @@
             </h2>
             
             <!-- Box de preço destacado -->
-            <div style="background: linear-gradient(135deg, rgba(212, 175, 55, 0.15) 0%, rgba(212, 175, 55, 0.05) 100%); 
-                backdrop-filter: blur(15px); 
-                border-radius: 24px; 
-                padding: 3rem 2.5rem; 
-                margin: 3rem 0; 
-                border: 3px solid rgba(212, 175, 55, 0.6); 
-                box-shadow: 0 20px 60px rgba(212, 175, 55, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.1);
-                position: relative;
-                overflow: hidden;">
+            <div style="background: rgba(255,255,255,0.1); backdrop-filter: blur(10px); border-radius: 20px; padding: 2rem 1.5rem; margin: 2rem 0; border: 2px solid rgba(212, 175, 55, 0.3); box-shadow: 0 10px 40px rgba(0,0,0,0.3);">
                 
                 <!-- Preço riscado menor -->
                 <div style="margin-bottom: 0.5rem;">
-                    <span style="font-size: clamp(20px, 4.5vw, 28px); text-decoration: line-through; opacity: 0.7; font-weight: 600; color: #FFD700;">De R$ 49,90</span>
+                    <span style="font-size: clamp(18px, 4vw, 24px); text-decoration: line-through; opacity: 0.5; font-weight: 500;">De R$ 49,90</span>
                 </div>
                 
                 <!-- Preço principal GIGANTE -->
                 <div style="margin-bottom: 1rem;">
-                    <div style="display: inline-block; font-size: clamp(18px, 3.5vw, 24px); opacity: 0.9; margin-bottom: 0.8rem; color: #FFD700; font-weight: 600;">Por apenas</div>
-                    <div style="font-size: clamp(64px, 16vw, 88px); font-weight: 900; color: #FFD700; line-height: 1; letter-spacing: -2px; margin: 0.5rem 0; text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000, 0 0 0 #000;">
+                    <div style="display: inline-block; font-size: clamp(16px, 3vw, 20px); opacity: 0.8; margin-bottom: 0.5rem;">Por apenas</div>
+                    <div class="animated-number" style="font-size: clamp(56px, 15vw, 72px); font-weight: 900; color: var(--gold); line-height: 1; text-shadow: 0 4px 20px rgba(212, 175, 55, 0.4);">
                         R$ 29,90
                     </div>
-                    
                 </div>
                 
                 <!-- Badge de economia -->
@@ -2646,7 +2349,7 @@
             <!-- Detalhes do produto -->
             <div style="margin-bottom: 2rem; padding: 0 1rem;">
                 <p style="font-size: clamp(14px, 3.5vw, 16px); opacity: 0.85; line-height: 1.6;">
-                    ✨ o Ebook de neurociência aplicada<br>
+                    ✨ 147 páginas de neurociência aplicada<br>
                     ⚡ 7 pilares do pensamento estruturado<br>
                     🚀 21 dias de transformação mental<br>
                     🌍 Bilíngue (PT-BR + EN)<br>
@@ -2655,16 +2358,18 @@
             </div>
             
             <!-- Botão CTA GIGANTE -->
-            <a href="https://pay.voompcreators.com.br/11811" class="cta-primary glow-effect pulse-effect" style="font-size: clamp(16px, 4vw, 20px); padding: clamp(1.2rem, 4vw, 1.8rem) clamp(2rem, 8vw, 4rem); background: var(--gold); color: #000; font-weight: 700; display: inline-block; width: 100%; max-width: 400px; border-radius: 12px; text-decoration: none; box-shadow: 0 10px 40px rgba(212, 175, 55, 0.4); transition: all 0.3s ease;">
+            <a href="https://pay.kiwify.com.br/CqHb4jr" class="cta-primary glow-effect pulse-effect" style="font-size: clamp(16px, 4vw, 20px); padding: clamp(1.2rem, 4vw, 1.8rem) clamp(2rem, 8vw, 4rem); background: var(--gold); color: #000; font-weight: 700; display: inline-block; width: 100%; max-width: 400px; border-radius: 12px; text-decoration: none; box-shadow: 0 10px 40px rgba(212, 175, 55, 0.4); transition: all 0.3s ease;">
                 ⚡ GARANTIR MEU ACESSO AGORA
             </a>
             
             <!-- Garantias -->
             <div style="margin-top: 2rem; padding: 1.5rem; background: rgba(0,0,0,0.3); border-radius: 12px; border: 1px solid rgba(255,255,255,0.1);">
                 <p style="font-size: clamp(13px, 3vw, 15px); opacity: 0.8; line-height: 1.8;">
-                    ✓ Pagamento 100% seguro<br>
+                    ✓ Pagamento 100% seguro (Kiwify)<br>
                     ✓ Parcelamento em até 12x sem juros<br>
-                    ✓ Garantia incondicional de 7 dias<br></p>
+                    ✓ Garantia incondicional de 30 dias<br>
+                    ✓ Suporte via e-mail incluído
+                </p>
             </div>
             
             <!-- Urgência final -->
@@ -2708,28 +2413,19 @@
             </h2>
             
             <!-- Box de preço destacado -->
-            <div style="background: linear-gradient(135deg, rgba(212, 175, 55, 0.15) 0%, rgba(212, 175, 55, 0.05) 100%); 
-                backdrop-filter: blur(15px); 
-                border-radius: 24px; 
-                padding: 3rem 2.5rem; 
-                margin: 3rem 0; 
-                border: 3px solid rgba(212, 175, 55, 0.6); 
-                box-shadow: 0 20px 60px rgba(212, 175, 55, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.1);
-                position: relative;
-                overflow: hidden;">
+            <div style="background: rgba(255,255,255,0.1); backdrop-filter: blur(10px); border-radius: 20px; padding: 2rem 1.5rem; margin: 2rem 0; border: 2px solid rgba(212, 175, 55, 0.3); box-shadow: 0 10px 40px rgba(0,0,0,0.3);">
                 
                 <!-- Preço riscado menor -->
                 <div style="margin-bottom: 0.5rem;">
-                    <span style="font-size: clamp(20px, 4.5vw, 28px); text-decoration: line-through; opacity: 0.7; font-weight: 600; color: #FFD700;">De R$ 49,90</span>
+                    <span style="font-size: clamp(18px, 4vw, 24px); text-decoration: line-through; opacity: 0.5; font-weight: 500;">De R$ 49,90</span>
                 </div>
                 
                 <!-- Preço principal GIGANTE -->
                 <div style="margin-bottom: 1rem;">
-                    <div style="display: inline-block; font-size: clamp(18px, 3.5vw, 24px); opacity: 0.9; margin-bottom: 0.8rem; color: #FFD700; font-weight: 600;">Por apenas</div>
-                    <div style="font-size: clamp(64px, 16vw, 88px); font-weight: 900; color: #FFD700; line-height: 1; letter-spacing: -2px; margin: 0.5rem 0; text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000, 0 0 0 #000;">
+                    <div style="display: inline-block; font-size: clamp(16px, 3vw, 20px); opacity: 0.8; margin-bottom: 0.5rem;">Por apenas</div>
+                    <div class="animated-number" style="font-size: clamp(56px, 15vw, 72px); font-weight: 900; color: var(--gold); line-height: 1; text-shadow: 0 4px 20px rgba(212, 175, 55, 0.4);">
                         R$ 29,90
                     </div>
-                    
                 </div>
                 
                 <!-- Badge de economia -->
@@ -2746,7 +2442,7 @@
             <!-- Detalhes do produto -->
             <div style="margin-bottom: 2rem; padding: 0 1rem;">
                 <p style="font-size: clamp(14px, 3.5vw, 16px); opacity: 0.85; line-height: 1.6;">
-                    ✨ o Ebook de neurociência aplicada<br>
+                    ✨ 147 páginas de neurociência aplicada<br>
                     ⚡ 7 pilares do pensamento estruturado<br>
                     🚀 21 dias de transformação mental<br>
                     🌍 Bilíngue (PT-BR + EN)<br>
@@ -2755,16 +2451,18 @@
             </div>
             
             <!-- Botão CTA GIGANTE -->
-            <a href="https://pay.voompcreators.com.br/11811" class="cta-primary glow-effect pulse-effect" style="font-size: clamp(16px, 4vw, 20px); padding: clamp(1.2rem, 4vw, 1.8rem) clamp(2rem, 8vw, 4rem); background: var(--gold); color: #000; font-weight: 700; display: inline-block; width: 100%; max-width: 400px; border-radius: 12px; text-decoration: none; box-shadow: 0 10px 40px rgba(212, 175, 55, 0.4); transition: all 0.3s ease;">
+            <a href="https://pay.kiwify.com.br/CqHb4jr" class="cta-primary glow-effect pulse-effect" style="font-size: clamp(16px, 4vw, 20px); padding: clamp(1.2rem, 4vw, 1.8rem) clamp(2rem, 8vw, 4rem); background: var(--gold); color: #000; font-weight: 700; display: inline-block; width: 100%; max-width: 400px; border-radius: 12px; text-decoration: none; box-shadow: 0 10px 40px rgba(212, 175, 55, 0.4); transition: all 0.3s ease;">
                 ⚡ GARANTIR MEU ACESSO AGORA
             </a>
             
             <!-- Garantias -->
             <div style="margin-top: 2rem; padding: 1.5rem; background: rgba(0,0,0,0.3); border-radius: 12px; border: 1px solid rgba(255,255,255,0.1);">
                 <p style="font-size: clamp(13px, 3vw, 15px); opacity: 0.8; line-height: 1.8;">
-                    ✓ Pagamento 100% seguro<br>
+                    ✓ Pagamento 100% seguro (Kiwify)<br>
                     ✓ Parcelamento em até 12x sem juros<br>
-                    ✓ Garantia incondicional de 7 dias<br></p>
+                    ✓ Garantia incondicional de 30 dias<br>
+                    ✓ Suporte via e-mail incluído
+                </p>
             </div>
             
             <!-- Urgência final -->
@@ -2907,19 +2605,6 @@
          Versão Brand Book: 1.0
          
          ======================================== -->
-
-
-    <script>
-        // Header scroll effect
-        window.addEventListener('scroll', function() {
-            const header = document.querySelector('.site-header');
-            if (window.scrollY > 50) {
-                header.classList.add('scrolled');
-            } else {
-                header.classList.remove('scrolled');
-            }
-        });
-    </script>
 
 </body>
 </html>
