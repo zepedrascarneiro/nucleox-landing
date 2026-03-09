@@ -3,76 +3,191 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="E se a confusão na sua mente não fosse falha, mas apenas uma geometria mal desenhada?">
-        <!-- Google tag (gtag.js) -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-NCFP9MQ01L"></script>
-        <script>
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
+    <meta name="description" content="E se a confusao na sua mente nao fosse falha, mas apenas uma geometria mal desenhada? O metodo que ensina mentes a pensar com estrutura.">
+    <meta property="og:title" content="NUCLEOx: A Geometria Invisivel do Pensamento">
+    <meta property="og:description" content="O metodo que ensina mentes a pensar com estrutura. O futuro pertence a quem pensa com clareza.">
+    <title>NUCLEOx: The Geometry of Thought</title>
 
-            gtag('config', 'G-NCFP9MQ01L');
-        </script>
-    <meta property="og:title" content="NUCLEOˣ: A Geometria Invisível do Pensamento">
-    <meta property="og:description" content="O método que ensina mentes a pensar com estrutura. O futuro pertence a quem pensa com clareza.">
-    <title>NUCLEOˣ: The Geometry of Thought</title>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-NCFP9MQ01L"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-NCFP9MQ01L');
+    </script>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
-    <style>
-/* ===================================================
-   CORES OFICIAIS DA LOGO (BASEADO NA IMAGEM)
-   ===================================================
-   
-   Cérebro (tons de verde natural):
-   • Base: #4CAF50 (Material Green 500)
-   • Destaque: #66BB6A (Material Green 400)
-   • Detalhes: #81C784 (Material Green 300)
-   • Sinapses: #A5D6A7 (Material Green 200)
-   
-   Orbitais:
-   • Branco: #FFFFFF (opacidade 0.7-0.8)
-   
-   Background:
-   • Preto absoluto: #000000
-   
-   Núcleo:
-   • Verde escuro: #1a3a1a
-   
-   =================================================== */
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
+    <style>
+        /* ===================================================
+           NUCLEOx - LANDING PAGE DE VENDAS PREMIUM
+           =================================================== */
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
         :root {
-            --primary: #000000;
-            --secondary: #ffffff;
-            --accent: #666666;
             --gold: #D4AF37;
-            --atomic-green: #4CAF50;  /* Verde oficial da logo */
+            --gold-light: #FFD700;
+            --gold-dark: #b8941e;
             --black: #000000;
             --white: #FFFFFF;
-            --graphite: #2F4F4F;
-            --surface-dark: rgba(255, 255, 255, 0.05);
-            --surface-mid: rgba(255, 255, 255, 0.08);
+            --gray-900: #0a0a0a;
+            --gray-800: #1a1a1a;
+            --surface: rgba(255, 255, 255, 0.05);
+            --surface-hover: rgba(255, 255, 255, 0.08);
             --text-primary: #FFFFFF;
             --text-secondary: rgba(255, 255, 255, 0.72);
-            --text-tertiary: rgba(255, 255, 255, 0.55);
+            --text-muted: rgba(255, 255, 255, 0.55);
+            --gold-glow: rgba(212, 175, 55, 0.3);
+            --green: #4CAF50;
         }
-        
+
+        html { scroll-behavior: smooth; }
+
         body {
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-            background: #000000;
+            background: var(--black);
             color: var(--text-primary);
             line-height: 1.7;
             overflow-x: hidden;
             -webkit-font-smoothing: antialiased;
+            padding-top: 50px;
         }
-        
-        /* Geometria de fundo */
+
+        /* Layout */
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 2rem; }
+        .section { padding: 100px 2rem; max-width: 1100px; margin: 0 auto; }
+        .text-center { text-align: center; }
+
+        /* Tipografia */
+        .overline {
+            font-size: 12px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--gold);
+            margin-bottom: 2rem;
+            font-weight: 500;
+        }
+
+        .section-title {
+            font-size: clamp(32px, 6vw, 48px);
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+
+        .section-subtitle {
+            font-size: clamp(16px, 3vw, 20px);
+            color: var(--text-secondary);
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 3rem;
+            line-height: 1.7;
+        }
+
+        .highlight { color: var(--gold); font-weight: 700; }
+
+        /* Animacoes */
+        @keyframes rotate { from { transform: translate(-50%, -50%) rotate(0deg); } to { transform: translate(-50%, -50%) rotate(360deg); } }
+        @keyframes pulse { 0%, 100% { transform: translate(-50%, -50%) scale(1); opacity: 0.8; } 50% { transform: translate(-50%, -50%) scale(1.8); opacity: 0.3; } }
+        @keyframes glow { 0%, 100% { box-shadow: 0 0 20px var(--gold-glow); } 50% { box-shadow: 0 0 40px var(--gold-glow), 0 0 60px var(--gold-glow); } }
+        @keyframes fadeInUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+        @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
+        @keyframes shimmer { 0% { background-position: -1000px 0; } 100% { background-position: 1000px 0; } }
+        @keyframes pulseScale { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.02); } }
+        @keyframes borderPulse { 0%, 100% { opacity: 0; } 50% { opacity: 0.5; } }
+        @keyframes slideDown { from { transform: translateY(-100%); } to { transform: translateY(0); } }
+
+        .animate-fade { opacity: 0; transform: translateY(30px); transition: opacity 0.6s ease, transform 0.6s ease; }
+        .animate-fade.visible { opacity: 1; transform: translateY(0); }
+
+        /* ================================
+           COUNTDOWN BAR
+           ================================ */
+        #countdown-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(135deg, var(--gold) 0%, var(--gold-dark) 100%);
+            color: var(--black);
+            padding: 10px 20px;
+            text-align: center;
+            font-weight: 700;
+            font-size: 14px;
+            z-index: 99999;
+            box-shadow: 0 2px 10px var(--gold-glow);
+            animation: slideDown 0.5s ease;
+        }
+
+        #countdown-bar .timer {
+            font-size: 22px;
+            font-weight: 900;
+            letter-spacing: 2px;
+            margin-left: 10px;
+        }
+
+        /* ================================
+           HEADER
+           ================================ */
+        .site-header {
+            position: fixed;
+            top: 50px;
+            left: 0;
+            right: 0;
+            z-index: 9999;
+            background: rgba(0, 0, 0, 0.85);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+            padding: 1rem 0;
+            transition: all 0.3s ease;
+        }
+
+        .site-header.scrolled {
+            background: rgba(0, 0, 0, 0.95);
+            padding: 0.75rem 0;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .header-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .header-logo { display: flex; align-items: center; text-decoration: none; transition: transform 0.3s; }
+        .header-logo:hover { transform: scale(1.02); }
+        .header-logo img { height: 50px; width: auto; transition: height 0.3s; }
+        .site-header.scrolled .header-logo img { height: 40px; }
+
+        .header-cta {
+            background: var(--gold);
+            color: var(--black);
+            padding: 0.75rem 1.5rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 14px;
+            transition: all 0.3s;
+            box-shadow: 0 4px 15px var(--gold-glow);
+        }
+
+        .header-cta:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 25px rgba(212, 175, 55, 0.5);
+        }
+
+        /* ================================
+           HERO
+           ================================ */
         .hero {
             min-height: 100vh;
             display: flex;
@@ -82,17 +197,14 @@
             background: linear-gradient(135deg, #000000 0%, #0b0b0b 50%, #050505 100%);
             overflow: hidden;
         }
-        
+
         .hero-background {
             position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
+            inset: 0;
             z-index: 1;
             opacity: 0.4;
         }
-        
+
         .atom-orbit {
             position: absolute;
             top: 50%;
@@ -102,11 +214,11 @@
             border-radius: 50%;
             animation: rotate 60s linear infinite;
         }
-        
+
         .atom-orbit:nth-child(1) { width: 400px; height: 400px; }
         .atom-orbit:nth-child(2) { width: 600px; height: 600px; animation-duration: 80s; animation-direction: reverse; }
         .atom-orbit:nth-child(3) { width: 800px; height: 800px; animation-duration: 100s; }
-        
+
         .atom-core {
             position: absolute;
             top: 50%;
@@ -118,161 +230,7 @@
             border-radius: 50%;
             animation: pulse 4s ease-in-out infinite;
         }
-        
-        @keyframes rotate {
-            from { transform: translate(-50%, -50%) rotate(0deg); }
-            to { transform: translate(-50%, -50%) rotate(360deg); }
-        }
-        
-        @keyframes pulse {
-            0%, 100% { transform: translate(-50%, -50%) scale(1); opacity: 0.8; }
-            50% { transform: translate(-50%, -50%) scale(1.8); opacity: 0.3; }
-        }
-        
-        /* 🔥 EFEITOS VISUAIS CHAMATIVOS */
-        @keyframes glow {
-            0%, 100% { box-shadow: 0 0 20px rgba(212, 175, 55, 0.3); }
-            50% { box-shadow: 0 0 40px rgba(212, 175, 55, 0.6), 0 0 60px rgba(212, 175, 55, 0.3); }
-        }
-        
-        @keyframes pulseGold {
-            0%, 100% { transform: scale(1); opacity: 1; }
-            50% { transform: scale(1.05); opacity: 0.9; }
-        }
-        
-        @keyframes shake {
-            0%, 100% { transform: translateX(0); }
-            10%, 30%, 50%, 70%, 90% { transform: translateX(-2px); }
-            20%, 40%, 60%, 80% { transform: translateX(2px); }
-        }
-        
-        @keyframes slideInUp {
-            from { transform: translateY(30px); opacity: 0; }
-            to { transform: translateY(0); opacity: 1; }
-        }
-        
-        @keyframes float {
-            0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(-10px); }
-        }
-        
-        @keyframes shimmer {
-            0% { background-position: -1000px 0; }
-            100% { background-position: 1000px 0; }
-        }
-        
-        .animate-in {
-            animation: slideInUp 0.8s ease-out;
-        }
-        
-        .glow-effect {
-            animation: glow 3s ease-in-out infinite;
-        }
-        
-        .pulse-effect {
-            animation: pulseGold 2s ease-in-out infinite;
-        }
-        
-        .float-effect {
-            animation: float 3s ease-in-out infinite;
-        }
-        
-        .shimmer-effect {
-            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
-            background-size: 1000px 100%;
-            animation: shimmer 3s infinite;
-        }
-        
-        /* Badge pulsante de urgência */
-        .urgency-badge {
-            display: inline-block;
-            background: linear-gradient(135deg, #ff4444 0%, #cc0000 100%);
-            color: white;
-            padding: 0.75rem 1.5rem;
-            border-radius: 50px;
-            font-size: 13px;
-            font-weight: 700;
-            letter-spacing: 2px;
-            animation: pulseGold 2s ease-in-out infinite;
-            box-shadow: 0 5px 20px rgba(255, 68, 68, 0.4);
-        }
-        
-        /* Badge dourado brilhante */
-        .gold-badge {
-            display: inline-block;
-            background: linear-gradient(135deg, var(--gold) 0%, #b8941e 100%);
-            color: #000;
-            padding: 0.75rem 2rem;
-            border-radius: 50px;
-            font-size: 14px;
-            font-weight: 700;
-            letter-spacing: 1.5px;
-            animation: glow 3s ease-in-out infinite;
-            box-shadow: 0 10px 30px rgba(212, 175, 55, 0.3);
-            text-shadow: 0 1px 2px rgba(0,0,0,0.1);
-        }
-        
-        /* Highlight brilhante */
-        .highlight-glow {
-            background: linear-gradient(135deg, rgba(212, 175, 55, 0.15) 0%, rgba(212, 175, 55, 0.05) 100%);
-            padding: 0.2rem 0.6rem;
-            border-radius: 4px;
-            box-shadow: 0 0 20px rgba(212, 175, 55, 0.2);
-            font-weight: 700;
-            color: var(--gold);
-        }
-        
-        /* Contador animado */
-        .animated-number {
-            display: inline-block;
-            font-size: 64px;
-            font-weight: 900;
-            background: linear-gradient(135deg, #000 0%, #333 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            animation: float 3s ease-in-out infinite;
-        }
-        
-        /* Gradiente animado de fundo */
-        .gradient-animated {
-            background: linear-gradient(270deg, #000000, #1a1a1a, #000000);
-            background-size: 400% 400%;
-            animation: gradientShift 10s ease infinite;
-        }
-        
-        @keyframes gradientShift {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
-        }
-        
-        /* Borda brilhante animada */
-        .border-glow {
-            position: relative;
-            border: 2px solid var(--gold);
-            border-radius: 8px;
-        }
-        
-        .border-glow::before {
-            content: '';
-            position: absolute;
-            top: -2px;
-            left: -2px;
-            right: -2px;
-            bottom: -2px;
-            background: linear-gradient(45deg, var(--gold), transparent, var(--gold));
-            border-radius: 8px;
-            opacity: 0;
-            animation: borderPulse 3s ease-in-out infinite;
-            z-index: -1;
-        }
-        
-        @keyframes borderPulse {
-            0%, 100% { opacity: 0; }
-            50% { opacity: 0.5; }
-        }
-        
+
         .hero-content {
             position: relative;
             z-index: 2;
@@ -280,1003 +238,748 @@
             max-width: 900px;
             padding: 0 2rem;
         }
-        
-        /* Tipografia Premium */
-        .overline {
-            font-size: 12px;
-            letter-spacing: 3px;
-            text-transform: uppercase;
-            color: var(--gold);
+
+        .hero-badge {
+            display: inline-block;
+            background: rgba(212, 175, 55, 0.15);
+            padding: 0.75rem 1.5rem;
+            border-radius: 50px;
             margin-bottom: 2rem;
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            color: var(--gold);
+            font-weight: 600;
+            font-size: 13px;
+            letter-spacing: 2px;
+        }
+
+        .hero-logo-area {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 2rem;
+            margin: 3rem auto;
+        }
+
+        .hero-logo-area svg { filter: drop-shadow(0 10px 30px rgba(76, 175, 80, 0.4)); }
+
+        .hero-brand-text h1 {
+            font-size: clamp(48px, 12vw, 96px);
+            font-weight: 900;
+            letter-spacing: -1px;
+            color: var(--white);
+            line-height: 1;
+        }
+
+        .hero-brand-text h1 sup { font-size: 0.6em; color: var(--gold); }
+
+        .hero-tagline {
+            font-size: clamp(14px, 3vw, 20px);
+            color: rgba(255, 255, 255, 0.8);
+            letter-spacing: 3px;
+            margin-top: 1rem;
             font-weight: 500;
         }
-        
-        .hero-brand {
-            font-size: 64px;
-            font-weight: 900;
-            letter-spacing: -2px;
-            margin-bottom: 2rem;
-        }
-        
-        .brand-x {
-            font-size: 0.7em;
-            vertical-align: super;
-            opacity: 0.8;
-        }
-        
+
         .hero-headline {
-            font-size: 56px;
+            font-size: clamp(28px, 5vw, 48px);
             font-weight: 300;
-            line-height: 1.15;
-            margin-bottom: 2rem;
-            color: var(--text-primary);
+            line-height: 1.2;
+            margin-bottom: 1.5rem;
         }
-        
+
         .hero-headline strong {
             font-weight: 700;
-            border-bottom: 3px solid var(--gold);
+            background: linear-gradient(135deg, rgba(212, 175, 55, 0.15) 0%, rgba(212, 175, 55, 0.05) 100%);
+            padding: 0.1em 0.4em;
+            border-radius: 4px;
+            color: var(--gold);
         }
-        
-        .hero-subheadline {
-            font-size: 22px;
-            font-weight: 400;
+
+        .hero-sub {
+            font-size: clamp(16px, 3vw, 20px);
             color: var(--text-secondary);
-            margin-bottom: 3rem;
+            margin-bottom: 2.5rem;
             max-width: 750px;
             margin-left: auto;
             margin-right: auto;
             line-height: 1.6;
         }
-        
-        /* CTAs Premium */
+
+        .hero-meta {
+            margin-top: 2rem;
+            font-size: 14px;
+            color: var(--text-muted);
+        }
+
+        /* ================================
+           BOTOES CTA
+           ================================ */
         .cta-primary {
             background: var(--gold);
-            color: #000000;
+            color: var(--black);
             border: none;
-            padding: 1.5rem 3rem;
+            padding: 1.25rem 2.5rem;
             font-size: 16px;
             font-weight: 700;
-            border-radius: 6px;
+            border-radius: 8px;
             cursor: pointer;
-            transition: all 0.3s ease;
-            text-transform: none;
-            letter-spacing: 0.5px;
+            transition: all 0.3s;
             display: inline-block;
             text-decoration: none;
-            box-shadow: 0 15px 35px rgba(212, 175, 55, 0.25);
+            box-shadow: 0 10px 30px var(--gold-glow);
         }
-        
+
         .cta-primary:hover {
             transform: translateY(-2px);
-            box-shadow: 0 20px 45px rgba(212, 175, 55, 0.35);
+            box-shadow: 0 15px 40px rgba(212, 175, 55, 0.4);
         }
-        
+
+        .cta-primary.cta-large {
+            font-size: clamp(16px, 4vw, 20px);
+            padding: clamp(1.2rem, 4vw, 1.8rem) clamp(2rem, 8vw, 4rem);
+            width: 100%;
+            max-width: 440px;
+            border-radius: 12px;
+            animation: glow 3s ease-in-out infinite;
+        }
+
         .cta-secondary {
             background: transparent;
             color: var(--gold);
             border: 2px solid var(--gold);
-            padding: 1.25rem 2.5rem;
+            padding: 1rem 2rem;
             font-size: 15px;
             font-weight: 600;
-            border-radius: 6px;
+            border-radius: 8px;
             cursor: pointer;
-            transition: all 0.3s ease;
+            transition: all 0.3s;
             display: inline-block;
             text-decoration: none;
             margin-left: 1rem;
         }
-        
-        .cta-secondary:hover {
-            background: var(--gold);
-            color: #000000;
+
+        .cta-secondary:hover { background: var(--gold); color: var(--black); }
+
+        /* ================================
+           NUMEROS / PROVA SOCIAL RAPIDA
+           ================================ */
+        .stats-bar {
+            background: var(--surface);
+            border-top: 1px solid rgba(255,255,255,0.06);
+            border-bottom: 1px solid rgba(255,255,255,0.06);
+            padding: 3rem 2rem;
         }
-        
-        /* Seções */
-        .section {
-            padding: 120px 2rem;
-            max-width: 1100px;
-            margin: 0 auto;
-        }
-        
-        .section-title {
-            font-size: 48px;
-            font-weight: 700;
-            line-height: 1.2;
-            margin-bottom: 2rem;
-            text-align: center;
-            color: var(--text-primary);
-        }
-        
-        .section-subtitle {
-            font-size: 28px;
-            color: var(--text-secondary);
-            text-align: center;
-            max-width: 700px;
-            margin: 0 auto 4rem;
-            line-height: 1.7;
-        }
-        
-        /* Badge de Exclusividade */
-        .exclusivity-badge {
-            display: inline-block;
-            background: rgba(212, 175, 55, 0.15);
-            color: var(--gold);
-            padding: 0.5rem 1.5rem;
-            border-radius: 50px;
-            font-size: 13px;
-            font-weight: 600;
-            letter-spacing: 2px;
-            margin-bottom: 2rem;
-            border: 1px solid rgba(212, 175, 55, 0.3);
-        }
-        
-        /* História de Origem */
-        .origin-story {
-            background: var(--surface-dark);
-            padding: 80px 2rem;
-            margin: 0 -2rem;
-            border: 1px solid rgba(255, 255, 255, 0.08);
-        }
-        
-        .origin-content {
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
             max-width: 900px;
             margin: 0 auto;
+            text-align: center;
         }
-        
-        .origin-quote {
-            font-size: 32px;
-            font-weight: 300;
-            line-height: 1.4;
-            margin-bottom: 3rem;
-            font-style: italic;
-            color: var(--text-primary);
+
+        .stat-number {
+            font-size: clamp(36px, 6vw, 52px);
+            font-weight: 900;
+            margin-bottom: 0.25rem;
         }
-        
-        .origin-text {
-            font-size: 28px;
-            line-height: 1.8;
-            color: var(--text-secondary);
-            margin-bottom: 1.5rem;
-        }
-        
-        .author-signature {
-            font-size: 18px;
-            font-weight: 600;
-            margin-top: 3rem;
-            color: var(--text-primary);
-        }
-        
-        .author-signature small {
-            display: block;
-            font-size: 14px;
-            font-weight: 400;
-            color: var(--text-tertiary);
-            margin-top: 0.5rem;
-        }
-        
-        /* Transformação (Antes/Depois) */
-        .transformation-grid {
+
+        .stat-label { font-size: 14px; color: var(--text-secondary); }
+
+        /* ================================
+           TRANSFORMACAO ANTES/DEPOIS
+           ================================ */
+        .transform-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 3rem;
-            margin-top: 4rem;
+            gap: 2rem;
+            margin-top: 3rem;
         }
-        
+
         .transform-card {
-            padding: 3rem;
-            border-radius: 8px;
-            text-align: left;
-            background: var(--surface-dark);
+            padding: 2.5rem;
+            border-radius: 12px;
+            background: var(--surface);
             border: 1px solid rgba(255, 255, 255, 0.06);
         }
-        
-        .transform-before {
-            border-left: 4px solid rgba(255, 255, 255, 0.15);
-        }
-        
-        .transform-after {
-            background: rgba(212, 175, 55, 0.08);
-            color: var(--text-primary);
-            border-left: 4px solid var(--gold);
-        }
-        
+
+        .transform-card.before { border-left: 4px solid rgba(255, 255, 255, 0.15); }
+        .transform-card.after { background: rgba(212, 175, 55, 0.08); border-left: 4px solid var(--gold); }
+
         .transform-label {
-            font-size: 14px;
+            font-size: 13px;
             text-transform: uppercase;
             letter-spacing: 2px;
-            margin-bottom: 1.5rem;
+            margin-bottom: 1rem;
             font-weight: 600;
         }
-        
-        .transform-before .transform-label {
-            color: var(--text-tertiary);
+
+        .transform-card.before .transform-label { color: var(--text-muted); }
+        .transform-card.after .transform-label { color: var(--gold); }
+
+        .transform-text { font-size: clamp(16px, 3vw, 20px); line-height: 1.7; color: var(--text-secondary); }
+
+        .transform-quote {
+            background: var(--surface);
+            padding: 2.5rem;
+            border-radius: 12px;
+            margin-top: 3rem;
+            text-align: center;
+            border: 1px solid rgba(255, 255, 255, 0.08);
         }
-        
-        .transform-after .transform-label {
-            color: var(--gold);
+
+        .transform-quote p {
+            font-size: clamp(18px, 3vw, 24px);
+            line-height: 1.6;
+            max-width: 700px;
+            margin: 0 auto;
         }
-        
-        .transform-text {
-            font-size: 28px;
-            line-height: 1.7;
-            color: var(--text-secondary);
-        }
-        
-        /* Pilares */
+
+        /* ================================
+           7 PILARES
+           ================================ */
         .pillars-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem;
-            margin-top: 4rem;
+            gap: 1.5rem;
+            margin-top: 3rem;
         }
-        
+
         .pillar-card {
-            padding: 3rem 2rem;
-            background: #000000;
-            border: 2px solid rgba(255, 255, 255, 0.15);
+            padding: 2.5rem 2rem;
+            background: var(--black);
+            border: 2px solid rgba(255, 255, 255, 0.12);
             border-radius: 16px;
-            transition: all 0.4s ease;
+            transition: all 0.4s;
             text-align: center;
             position: relative;
-            overflow: hidden;
         }
-        
+
         .pillar-card:hover {
-            border-color: rgba(255, 255, 255, 0.4);
-            transform: translateY(-8px);
-            box-shadow: 0 20px 60px rgba(255, 255, 255, 0.1);
-            background: #0a0a0a;
+            border-color: rgba(212, 175, 55, 0.5);
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(212, 175, 55, 0.1);
         }
-        
-        .pillar-number {
-            width: 80px;
-            height: 80px;
+
+        .pillar-letter {
+            width: 64px;
+            height: 64px;
             background: transparent;
-            color: #ffffff;
-            border: 3px solid #ffffff;
+            color: var(--gold);
+            border: 3px solid var(--gold);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 32px;
-            font-weight: 900;
-            margin: 0 auto 2rem auto;
-            transition: all 0.3s ease;
-        }
-        
-        .pillar-card:hover .pillar-number {
-            transform: scale(1.1);
-            border-color: var(--gold);
-            color: var(--gold);
-        }
-        
-        .pillar-title {
             font-size: 28px;
-            font-weight: 700;
-            margin-bottom: 1rem;
-            color: #ffffff;
-            letter-spacing: 1px;
-        }
-        
-        .pillar-description {
-            font-size: 15px;
-            color: rgba(255, 255, 255, 0.7);
-            line-height: 1.7;
-            margin-bottom: 1.5rem;
-        }
-        
-        .pillar-result {
-            font-size: 13px;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            color: var(--gold);
-            font-weight: 700;
-        }
-        
-        /* Prova Social */
-        .testimonials-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-top: 4rem;
-        }
-        
-        .testimonial-card {
-            background: var(--surface-dark);
-            padding: 2.5rem;
-            border-radius: 8px;
-            border-left: 3px solid var(--gold);
-        }
-        
-        .testimonial-text {
-            font-size: 18px;
-            line-height: 1.6;
-            color: var(--text-secondary);
-            font-style: italic;
-            margin-bottom: 1.5rem;
-        }
-        
-        .testimonial-author {
-            font-size: 15px;
-            font-weight: 600;
-            color: var(--text-primary);
-        }
-        
-        .testimonial-role {
-            font-size: 14px;
-            color: var(--text-tertiary);
-        }
-        
-        /* Preview de Conteúdo */
-        .preview-grid {
-            display: grid;
-            gap: 2rem;
-            margin-top: 4rem;
-        }
-        
-        .preview-card {
-            background: var(--surface-dark);
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            padding: 2.5rem;
-            border-radius: 8px;
-            text-align: left;
-        }
-        
-        .preview-number {
-            font-size: 14px;
-            color: var(--text-tertiary);
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            margin-bottom: 1rem;
-            font-weight: 600;
-        }
-        
-        .preview-insight {
-            font-size: 24px;
-            font-weight: 700;
-            line-height: 1.4;
-            color: var(--text-primary);
-            margin-bottom: 1rem;
-        }
-        
-        .preview-description {
-            font-size: 17px;
-            color: var(--text-secondary);
-            line-height: 1.7;
-        }
-        
-        /* Oferta */
-        .offer-section {
-            background: #000000;
-            color: #ffffff;
-            padding: 100px 2rem;
-            text-align: center;
-            margin: 0 -2rem;
-        }
-        
-        .offer-content {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        
-        .price-box {
-            margin: 3rem 0;
-            background: rgba(212, 175, 55, 0.08);
-            border: 2px solid rgba(212, 175, 55, 0.3);
-            border-radius: 20px;
-            padding: 3rem 2rem;
-            box-shadow: 0 10px 40px rgba(212, 175, 55, 0.2);
-        }
-        
-        .price-label {
-            font-size: 14px;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            opacity: 0.7;
-            margin-bottom: 1rem;
-        }
-        
-        .price-amount {
-            font-size: 72px;
             font-weight: 900;
-            letter-spacing: -2px;
-            color: var(--gold);
-            text-shadow: 0 4px 20px rgba(212, 175, 55, 0.4);
+            margin: 0 auto 1.5rem;
+            transition: all 0.3s;
         }
-        
-        .price-currency {
-            font-size: 40px;
-            font-weight: 700;
-            margin-right: 0.2rem;
+
+        .pillar-card:hover .pillar-letter {
+            background: var(--gold);
+            color: var(--black);
+            transform: scale(1.1);
         }
-        
-        .price-caption {
-            font-size: 18px;
-            opacity: 0.8;
-            margin-top: 1rem;
-        }
-        
-        .offer-features {
-            text-align: left;
-            max-width: 600px;
-            margin: 3rem auto;
-        }
-        
-        .offer-feature {
-            font-size: 17px;
-            margin-bottom: 1rem;
-            padding-left: 1.5rem;
-            position: relative;
-        }
-        
-        .offer-feature:before {
-            content: "✓";
-            position: absolute;
-            left: 0;
-            font-weight: 700;
-            color: var(--gold);
-        }
-        
-        .guarantee-text {
-            font-size: 15px;
-            opacity: 0.7;
-            margin-top: 2rem;
-        }
-        
-        /* Comunidade */
-        .community-section {
-            background: linear-gradient(135deg, rgba(76, 175, 80, 0.08) 0%, rgba(0, 0, 0, 0.9) 60%);
+
+        .pillar-title { font-size: 18px; font-weight: 700; margin-bottom: 0.75rem; }
+        .pillar-desc { font-size: 14px; color: var(--text-secondary); line-height: 1.6; margin-bottom: 1rem; }
+        .pillar-result { font-size: 12px; text-transform: uppercase; letter-spacing: 2px; color: var(--gold); font-weight: 700; }
+
+        /* ================================
+           PREVIEW / INSIGHTS
+           ================================ */
+        .insights-section {
+            background: var(--surface);
             padding: 100px 2rem;
-            text-align: center;
             border-top: 1px solid rgba(255, 255, 255, 0.06);
             border-bottom: 1px solid rgba(255, 255, 255, 0.06);
         }
-        
-        .community-badge {
-            font-size: 48px;
-            margin-bottom: 2rem;
-        }
-        
-        .community-title {
-            font-size: 42px;
-            font-weight: 700;
+
+        .insight-card {
+            background: rgba(0,0,0,0.4);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            padding: 2.5rem;
+            border-radius: 12px;
             margin-bottom: 1.5rem;
+            transition: all 0.3s;
         }
-        
-        .community-text {
-            font-size: 28px;
-            color: var(--text-secondary);
-            max-width: 700px;
-            margin: 0 auto 3rem;
-            line-height: 1.8;
+
+        .insight-card:hover {
+            border-color: rgba(212, 175, 55, 0.3);
+            background: rgba(0,0,0,0.6);
         }
-        
-        /* Footer */
-        .footer {
-            background: #000000;
-            color: #ffffff;
-            padding: 3rem 2rem;
+
+        .insight-number { font-size: 13px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 2px; margin-bottom: 1rem; font-weight: 600; }
+        .insight-quote { font-size: clamp(18px, 3vw, 22px); font-weight: 700; line-height: 1.4; margin-bottom: 1rem; }
+        .insight-text { font-size: 16px; color: var(--text-secondary); line-height: 1.7; }
+
+        /* ================================
+           DEPOIMENTOS
+           ================================ */
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-top: 3rem;
+        }
+
+        .testimonial-card {
+            background: var(--surface);
+            padding: 2rem;
+            border-radius: 12px;
+            border-left: 3px solid var(--gold);
+            transition: all 0.3s;
+        }
+
+        .testimonial-card:hover { background: var(--surface-hover); transform: translateY(-3px); }
+
+        .testimonial-stars { color: var(--gold); font-size: 16px; margin-bottom: 1rem; letter-spacing: 2px; }
+        .testimonial-text { font-size: 16px; line-height: 1.6; color: var(--text-secondary); font-style: italic; margin-bottom: 1.5rem; }
+        .testimonial-author { font-size: 15px; font-weight: 600; }
+        .testimonial-role { font-size: 13px; color: var(--text-muted); margin-top: 0.25rem; }
+
+        /* ================================
+           O QUE VOCE RECEBE
+           ================================ */
+        .product-section {
+            background: linear-gradient(180deg, var(--black) 0%, var(--gray-900) 100%);
+            padding: 100px 2rem;
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 3rem;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .product-item {
+            background: var(--surface);
+            padding: 2rem;
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            transition: all 0.3s;
+        }
+
+        .product-item:hover { border-color: rgba(212, 175, 55, 0.3); transform: translateY(-3px); }
+
+        .product-icon { font-size: 32px; margin-bottom: 1rem; }
+        .product-name { font-size: 16px; font-weight: 600; margin-bottom: 0.5rem; }
+        .product-detail { font-size: 14px; color: var(--text-secondary); line-height: 1.5; }
+
+        /* ================================
+           OFERTA PRINCIPAL
+           ================================ */
+        .offer-section {
+            background: var(--black);
+            padding: 100px 2rem;
             text-align: center;
         }
-        
-        .footer-brand {
-            font-size: 28px;
+
+        .offer-box {
+            max-width: 600px;
+            margin: 3rem auto;
+            background: linear-gradient(135deg, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.6) 100%);
+            backdrop-filter: blur(15px);
+            border-radius: 24px;
+            padding: clamp(2rem, 5vw, 3rem);
+            border: 2px solid rgba(212, 175, 55, 0.3);
+            box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+        }
+
+        .offer-badge {
+            display: inline-block;
+            background: rgba(212, 175, 55, 0.2);
+            border: 1px solid var(--gold);
+            padding: 0.5rem 1.5rem;
+            border-radius: 50px;
+            margin-bottom: 2rem;
+            color: var(--gold);
+            font-weight: 700;
+            font-size: clamp(12px, 3vw, 14px);
+            letter-spacing: 2px;
+        }
+
+        .offer-price-old {
+            font-size: clamp(20px, 5vw, 28px);
+            font-weight: 600;
+            opacity: 0.5;
+            text-decoration: line-through;
+            margin-bottom: 0.5rem;
+        }
+
+        .offer-price-new {
+            font-size: clamp(64px, 18vw, 96px);
             font-weight: 900;
-            margin-bottom: 1rem;
-        }
-        
-        .footer-links {
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            margin: 2rem 0;
-        }
-        
-        .footer-links a {
-            color: #ffffff;
-            text-decoration: none;
-            opacity: 0.6;
-            font-size: 14px;
-            transition: opacity 0.3s ease;
-        }
-        
-        .footer-links a:hover {
-            opacity: 1;
-        }
-        
-        .footer-copy {
-            opacity: 0.4;
-            font-size: 13px;
-        }
-        
-        /* Responsivo */
-        @media (max-width: 768px) {
-            .hero-brand {
-                font-size: 48px;
-            }
-            
-            .hero-headline {
-                font-size: 36px;
-            }
-            
-            .hero-subheadline {
-                font-size: 18px;
-            }
-            
-            .section-title {
-                font-size: 32px;
-            }
-            
-            .transformation-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .cta-secondary {
-                margin-left: 0;
-                margin-top: 1rem;
-                display: block;
-            }
-            
-            .price-amount {
-                font-size: 56px;
-            }
-        }
-        
-        html {
-            scroll-behavior: smooth;
-        }
-    
-        /* ========================================
-           LOGO NUCLEOˣ E BACKGROUND ATÔMICO
-           ======================================== */
-        
-        .nucleox-logo {
-            font-family: 'Inter', sans-serif;
-            font-size: clamp(32px, 8vw, 48px);
-            font-weight: 900;
-            letter-spacing: -1px;
-            background: linear-gradient(135deg, #ffffff 0%, var(--gold) 50%, #ffffff 100%);
+            line-height: 1;
+            background: linear-gradient(135deg, #ffffff 0%, var(--gold) 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
-            text-shadow: 0 0 30px rgba(212, 175, 55, 0.3);
-            position: relative;
-            display: inline-block;
-        }
-        
-        .nucleox-logo sup {
-            font-size: 0.6em;
-            font-weight: 900;
-            color: var(--gold);
-            -webkit-text-fill-color: var(--gold);
-        }
-        
-        /* Background atômico animado */
-        body::before {
-            content: '';
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: 
-                radial-gradient(circle at 20% 30%, rgba(212, 175, 55, 0.03) 0%, transparent 50%),
-                radial-gradient(circle at 80% 60%, rgba(212, 175, 55, 0.02) 0%, transparent 50%),
-                radial-gradient(circle at 40% 80%, rgba(255, 255, 255, 0.01) 0%, transparent 40%);
-            pointer-events: none;
-            z-index: 0;
-        }
-        
-        /* Orbitais atômicos decorativos */
-        .atomic-orbital {
-            position: fixed;
-            border: 1px solid rgba(212, 175, 55, 0.15);
-            border-radius: 50%;
-            pointer-events: none;
-            z-index: 0;
-        }
-        
-        .orbital-1 {
-            width: 400px;
-            height: 400px;
-            top: 10%;
-            right: -100px;
-            animation: rotate-orbital 20s linear infinite;
-        }
-        
-        .orbital-2 {
-            width: 600px;
-            height: 300px;
-            bottom: 10%;
-            left: -150px;
-            animation: rotate-orbital-reverse 25s linear infinite;
-            transform: rotate(45deg);
-        }
-        
-        .orbital-3 {
-            width: 350px;
-            height: 350px;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            animation: pulse-orbital 15s ease-in-out infinite;
-        }
-        
-        @keyframes rotate-orbital {
-            from { transform: rotate(0deg); }
-            to { transform: rotate(360deg); }
-        }
-        
-        @keyframes rotate-orbital-reverse {
-            from { transform: rotate(45deg); }
-            to { transform: rotate(405deg); }
-        }
-        
-        @keyframes pulse-orbital {
-            0%, 100% { 
-                opacity: 0.05;
-                transform: translate(-50%, -50%) scale(1);
-            }
-            50% { 
-                opacity: 0.15;
-                transform: translate(-50%, -50%) scale(1.1);
-            }
-        }
-        
-        /* Partículas atômicas flutuantes */
-        .atomic-particle {
-            position: fixed;
-            width: 3px;
-            height: 3px;
-            background: var(--gold);
-            border-radius: 50%;
-            pointer-events: none;
-            z-index: 0;
-            box-shadow: 0 0 10px rgba(212, 175, 55, 0.5);
-            animation: float-particle 8s ease-in-out infinite;
-        }
-        
-        @keyframes float-particle {
-            0%, 100% { 
-                transform: translateY(0) translateX(0);
-                opacity: 0.2;
-            }
-            25% { 
-                transform: translateY(-30px) translateX(20px);
-                opacity: 0.5;
-            }
-            50% { 
-                transform: translateY(-10px) translateX(-15px);
-                opacity: 0.3;
-            }
-            75% { 
-                transform: translateY(-40px) translateX(10px);
-                opacity: 0.6;
-            }
-        }
-        
-        /* Garantir que conteúdo fique acima do background */
-        .container, section, header {
-            position: relative;
-            z-index: 1;
-        }
-        
-    
-        /* ========================================
-           LOGO OFICIAL NUCLEOˣ
-           ======================================== */
-        
-        .nucleox-logo-official {
-            display: flex;
-            align-items: center;
-            gap: clamp(1rem, 3vw, 2rem);
-            justify-content: center;
-            margin: 2rem auto;
-        }
-        
-        .atomic-brain-icon {
-            width: clamp(60px, 15vw, 120px);
-            height: clamp(60px, 15vw, 120px);
-            position: relative;
-            animation: rotate-slow 40s linear infinite;
-        }
-        
-        .atomic-brain-icon svg {
-            width: 100%;
-            height: 100%;
-        }
-        
-        .logo-text-group {
-            display: flex;
-            flex-direction: column;
-            gap: 0.5rem;
-        }
-        
-        .logo-nucleo {
-            font-family: 'Inter', sans-serif;
-            font-size: clamp(36px, 10vw, 72px);
-            font-weight: 900;
-            letter-spacing: -2px;
-            color: #ffffff;
-            line-height: 1;
-        }
-        
-        .logo-nucleo sup {
-            font-size: 0.5em;
-            color: var(--gold);
-            font-weight: 900;
-        }
-        
-        .logo-tagline {
-            font-family: 'Inter', sans-serif;
-            font-size: clamp(10px, 2.5vw, 16px);
-            font-weight: 300;
-            letter-spacing: 3px;
-            color: rgba(255, 255, 255, 0.7);
-            text-transform: uppercase;
-        }
-        
-        @keyframes rotate-slow {
-            from { transform: rotate(0deg); }
-            to { transform: rotate(360deg); }
-        }
-        
-        /* ========================================
-           ÍCONES GEOMÉTRICOS DOS 6 PRINCÍPIOS
-           ======================================== */
-        
-        .geometric-icon {
-            width: 80px;
-            height: 80px;
-            margin: 0 auto 1.5rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        
-        .geometric-icon svg {
-            width: 100%;
-            height: 100%;
-        }
-        
-        .principle-card {
-            background: rgba(255, 255, 255, 0.03);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 16px;
-            padding: 2rem 1.5rem;
-            text-align: center;
-            transition: all 0.3s ease;
-        }
-        
-        .principle-card:hover {
-            background: rgba(255, 255, 255, 0.05);
-            border-color: var(--gold);
-            transform: translateY(-5px);
-        }
-        
-        .principle-letter {
-            font-size: 48px;
-            font-weight: 900;
-            color: var(--gold);
             margin: 1rem 0;
         }
-        
-        .principle-title {
-            font-size: 14px;
+
+        .offer-price-new span { font-size: 0.65em; opacity: 0.9; }
+
+        .offer-savings {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--gold) 0%, var(--gold-dark) 100%);
+            color: var(--black);
+            padding: 0.6rem 1.5rem;
+            border-radius: 50px;
+            font-size: clamp(12px, 3vw, 14px);
             font-weight: 700;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            color: #ffffff;
-            margin-bottom: 0.5rem;
+            letter-spacing: 1px;
+            animation: glow 3s ease-in-out infinite;
+            margin: 1rem 0;
         }
-        
-        .principle-subtitle {
-            font-size: 12px;
-            font-weight: 600;
-            color: rgba(255, 255, 255, 0.6);
-            margin-bottom: 1rem;
+
+        .offer-installment {
+            font-size: clamp(14px, 3.5vw, 16px);
+            opacity: 0.9;
+            font-weight: 500;
+            margin-top: 1.5rem;
         }
-        
-        .principle-description {
-            font-size: 14px;
-            line-height: 1.6;
-            color: rgba(255, 255, 255, 0.7);
+
+        .offer-payment-options {
+            text-align: left;
+            background: rgba(0,0,0,0.3);
+            padding: 1.5rem;
+            border-radius: 12px;
+            margin: 2rem 0;
         }
-        
+
+        .payment-option {
+            padding: 1rem 1.25rem;
+            border-radius: 10px;
+            margin-bottom: 0.75rem;
+        }
+
+        .payment-option:last-child { margin-bottom: 0; }
+
+        .payment-highlight {
+            background: rgba(212, 175, 55, 0.15);
+            border: 2px solid var(--gold);
+        }
+
+        .payment-regular {
+            background: rgba(255,255,255,0.04);
+            border: 1px solid rgba(255,255,255,0.12);
+        }
+
+        .offer-features {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0.75rem;
+            margin: 2rem 0;
+        }
+
+        .offer-feature {
+            background: rgba(255,255,255,0.04);
+            padding: 1rem;
+            border-radius: 10px;
+            border-left: 3px solid var(--gold);
+            font-size: clamp(13px, 3vw, 15px);
+            text-align: left;
+        }
+
+        .offer-comparison {
+            background: rgba(0,0,0,0.3);
+            padding: 2rem;
+            border-radius: 16px;
+            margin: 2rem 0;
+            border: 1px solid rgba(255,255,255,0.08);
+        }
+
+        .comparison-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+            text-align: center;
+            margin-top: 1rem;
+        }
+
+        .comparison-item { opacity: 0.5; }
+        .comparison-item.featured {
+            opacity: 1;
+            background: rgba(212, 175, 55, 0.15);
+            padding: 1rem;
+            border-radius: 10px;
+            border: 2px solid var(--gold);
+        }
+
+        .comparison-label { font-size: 12px; margin-bottom: 0.5rem; }
+        .comparison-price { font-size: clamp(18px, 4vw, 24px); font-weight: 700; }
+        .comparison-item.featured .comparison-label { color: var(--gold); font-weight: 600; }
+        .comparison-item.featured .comparison-price { color: var(--gold); font-weight: 900; }
 
         /* ================================
-           HEADER FIXO COM LOGO
+           GARANTIA
            ================================ */
-        .site-header {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            z-index: 9999;
-            background: rgba(0, 0, 0, 0.85);
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
-            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-            padding: 1rem 0;
-            transition: all 0.3s ease;
-        }
-        
-        .site-header.scrolled {
-            background: rgba(0, 0, 0, 0.95);
-            padding: 0.75rem 0;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-        }
-        
-        .header-container {
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: 0 2rem;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-        
-        .header-logo {
-            display: flex;
-            align-items: center;
-            gap: 0;
-            text-decoration: none;
-            transition: all 0.3s ease;
-        }
-        
-        .header-logo:hover {
-            transform: scale(1.02);
-        }
-        
-        .header-logo img {
-            height: 50px;
-            width: auto;
-            transition: all 0.3s ease;
-        }
-        
-        .site-header.scrolled .header-logo img {
-            height: 40px;
-        }
-        
-        .header-cta {
-            background: var(--gold);
-            color: #000000;
-            padding: 0.75rem 1.5rem;
-            border-radius: 8px;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 14px;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
-        }
-        
-        .header-cta:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 25px rgba(212, 175, 55, 0.5);
-        }
-        
-        /* Responsivo */
-        @media (max-width: 768px) {
-            .header-logo img {
-                height: 40px;
-            }
-            
-            .site-header.scrolled .header-logo img {
-                height: 35px;
-            }
-            
-            .header-cta {
-                padding: 0.6rem 1.2rem;
-                font-size: 13px;
-            }
+        .guarantee-section {
+            background: var(--surface);
+            padding: 80px 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.06);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.06);
         }
 
+        .guarantee-box {
+            max-width: 700px;
+            margin: 0 auto;
+            text-align: center;
+            background: rgba(0,0,0,0.3);
+            border: 2px solid rgba(212, 175, 55, 0.2);
+            border-radius: 20px;
+            padding: 3rem;
+        }
+
+        .guarantee-icon { font-size: 64px; margin-bottom: 1.5rem; }
+        .guarantee-title { font-size: clamp(24px, 5vw, 32px); font-weight: 700; margin-bottom: 1rem; }
+        .guarantee-text { font-size: 16px; color: var(--text-secondary); line-height: 1.8; max-width: 500px; margin: 0 auto; }
+
+        /* ================================
+           FAQ
+           ================================ */
+        .faq-list { max-width: 700px; margin: 3rem auto 0; }
+
+        .faq-item {
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 1.5rem 0;
+        }
+
+        .faq-question {
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: color 0.3s;
+        }
+
+        .faq-question:hover { color: var(--gold); }
+
+        .faq-icon {
+            font-size: 24px;
+            font-weight: 300;
+            transition: transform 0.3s;
+            flex-shrink: 0;
+            margin-left: 1rem;
+            color: var(--gold);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease, padding 0.3s ease;
+            font-size: 15px;
+            color: var(--text-secondary);
+            line-height: 1.7;
+        }
+
+        .faq-item.open .faq-answer { max-height: 300px; padding-top: 1rem; }
+        .faq-item.open .faq-icon { transform: rotate(45deg); }
+
+        /* ================================
+           SOBRE O AUTOR
+           ================================ */
+        .author-section {
+            background: var(--surface);
+            padding: 100px 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.06);
+        }
+
+        .author-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .author-avatar {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            border: 3px solid var(--gold);
+            margin: 0 auto 2rem;
+            background: var(--gray-800);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 48px;
+        }
+
+        .author-name { font-size: 24px; font-weight: 700; margin-bottom: 0.5rem; }
+        .author-title { font-size: 14px; color: var(--gold); letter-spacing: 2px; text-transform: uppercase; margin-bottom: 2rem; }
+        .author-bio { font-size: 16px; color: var(--text-secondary); line-height: 1.8; max-width: 600px; margin: 0 auto; }
+
+        .author-credentials {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .credential {
+            background: rgba(0,0,0,0.3);
+            padding: 0.75rem 1.5rem;
+            border-radius: 50px;
+            font-size: 13px;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+
+        /* ================================
+           COMUNIDADE
+           ================================ */
+        .community-section {
+            background: linear-gradient(135deg, rgba(76, 175, 80, 0.06) 0%, rgba(0, 0, 0, 0.95) 60%);
+            padding: 100px 2rem;
+            text-align: center;
+            border-top: 1px solid rgba(255, 255, 255, 0.06);
+        }
+
+        .community-icon { font-size: 48px; margin-bottom: 1.5rem; }
+        .community-title { font-size: clamp(28px, 5vw, 42px); font-weight: 700; margin-bottom: 1.5rem; }
+        .community-text { font-size: clamp(16px, 3vw, 20px); color: var(--text-secondary); max-width: 700px; margin: 0 auto 2rem; line-height: 1.8; }
+
+        /* ================================
+           CTA FINAL
+           ================================ */
+        .final-cta-section {
+            padding: 100px 2rem;
+            text-align: center;
+            background: linear-gradient(180deg, var(--gray-900) 0%, var(--black) 100%);
+        }
+
+        .final-quote {
+            font-size: clamp(22px, 4vw, 32px);
+            font-weight: 300;
+            line-height: 1.5;
+            font-style: italic;
+            margin-bottom: 2rem;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .final-text {
+            font-size: clamp(16px, 3vw, 20px);
+            color: var(--text-secondary);
+            line-height: 1.7;
+            margin-bottom: 3rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* ================================
+           FOOTER
+           ================================ */
+        .footer {
+            background: var(--black);
+            padding: 3rem 2rem;
+            text-align: center;
+            border-top: 1px solid rgba(255,255,255,0.06);
+        }
+
+        .footer-brand { font-size: 24px; font-weight: 900; margin-bottom: 1rem; }
+        .footer-brand sup { font-size: 0.6em; color: var(--gold); }
+        .footer-links { display: flex; justify-content: center; gap: 2rem; margin: 1.5rem 0; flex-wrap: wrap; }
+        .footer-links a { color: var(--text-muted); text-decoration: none; font-size: 14px; transition: color 0.3s; }
+        .footer-links a:hover { color: var(--white); }
+        .footer-copy { color: var(--text-muted); font-size: 13px; }
+
+        /* ================================
+           BOTAO FLUTUANTE MOBILE
+           ================================ */
+        .floating-cta {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0, 0, 0, 0.95);
+            backdrop-filter: blur(20px);
+            padding: 1rem 1.5rem;
+            z-index: 9998;
+            display: none;
+            border-top: 1px solid rgba(212, 175, 55, 0.3);
+            box-shadow: 0 -5px 30px rgba(0, 0, 0, 0.5);
+        }
+
+        .floating-cta a {
+            display: block;
+            background: var(--gold);
+            color: var(--black);
+            text-align: center;
+            padding: 1rem;
+            border-radius: 10px;
+            font-weight: 700;
+            font-size: 16px;
+            text-decoration: none;
+            box-shadow: 0 4px 20px var(--gold-glow);
+        }
+
+        .floating-cta .floating-price {
+            font-size: 12px;
+            color: var(--text-secondary);
+            text-align: center;
+            margin-top: 0.5rem;
+        }
+
+        /* ================================
+           RESPONSIVO
+           ================================ */
+        @media (max-width: 768px) {
+            .transform-grid { grid-template-columns: 1fr; }
+            .stats-grid { grid-template-columns: repeat(2, 1fr); gap: 1.5rem; }
+            .offer-features { grid-template-columns: 1fr; }
+            .comparison-grid { grid-template-columns: 1fr; gap: 0.75rem; }
+            .cta-secondary { margin-left: 0; margin-top: 1rem; display: block; }
+            .floating-cta { display: block; }
+            body { padding-bottom: 90px; }
+            .header-logo img { height: 40px; }
+            .site-header.scrolled .header-logo img { height: 35px; }
+            .header-cta { padding: 0.6rem 1.2rem; font-size: 13px; }
+            .author-credentials { gap: 1rem; }
+        }
+
+        @media (max-width: 480px) {
+            .hero-headline { font-size: 24px; }
+            .pillars-grid { grid-template-columns: 1fr; }
+        }
     </style>
 </head>
 <body>
+
     <!-- ================================
-         BARRA DE URGÊNCIA - TEMPO LIMITADO
+         COUNTDOWN BAR
          ================================ -->
-    <div id="countdown-bar" style="
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        background: linear-gradient(135deg, #D4AF37 0%, #B8941F 100%);
-        color: #000000;
-        padding: 12px 20px;
-        text-align: center;
-        font-family: 'Inter', sans-serif;
-        font-weight: 700;
-        font-size: 16px;
-        z-index: 99999;
-        box-shadow: 0 2px 10px rgba(212, 175, 55, 0.3);
-        animation: pulse 2s ease-in-out infinite;
-    ">
-        <span style="margin-right: 15px;">⏰ OFERTA EXPIRA EM:</span>
-        <span id="countdown-timer" style="
-            font-size: 28px;
-            font-weight: 900;
-            letter-spacing: 2px;
-            color: #000000;
-        ">06:59</span>
+    <div id="countdown-bar">
+        <span>OFERTA EXPIRA EM:</span>
+        <span id="countdown-timer" class="timer">06:59</span>
     </div>
 
-    <style>
-        @keyframes pulse {
-            0%, 100% { transform: scale(1); }
-            50% { transform: scale(1.02); }
-        }
-        
-        body {
-            padding-top: 50px !important;
-        }
-        
-        .site-header {
-            top: 50px !important;
-        }
-    </style>
-
-    <script>
-        // Contagem regressiva de 24 horas
-        let timeLeft = 7 * 60; // 24 horas em segundos
-        
-        function updateCountdown() {
-            const hours = Math.floor(timeLeft / 3600);
-            const minutes = Math.floor((timeLeft % 3600) / 60);
-            const seconds = timeLeft % 60;
-            
-            const display = 
-                String(hours).padStart(2, '0') + ':' +
-                String(minutes).padStart(2, '0') + ':' +
-                String(seconds).padStart(2, '0');
-            
-            document.getElementById('countdown-timer').textContent = display;
-            
-            if (timeLeft > 0) {
-                timeLeft--;
-            } else {
-                timeLeft = 24 * 60 * 60; // Reinicia
-            }
-        }
-        
-        // Atualiza a cada segundo
-        setInterval(updateCountdown, 1000);
-        updateCountdown();
-    </script>
     <!-- ================================
-         HEADER FIXO COM LOGO
+         HEADER
          ================================ -->
     <header class="site-header">
         <div class="header-container">
             <a href="#" class="header-logo">
-                <img src="assets/nucleox-logo.png" alt="NUCLEOˣ - A Geometria do Pensamento">
+                <img src="assets/nucleox-logo.png" alt="NUCLEOx - A Geometria do Pensamento">
             </a>
-            <a href="https://pay.voompcreators.com.br/11811/offer/m4HKL6" class="header-cta">
-                Começar Agora
-            </a>
+            <a href="https://pay.voompcreators.com.br/11811/offer/m4HKL6" class="header-cta">Garantir Agora</a>
         </div>
     </header>
 
-    <!-- Orbitais Atômicos Decorativos -->
-    <div class="atomic-orbital orbital-1"></div>
-    <div class="atomic-orbital orbital-2"></div>
-    <div class="atomic-orbital orbital-3"></div>
-    
-    <!-- Partículas Atômicas -->
-    <div class="atomic-particle" style="top: 20%; left: 15%; animation-delay: 0s;"></div>
-    <div class="atomic-particle" style="top: 40%; left: 80%; animation-delay: 1s;"></div>
-    <div class="atomic-particle" style="top: 60%; left: 30%; animation-delay: 2s;"></div>
-    <div class="atomic-particle" style="top: 75%; left: 70%; animation-delay: 3s;"></div>
-    <div class="atomic-particle" style="top: 15%; left: 60%; animation-delay: 4s;"></div>
-    <div class="atomic-particle" style="top: 85%; left: 25%; animation-delay: 5s;"></div>
-    <div class="atomic-particle" style="top: 50%; left: 90%; animation-delay: 6s;"></div>
-    <div class="atomic-particle" style="top: 30%; left: 45%; animation-delay: 7s;"></div>
-
-
-    <!-- ========================================
-         PILAR 1: ABERTURA MAGNÉTICA
-         ======================================== -->
+    <!-- ================================
+         HERO
+         ================================ -->
     <section class="hero">
         <div class="hero-background">
             <div class="atom-orbit"></div>
@@ -1284,1649 +987,628 @@
             <div class="atom-orbit"></div>
             <div class="atom-core"></div>
         </div>
-        
+
         <div class="hero-content">
-            <!-- Badge de urgência -->
-            <div style="background: rgba(212, 175, 55, 0.15); padding: 0.75rem 1.5rem; border-radius: 50px; display: inline-block; margin-bottom: 1rem; border: 1px solid rgba(212, 175, 55, 0.3);">
-                <span style="color: var(--gold); font-weight: 600; font-size: 13px; letter-spacing: 2px;">
-                    🔥 OFERTA LIMITADA • 30% OFF termina em breve
-                </span>
-            </div>
-            
-            <div class="overline">Arquitetura Mental para Mentes Exponenciais</div>
-            
-            <div class="urgency-badge float-effect" style="margin-bottom: 2rem;">
-                🔥 OFERTA LIMITADA • 30% OFF termina em breve
-            </div>
-            
-            <div class="hero-brand" style="display: flex; flex-direction: column; align-items: center; gap: 2rem; margin: 4rem auto;">
-                <!-- Ícone SVG do átomo com cérebro -->
-                <svg width="280" height="280" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" style="filter: drop-shadow(0 10px 30px rgba(76, 175, 80, 0.4));">
-                    <!-- Orbitais -->
+            <div class="hero-badge">OFERTA LIMITADA &bull; 30% OFF</div>
+
+            <div class="hero-logo-area">
+                <svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
                     <ellipse cx="100" cy="100" rx="80" ry="30" fill="none" stroke="#ffffff" stroke-width="2.5" opacity="0.8"/>
                     <ellipse cx="100" cy="100" rx="80" ry="30" fill="none" stroke="#ffffff" stroke-width="2.5" opacity="0.8" transform="rotate(60 100 100)"/>
                     <ellipse cx="100" cy="100" rx="80" ry="30" fill="none" stroke="#ffffff" stroke-width="2.5" opacity="0.8" transform="rotate(120 100 100)"/>
-                    
-                    <!-- Cérebro central simplificado -->
                     <path d="M85 90 Q80 85 80 80 Q80 70 90 70 Q95 65 100 65 Q105 65 110 70 Q120 70 120 80 Q120 85 115 90 L112 95 Q110 100 108 105 L100 110 L92 105 Q90 100 88 95 Z" fill="#4CAF50" stroke="#4CAF50" stroke-width="1.5"/>
                     <path d="M90 75 Q92 73 95 75 M105 75 Q107 73 110 75" stroke="#2d5f2e" stroke-width="1.2" fill="none"/>
                     <path d="M95 82 L95 95 M105 82 L105 95" stroke="#2d5f2e" stroke-width="1.2"/>
-                    
-                    <!-- Núcleo -->
                     <circle cx="100" cy="100" r="6" fill="#4CAF50" opacity="0.3"/>
                 </svg>
-                
-                <!-- Texto da logo -->
-                <div style="text-align: center;">
-                    <h1 style="font-size: clamp(48px, 12vw, 96px); font-weight: 900; letter-spacing: -1px; color: #ffffff; margin: 0; line-height: 1;">
-                        NUCLEO<sup style="font-size: 0.6em; color: #D4AF37;">ˣ</sup>
-                    </h1>
-                    <p style="font-size: clamp(14px, 3vw, 20px); color: rgba(255, 255, 255, 0.8); letter-spacing: 3px; margin-top: 1rem; font-weight: 500;">
-                        A GEOMETRIA DO PENSAMENTO
-                    </p>
+
+                <div class="hero-brand-text">
+                    <h1>NUCLEO<sup>x</sup></h1>
+                    <p class="hero-tagline">A GEOMETRIA DO PENSAMENTO</p>
                 </div>
             </div>
-            
-            <h1 class="hero-headline">
-                <strong class="highlight-glow">A única metodologia</strong> que transforma<br>
+
+            <h2 class="hero-headline">
+                <strong>A unica metodologia</strong> que transforma<br>
                 pensadores comuns em<br>
-                <strong class="highlight-glow">mentes estruturalmente superiores</strong>
-            </h1>
-            
-            <p class="hero-subheadline">
-                O padrão invisível em todas as mentes brilhantes. O método que ensina a pensar com estrutura, decidir como um algoritmo e viver com consciência exponencial.
+                <strong>mentes estruturalmente superiores</strong>
+            </h2>
+
+            <p class="hero-sub">
+                O padrao invisivel em todas as mentes brilhantes. O metodo que ensina a pensar com estrutura, decidir como um algoritmo e viver com consciencia exponencial.
             </p>
-            
+
             <a href="https://pay.voompcreators.com.br/11811/offer/m4HKL6" class="cta-primary">Estruturar Meu Pensamento</a>
-            <a href="https://pay.voompcreators.com.br/11811/offer/m4HKL6" class="cta-secondary">Conhecer o Método</a>
-            
-            <div style="margin-top: 3rem; font-size: 14px; color: var(--text-tertiary);">
-                o Ebook · 7 pilares · 21 dias de transformação
-            </div>
+            <a href="#oferta" class="cta-secondary">Ver a Oferta</a>
+
+            <p class="hero-meta">E-book &bull; 7 pilares &bull; 21 dias de transformacao</p>
         </div>
     </section>
 
-    <!-- ========================================
-         CTA FINAL DE URGÊNCIA - REDESENHADO
-         ======================================== -->
-    <section class="section gradient-animated" style="color: #ffffff; padding: 60px 1.5rem;">
-        <div style="text-align: center; max-width: 600px; margin: 0 auto;">
-            
-            <!-- Badge de urgência -->
-            <div class="urgency-badge pulse-effect" style="margin-bottom: 1.5rem; font-size: 13px; padding: 0.6rem 1.2rem;">
-                🔥 ÚLTIMAS UNIDADES • 30% OFF
+    <!-- ================================
+         NUMEROS DE AUTORIDADE
+         ================================ -->
+    <div class="stats-bar">
+        <div class="stats-grid animate-fade">
+            <div>
+                <div class="stat-number">50+</div>
+                <div class="stat-label">Estudos de Neurociencia</div>
             </div>
-            
-            <!-- Título -->
-            <h2 style="font-size: clamp(28px, 8vw, 42px); font-weight: 800; margin-bottom: 1rem; line-height: 1.2; letter-spacing: -1px;">
-                Última Chance de<br>Transformar Sua Mente
-            </h2>
-            
-            <!-- Box de preço destacado -->
-            <div style="background: linear-gradient(135deg, rgba(212, 175, 55, 0.15) 0%, rgba(212, 175, 55, 0.05) 100%); 
-                backdrop-filter: blur(15px); 
-                border-radius: 24px; 
-                padding: 3rem 2.5rem; 
-                margin: 3rem 0; 
-                border: 3px solid rgba(212, 175, 55, 0.6); 
-                box-shadow: 0 20px 60px rgba(212, 175, 55, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.1);
-                position: relative;
-                overflow: hidden;">
-                
-                <!-- Preço riscado menor -->
-                <div style="margin-bottom: 0.5rem;">
-                    <span style="font-size: clamp(20px, 4.5vw, 28px); text-decoration: line-through; opacity: 0.7; font-weight: 600; color: #FFD700;">De R$ 69,90</span>
-                </div>
-                
-                <!-- Preço principal GIGANTE -->
-                <div style="margin-bottom: 1rem;">
-                    <div style="display: inline-block; font-size: clamp(18px, 3.5vw, 24px); opacity: 0.9; margin-bottom: 0.8rem; color: #FFD700; font-weight: 600;">Por apenas</div>
-                    <div style="font-size: clamp(64px, 16vw, 88px); font-weight: 900; color: #FFD700; line-height: 1; letter-spacing: -2px; margin: 0.5rem 0; text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000, 0 0 0 #000;">
-                        R$ 48,90
-                    </div>
-                    
-                </div>
-                
-                <!-- Badge de economia -->
-                <div class="gold-badge" style="font-size: clamp(11px, 2.5vw, 13px); padding: 0.5rem 1.2rem; margin-top: 1rem;">
-                    💰 VOCÊ ECONOMIZA R$ 21,00
-                </div>
-                
-                <!-- Parcelamento -->
-                <p style="margin-top: 1.5rem; font-size: clamp(14px, 3.5vw, 16px); opacity: 0.9; font-weight: 500;">
-                    ou em até <strong style="color: var(--gold);">12x de R$ 4,08</strong> sem juros
-                </p>
+            <div>
+                <div class="stat-number">20+</div>
+                <div class="stat-label">Casos Praticos</div>
             </div>
-            
-            <!-- Detalhes do produto -->
-            <div style="margin-bottom: 2rem; padding: 0 1rem;">
-                <p style="font-size: clamp(14px, 3.5vw, 16px); opacity: 0.85; line-height: 1.6;">
-                    ✨ o Ebook de neurociência aplicada<br>
-                    ⚡ 7 pilares do pensamento estruturado<br>
-                    🚀 21 dias de transformação mental<br>
-                    🌍 Bilíngue (PT-BR + EN)<br>
-                    📧 Entrega instantânea por e-mail
-                </p>
+            <div>
+                <div class="stat-number">7</div>
+                <div class="stat-label">Pilares Fundamentais</div>
             </div>
-            
-            <!-- Botão CTA GIGANTE -->
-            <a href="https://pay.voompcreators.com.br/11811/offer/m4HKL6" class="cta-primary glow-effect pulse-effect" style="font-size: clamp(16px, 4vw, 20px); padding: clamp(1.2rem, 4vw, 1.8rem) clamp(2rem, 8vw, 4rem); background: var(--gold); color: #000; font-weight: 700; display: inline-block; width: 100%; max-width: 400px; border-radius: 12px; text-decoration: none; box-shadow: 0 10px 40px rgba(212, 175, 55, 0.4); transition: all 0.3s ease;">
-                ⚡ GARANTIR MEU ACESSO AGORA
-            </a>
-            
-            <!-- Garantias -->
-            <div style="margin-top: 2rem; padding: 1.5rem; background: rgba(0,0,0,0.3); border-radius: 12px; border: 1px solid rgba(255,255,255,0.1);">
-                <p style="font-size: clamp(13px, 3vw, 15px); opacity: 0.8; line-height: 1.8;">
-                    ✓ Pagamento 100% seguro<br>
-                    ✓ Parcelamento em até 12x sem juros<br>
-                    ✓ Garantia incondicional de 7 dias<br></p>
+            <div>
+                <div class="stat-number">21</div>
+                <div class="stat-label">Dias de Protocolo</div>
             </div>
-            
-            <!-- Urgência final -->
-            <p style="margin-top: 1.5rem; font-size: clamp(12px, 3vw, 14px); opacity: 0.6; font-style: italic;">
-                ⏰ Oferta válida por tempo limitado
-            </p>
-            
         </div>
-    </section>
+    </div>
 
-    </section>
+    <!-- ================================
+         TRANSFORMACAO ANTES/DEPOIS
+         ================================ -->
+    <section class="section animate-fade">
+        <h2 class="section-title">De Ruido Mental para<br>Clareza Arquitetonica</h2>
+        <p class="section-subtitle">O NUCLEOx nao adiciona informacao. Ele reestrutura sua geometria cognitiva.</p>
 
-    <!-- ========================================
-         CTA FINAL DE URGÊNCIA - REDESENHADO
-         ======================================== -->
-    <section class="section gradient-animated" style="color: #ffffff; padding: 60px 1.5rem;">
-        <div style="text-align: center; max-width: 600px; margin: 0 auto;">
-            
-            <!-- Badge de urgência -->
-            <div class="urgency-badge pulse-effect" style="margin-bottom: 1.5rem; font-size: 13px; padding: 0.6rem 1.2rem;">
-                🔥 ÚLTIMAS UNIDADES • 30% OFF
-            </div>
-            
-            <!-- Título -->
-            <h2 style="font-size: clamp(28px, 8vw, 42px); font-weight: 800; margin-bottom: 1rem; line-height: 1.2; letter-spacing: -1px;">
-                Última Chance de<br>Transformar Sua Mente
-            </h2>
-            
-            <!-- Box de preço destacado -->
-            <div style="background: linear-gradient(135deg, rgba(212, 175, 55, 0.15) 0%, rgba(212, 175, 55, 0.05) 100%); 
-                backdrop-filter: blur(15px); 
-                border-radius: 24px; 
-                padding: 3rem 2.5rem; 
-                margin: 3rem 0; 
-                border: 3px solid rgba(212, 175, 55, 0.6); 
-                box-shadow: 0 20px 60px rgba(212, 175, 55, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.1);
-                position: relative;
-                overflow: hidden;">
-                
-                <!-- Preço riscado menor -->
-                <div style="margin-bottom: 0.5rem;">
-                    <span style="font-size: clamp(20px, 4.5vw, 28px); text-decoration: line-through; opacity: 0.7; font-weight: 600; color: #FFD700;">De R$ 69,90</span>
-                </div>
-                
-                <!-- Preço principal GIGANTE -->
-                <div style="margin-bottom: 1rem;">
-                    <div style="display: inline-block; font-size: clamp(18px, 3.5vw, 24px); opacity: 0.9; margin-bottom: 0.8rem; color: #FFD700; font-weight: 600;">Por apenas</div>
-                    <div style="font-size: clamp(64px, 16vw, 88px); font-weight: 900; color: #FFD700; line-height: 1; letter-spacing: -2px; margin: 0.5rem 0; text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000, 0 0 0 #000;">
-                        R$ 48,90
-                    </div>
-                    
-                </div>
-                
-                <!-- Badge de economia -->
-                <div class="gold-badge" style="font-size: clamp(11px, 2.5vw, 13px); padding: 0.5rem 1.2rem; margin-top: 1rem;">
-                    💰 VOCÊ ECONOMIZA R$ 21,00
-                </div>
-                
-                <!-- Parcelamento -->
-                <p style="margin-top: 1.5rem; font-size: clamp(14px, 3.5vw, 16px); opacity: 0.9; font-weight: 500;">
-                    ou em até <strong style="color: var(--gold);">12x de R$ 4,08</strong> sem juros
-                </p>
-            </div>
-            
-            <!-- Detalhes do produto -->
-            <div style="margin-bottom: 2rem; padding: 0 1rem;">
-                <p style="font-size: clamp(14px, 3.5vw, 16px); opacity: 0.85; line-height: 1.6;">
-                    ✨ o Ebook de neurociência aplicada<br>
-                    ⚡ 7 pilares do pensamento estruturado<br>
-                    🚀 21 dias de transformação mental<br>
-                    🌍 Bilíngue (PT-BR + EN)<br>
-                    📧 Entrega instantânea por e-mail
-                </p>
-            </div>
-            
-            <!-- Botão CTA GIGANTE -->
-            <a href="https://pay.voompcreators.com.br/11811/offer/m4HKL6" class="cta-primary glow-effect pulse-effect" style="font-size: clamp(16px, 4vw, 20px); padding: clamp(1.2rem, 4vw, 1.8rem) clamp(2rem, 8vw, 4rem); background: var(--gold); color: #000; font-weight: 700; display: inline-block; width: 100%; max-width: 400px; border-radius: 12px; text-decoration: none; box-shadow: 0 10px 40px rgba(212, 175, 55, 0.4); transition: all 0.3s ease;">
-                ⚡ GARANTIR MEU ACESSO AGORA
-            </a>
-            
-            <!-- Garantias -->
-            <div style="margin-top: 2rem; padding: 1.5rem; background: rgba(0,0,0,0.3); border-radius: 12px; border: 1px solid rgba(255,255,255,0.1);">
-                <p style="font-size: clamp(13px, 3vw, 15px); opacity: 0.8; line-height: 1.8;">
-                    ✓ Pagamento 100% seguro<br>
-                    ✓ Parcelamento em até 12x sem juros<br>
-                    ✓ Garantia incondicional de 7 dias<br></p>
-            </div>
-            
-            <!-- Urgência final -->
-            <p style="margin-top: 1.5rem; font-size: clamp(12px, 3vw, 14px); opacity: 0.6; font-style: italic;">
-                ⏰ Oferta válida por tempo limitado
-            </p>
-            
-        </div>
-    </section>
-    <!-- ========================================
-         PILAR 3: PROVA DE AUTORIDADE
-         ======================================== -->
-    <section class="section">
-        <div class="overline" style="text-align: center;">Validação Científica</div>
-        <h2 class="section-title">
-            Um Sistema Validado por<br>Neurociência e Filosofia
-        </h2>
-        
-        <p class="section-subtitle">
-            O NUCLEOˣ não é teoria. É arquitetura mental baseada em 50+ estudos científicos, 20+ aplicações práticas e séculos de filosofia estrutural.
-        </p>
-        
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; margin-top: 4rem; text-align: center;">
-            <div>
-                <div style="font-size: 52px; font-weight: 900; color: var(--text-primary); margin-bottom: 0.5rem;">50+</div>
-                <p style="font-size: 16px; color: var(--text-secondary);">Estudos de Neurociência</p>
-            </div>
-            <div>
-                <div style="font-size: 52px; font-weight: 900; color: var(--text-primary); margin-bottom: 0.5rem;">20+</div>
-                <p style="font-size: 16px; color: var(--text-secondary);">Casos Práticos</p>
-            </div>
-            <div>
-                <div style="font-size: 52px; font-weight: 900; color: var(--text-primary); margin-bottom: 0.5rem;">7</div>
-                <p style="font-size: 16px; color: var(--text-secondary);">Pilares Fundamentais</p>
-            </div>
-            <div>
-                <div style="font-size: 52px; font-weight: 900; color: var(--text-primary); margin-bottom: 0.5rem;">21</div>
-                <p style="font-size: 16px; color: var(--text-secondary);">Dias de Protocolo</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- ========================================
-         CTA FINAL DE URGÊNCIA - REDESENHADO
-         ======================================== -->
-    <section class="section gradient-animated" style="color: #ffffff; padding: 60px 1.5rem;">
-        <div style="text-align: center; max-width: 600px; margin: 0 auto;">
-            
-            <!-- Badge de urgência -->
-            <div class="urgency-badge pulse-effect" style="margin-bottom: 1.5rem; font-size: 13px; padding: 0.6rem 1.2rem;">
-                🔥 ÚLTIMAS UNIDADES • 30% OFF
-            </div>
-            
-            <!-- Título -->
-            <h2 style="font-size: clamp(28px, 8vw, 42px); font-weight: 800; margin-bottom: 1rem; line-height: 1.2; letter-spacing: -1px;">
-                Última Chance de<br>Transformar Sua Mente
-            </h2>
-            
-            <!-- Box de preço destacado -->
-            <div style="background: linear-gradient(135deg, rgba(212, 175, 55, 0.15) 0%, rgba(212, 175, 55, 0.05) 100%); 
-                backdrop-filter: blur(15px); 
-                border-radius: 24px; 
-                padding: 3rem 2.5rem; 
-                margin: 3rem 0; 
-                border: 3px solid rgba(212, 175, 55, 0.6); 
-                box-shadow: 0 20px 60px rgba(212, 175, 55, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.1);
-                position: relative;
-                overflow: hidden;">
-                
-                <!-- Preço riscado menor -->
-                <div style="margin-bottom: 0.5rem;">
-                    <span style="font-size: clamp(20px, 4.5vw, 28px); text-decoration: line-through; opacity: 0.7; font-weight: 600; color: #FFD700;">De R$ 69,90</span>
-                </div>
-                
-                <!-- Preço principal GIGANTE -->
-                <div style="margin-bottom: 1rem;">
-                    <div style="display: inline-block; font-size: clamp(18px, 3.5vw, 24px); opacity: 0.9; margin-bottom: 0.8rem; color: #FFD700; font-weight: 600;">Por apenas</div>
-                    <div style="font-size: clamp(64px, 16vw, 88px); font-weight: 900; color: #FFD700; line-height: 1; letter-spacing: -2px; margin: 0.5rem 0; text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000, 0 0 0 #000;">
-                        R$ 48,90
-                    </div>
-                    
-                </div>
-                
-                <!-- Badge de economia -->
-                <div class="gold-badge" style="font-size: clamp(11px, 2.5vw, 13px); padding: 0.5rem 1.2rem; margin-top: 1rem;">
-                    💰 VOCÊ ECONOMIZA R$ 21,00
-                </div>
-                
-                <!-- Parcelamento -->
-                <p style="margin-top: 1.5rem; font-size: clamp(14px, 3.5vw, 16px); opacity: 0.9; font-weight: 500;">
-                    ou em até <strong style="color: var(--gold);">12x de R$ 4,08</strong> sem juros
-                </p>
-            </div>
-            
-            <!-- Detalhes do produto -->
-            <div style="margin-bottom: 2rem; padding: 0 1rem;">
-                <p style="font-size: clamp(14px, 3.5vw, 16px); opacity: 0.85; line-height: 1.6;">
-                    ✨ o Ebook de neurociência aplicada<br>
-                    ⚡ 7 pilares do pensamento estruturado<br>
-                    🚀 21 dias de transformação mental<br>
-                    🌍 Bilíngue (PT-BR + EN)<br>
-                    📧 Entrega instantânea por e-mail
-                </p>
-            </div>
-            
-            <!-- Botão CTA GIGANTE -->
-            <a href="https://pay.voompcreators.com.br/11811/offer/m4HKL6" class="cta-primary glow-effect pulse-effect" style="font-size: clamp(16px, 4vw, 20px); padding: clamp(1.2rem, 4vw, 1.8rem) clamp(2rem, 8vw, 4rem); background: var(--gold); color: #000; font-weight: 700; display: inline-block; width: 100%; max-width: 400px; border-radius: 12px; text-decoration: none; box-shadow: 0 10px 40px rgba(212, 175, 55, 0.4); transition: all 0.3s ease;">
-                ⚡ GARANTIR MEU ACESSO AGORA
-            </a>
-            
-            <!-- Garantias -->
-            <div style="margin-top: 2rem; padding: 1.5rem; background: rgba(0,0,0,0.3); border-radius: 12px; border: 1px solid rgba(255,255,255,0.1);">
-                <p style="font-size: clamp(13px, 3vw, 15px); opacity: 0.8; line-height: 1.8;">
-                    ✓ Pagamento 100% seguro<br>
-                    ✓ Parcelamento em até 12x sem juros<br>
-                    ✓ Garantia incondicional de 7 dias<br></p>
-            </div>
-            
-            <!-- Urgência final -->
-            <p style="margin-top: 1.5rem; font-size: clamp(12px, 3vw, 14px); opacity: 0.6; font-style: italic;">
-                ⏰ Oferta válida por tempo limitado
-            </p>
-            
-        </div>
-    </section>
-    <!-- ========================================
-         PILAR 4: TRANSFORMAÇÃO DESEJADA
-         ======================================== -->
-    <section class="section">
-        <h2 class="section-title">
-            De Ruído Mental para<br>Clareza Arquitetônica
-        </h2>
-        
-        <p class="section-subtitle">
-            O NUCLEOˣ não adiciona informação. Ele reestrutura sua geometria cognitiva.
-        </p>
-        
-        <div class="transformation-grid">
-            <div class="transform-card transform-before">
-                <div class="transform-label">Antes do NUCLEOˣ</div>
+        <div class="transform-grid">
+            <div class="transform-card before">
+                <div class="transform-label">Antes do NUCLEOx</div>
                 <p class="transform-text">
-                    Suas ideias se chocam. Cada decisão é uma batalha. Você consome informação infinita mas não consegue transformar em ação. Paralisia por análise. Fragmentação mental. Exaustão cognitiva.
+                    Suas ideias se chocam. Cada decisao e uma batalha. Voce consome informacao infinita mas nao consegue transformar em acao. Paralisia por analise. Fragmentacao mental. Exaustao cognitiva.
                 </p>
             </div>
-            
-            <div class="transform-card transform-after">
-                <div class="transform-label">Depois do NUCLEOˣ</div>
+            <div class="transform-card after">
+                <div class="transform-label">Depois do NUCLEOx</div>
                 <p class="transform-text">
-                    Suas ideias se alinham. Cada decisão segue uma <span class="highlight-glow">geometria invisível</span>: simples, precisa e previsível. Você pensa 10x mais rápido mantendo clareza. Executa sem travamento. Opera em modo exponencial.
+                    Suas ideias se alinham. Cada decisao segue uma <span class="highlight">geometria invisivel</span>: simples, precisa e previsivel. Voce pensa 10x mais rapido mantendo clareza. Executa sem travamento.
                 </p>
             </div>
         </div>
-        
-        <div style="background: var(--surface-dark); padding: 3rem; border-radius: 8px; margin-top: 4rem; text-align: center; border: 1px solid rgba(255, 255, 255, 0.08);">
-            <p style="font-size: 24px; line-height: 1.6; color: var(--text-primary); max-width: 700px; margin: 0 auto;">
-                <strong>Você não se torna mais inteligente.</strong><br>
-                Você se torna mais <em>estruturado</em>.<br><br>
-                E estrutura é o que separa gênios de pessoas inteligentes.
+
+        <div class="transform-quote">
+            <p>
+                <strong>Voce nao se torna mais inteligente.</strong><br>
+                Voce se torna mais <em>estruturado</em>.<br><br>
+                E estrutura e o que separa genios de pessoas inteligentes.
             </p>
         </div>
     </section>
 
-    <!-- ========================================
-         CTA FINAL DE URGÊNCIA - REDESENHADO
-         ======================================== -->
-    <section class="section gradient-animated" style="color: #ffffff; padding: 60px 1.5rem;">
-        <div style="text-align: center; max-width: 600px; margin: 0 auto;">
-            
-            <!-- Badge de urgência -->
-            <div class="urgency-badge pulse-effect" style="margin-bottom: 1.5rem; font-size: 13px; padding: 0.6rem 1.2rem;">
-                🔥 ÚLTIMAS UNIDADES • 30% OFF
-            </div>
-            
-            <!-- Título -->
-            <h2 style="font-size: clamp(28px, 8vw, 42px); font-weight: 800; margin-bottom: 1rem; line-height: 1.2; letter-spacing: -1px;">
-                Última Chance de<br>Transformar Sua Mente
-            </h2>
-            
-            <!-- Box de preço destacado -->
-            <div style="background: linear-gradient(135deg, rgba(212, 175, 55, 0.15) 0%, rgba(212, 175, 55, 0.05) 100%); 
-                backdrop-filter: blur(15px); 
-                border-radius: 24px; 
-                padding: 3rem 2.5rem; 
-                margin: 3rem 0; 
-                border: 3px solid rgba(212, 175, 55, 0.6); 
-                box-shadow: 0 20px 60px rgba(212, 175, 55, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.1);
-                position: relative;
-                overflow: hidden;">
-                
-                <!-- Preço riscado menor -->
-                <div style="margin-bottom: 0.5rem;">
-                    <span style="font-size: clamp(20px, 4.5vw, 28px); text-decoration: line-through; opacity: 0.7; font-weight: 600; color: #FFD700;">De R$ 69,90</span>
-                </div>
-                
-                <!-- Preço principal GIGANTE -->
-                <div style="margin-bottom: 1rem;">
-                    <div style="display: inline-block; font-size: clamp(18px, 3.5vw, 24px); opacity: 0.9; margin-bottom: 0.8rem; color: #FFD700; font-weight: 600;">Por apenas</div>
-                    <div style="font-size: clamp(64px, 16vw, 88px); font-weight: 900; color: #FFD700; line-height: 1; letter-spacing: -2px; margin: 0.5rem 0; text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000, 0 0 0 #000;">
-                        R$ 48,90
-                    </div>
-                    
-                </div>
-                
-                <!-- Badge de economia -->
-                <div class="gold-badge" style="font-size: clamp(11px, 2.5vw, 13px); padding: 0.5rem 1.2rem; margin-top: 1rem;">
-                    💰 VOCÊ ECONOMIZA R$ 21,00
-                </div>
-                
-                <!-- Parcelamento -->
-                <p style="margin-top: 1.5rem; font-size: clamp(14px, 3.5vw, 16px); opacity: 0.9; font-weight: 500;">
-                    ou em até <strong style="color: var(--gold);">12x de R$ 4,08</strong> sem juros
-                </p>
-            </div>
-            
-            <!-- Detalhes do produto -->
-            <div style="margin-bottom: 2rem; padding: 0 1rem;">
-                <p style="font-size: clamp(14px, 3.5vw, 16px); opacity: 0.85; line-height: 1.6;">
-                    ✨ o Ebook de neurociência aplicada<br>
-                    ⚡ 7 pilares do pensamento estruturado<br>
-                    🚀 21 dias de transformação mental<br>
-                    🌍 Bilíngue (PT-BR + EN)<br>
-                    📧 Entrega instantânea por e-mail
-                </p>
-            </div>
-            
-            <!-- Botão CTA GIGANTE -->
-            <a href="https://pay.voompcreators.com.br/11811/offer/m4HKL6" target="_blank" rel="noopener noreferrer" class="cta-primary glow-effect pulse-effect" style="font-size: clamp(16px, 4vw, 20px); padding: clamp(1.2rem, 4vw, 1.8rem) clamp(2rem, 8vw, 4rem); background: var(--gold); color: #000; font-weight: 700; display: inline-block; width: 100%; max-width: 400px; border-radius: 12px; text-decoration: none; box-shadow: 0 10px 40px rgba(212, 175, 55, 0.4); transition: all 0.3s ease;">
-                ⚡ GARANTIR MEU ACESSO AGORA
-            </a>
-            
-            <!-- Garantias -->
-            <div style="margin-top: 2rem; padding: 1.5rem; background: rgba(0,0,0,0.3); border-radius: 12px; border: 1px solid rgba(255,255,255,0.1);">
-                <p style="font-size: clamp(13px, 3vw, 15px); opacity: 0.8; line-height: 1.8;">
-                    ✓ Pagamento 100% seguro<br>
-                    ✓ Parcelamento em até 12x sem juros<br>
-                    ✓ Garantia incondicional de 7 dias<br></p>
-            </div>
-            
-            <!-- Urgência final -->
-            <p style="margin-top: 1.5rem; font-size: clamp(12px, 3vw, 14px); opacity: 0.6; font-style: italic;">
-                ⏰ Oferta válida por tempo limitado
-            </p>
-            
-        </div>
-    </section>
-    <!-- ========================================
-         PILAR 5: CONTEÚDO E VALOR (Reciprocidade)
-         ======================================== -->
-    <section id="preview" class="section" style="background: var(--surface-dark); padding: 100px 2rem; margin: 0 -2rem; border: 1px solid rgba(255, 255, 255, 0.08);">
-        <div style="max-width: 1100px; margin: 0 auto;">
-            <div class="overline" style="text-align: center;">Preview Exclusivo</div>
-            <h2 class="section-title">
-                3 Insights que Vão Mudar Seu Pensamento<br><span style="font-weight: 300; font-size: 0.7em; color: var(--text-secondary);">(mesmo antes de comprar)</span>
-            </h2>
-            
-            <div class="preview-grid">
-                <div class="preview-card">
-                    <div class="preview-number">Insight #1</div>
-                    <p class="preview-insight">
-                        "Pensar é desenhar: todo pensamento vago é um triângulo incompleto."
-                    </p>
-                    <p class="preview-description">
-                        Assim como um arquiteto não constrói sem planta, sua mente não deveria processar informação sem estrutura geométrica. O NUCLEOˣ ensina a desenhar seus pensamentos antes de executá-los.
-                    </p>
-                </div>
-                
-                <div class="preview-card animate-in border-glow">
-                    <div class="preview-number pulse-effect">Insight #2</div>
-                    <p class="preview-insight">
-                        "A forma é o corpo do pensamento, e quase ninguém a enxerga."
-                    </p>
-                    <p class="preview-description">
-                        Você nunca teve um problema de conteúdo. Você tinha um problema de geometria. Quando você aprende a ver a FORMA por trás das ideias, tudo se simplifica instantaneamente.
-                    </p>
-                </div>
-                
-                <div class="preview-card">
-                    <div class="preview-number">Insight #3</div>
-                    <p class="preview-insight">
-                        "Velocidade sem direção é apenas ruído acelerado."
-                    </p>
-                    <p class="preview-description">
-                        A era da IA não premia quem pensa mais rápido. Premia quem pensa com ESTRUTURA. O NUCLEOˣ é o sistema operacional que faltava na sua mente.
-                    </p>
-                </div>
-            </div>
-        </div>
-        
-        <!-- CTA após insights -->
-        <div style="text-align: center; margin-top: 4rem;">
-            <a href="https://pay.voompcreators.com.br/11811/offer/m4HKL6" target="_blank" rel="noopener noreferrer" class="cta-primary" style="font-size: 18px; padding: 1.5rem 3rem;">
-                Quero transformar meu pensamento →
-            </a>
-            <p style="margin-top: 1rem; font-size: 14px; color: var(--text-secondary);">
-                Pagamento único • Parcelamento em até 12x disponível
-            </p>
-        </div>
-    </section>
+    <!-- ================================
+         7 PILARES
+         ================================ -->
+    <section class="section animate-fade">
+        <div class="overline text-center">O Sistema Completo</div>
+        <h2 class="section-title">Os 7 Pilares da Arquitetura Mental</h2>
+        <p class="section-subtitle">O sistema que transforma caos em clareza. Dominavel em 21 dias.</p>
 
-    <!-- ========================================
-         CTA FINAL DE URGÊNCIA - REDESENHADO
-         ======================================== -->
-    <section class="section gradient-animated" style="color: #ffffff; padding: 60px 1.5rem;">
-        <div style="text-align: center; max-width: 600px; margin: 0 auto;">
-            
-            <!-- Badge de urgência -->
-            <div class="urgency-badge pulse-effect" style="margin-bottom: 1.5rem; font-size: 13px; padding: 0.6rem 1.2rem;">
-                🔥 ÚLTIMAS UNIDADES • 30% OFF
-            </div>
-            
-            <!-- Título -->
-            <h2 style="font-size: clamp(28px, 8vw, 42px); font-weight: 800; margin-bottom: 1rem; line-height: 1.2; letter-spacing: -1px;">
-                Última Chance de<br>Transformar Sua Mente
-            </h2>
-            
-            <!-- Box de preço destacado -->
-            <div style="background: linear-gradient(135deg, rgba(212, 175, 55, 0.15) 0%, rgba(212, 175, 55, 0.05) 100%); 
-                backdrop-filter: blur(15px); 
-                border-radius: 24px; 
-                padding: 3rem 2.5rem; 
-                margin: 3rem 0; 
-                border: 3px solid rgba(212, 175, 55, 0.6); 
-                box-shadow: 0 20px 60px rgba(212, 175, 55, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.1);
-                position: relative;
-                overflow: hidden;">
-                
-                <!-- Preço riscado menor -->
-                <div style="margin-bottom: 0.5rem;">
-                    <span style="font-size: clamp(20px, 4.5vw, 28px); text-decoration: line-through; opacity: 0.7; font-weight: 600; color: #FFD700;">De R$ 69,90</span>
-                </div>
-                
-                <!-- Preço principal GIGANTE -->
-                <div style="margin-bottom: 1rem;">
-                    <div style="display: inline-block; font-size: clamp(18px, 3.5vw, 24px); opacity: 0.9; margin-bottom: 0.8rem; color: #FFD700; font-weight: 600;">Por apenas</div>
-                    <div style="font-size: clamp(64px, 16vw, 88px); font-weight: 900; color: #FFD700; line-height: 1; letter-spacing: -2px; margin: 0.5rem 0; text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000, 0 0 0 #000;">
-                        R$ 48,90
-                    </div>
-                    
-                </div>
-                
-                <!-- Badge de economia -->
-                <div class="gold-badge" style="font-size: clamp(11px, 2.5vw, 13px); padding: 0.5rem 1.2rem; margin-top: 1rem;">
-                    💰 VOCÊ ECONOMIZA R$ 21,00
-                </div>
-                
-                <!-- Parcelamento -->
-                <p style="margin-top: 1.5rem; font-size: clamp(14px, 3.5vw, 16px); opacity: 0.9; font-weight: 500;">
-                    ou em até <strong style="color: var(--gold);">12x de R$ 4,08</strong> sem juros
-                </p>
-            </div>
-            
-            <!-- Detalhes do produto -->
-            <div style="margin-bottom: 2rem; padding: 0 1rem;">
-                <p style="font-size: clamp(14px, 3.5vw, 16px); opacity: 0.85; line-height: 1.6;">
-                    ✨ o Ebook de neurociência aplicada<br>
-                    ⚡ 7 pilares do pensamento estruturado<br>
-                    🚀 21 dias de transformação mental<br>
-                    🌍 Bilíngue (PT-BR + EN)<br>
-                    📧 Entrega instantânea por e-mail
-                </p>
-            </div>
-            
-            <!-- Botão CTA GIGANTE -->
-            <a href="https://pay.voompcreators.com.br/11811/offer/m4HKL6" class="cta-primary glow-effect pulse-effect" style="font-size: clamp(16px, 4vw, 20px); padding: clamp(1.2rem, 4vw, 1.8rem) clamp(2rem, 8vw, 4rem); background: var(--gold); color: #000; font-weight: 700; display: inline-block; width: 100%; max-width: 400px; border-radius: 12px; text-decoration: none; box-shadow: 0 10px 40px rgba(212, 175, 55, 0.4); transition: all 0.3s ease;">
-                ⚡ GARANTIR MEU ACESSO AGORA
-            </a>
-            
-            <!-- Garantias -->
-            <div style="margin-top: 2rem; padding: 1.5rem; background: rgba(0,0,0,0.3); border-radius: 12px; border: 1px solid rgba(255,255,255,0.1);">
-                <p style="font-size: clamp(13px, 3vw, 15px); opacity: 0.8; line-height: 1.8;">
-                    ✓ Pagamento 100% seguro<br>
-                    ✓ Parcelamento em até 12x sem juros<br>
-                    ✓ Garantia incondicional de 7 dias<br></p>
-            </div>
-            
-            <!-- Urgência final -->
-            <p style="margin-top: 1.5rem; font-size: clamp(12px, 3vw, 14px); opacity: 0.6; font-style: italic;">
-                ⏰ Oferta válida por tempo limitado
-            </p>
-            
-        </div>
-    </section>
-    <!-- ========================================
-         OS 7 PILARES DETALHADOS
-         ======================================== -->
-    <section class="section">
-        <h2 class="section-title">
-            Os 7 Pilares da Arquitetura Mental
-        </h2>
-        
-        <p class="section-subtitle">
-            O sistema completo que transforma caos em clareza. Dominável em 21 dias.
-        </p>
-        
         <div class="pillars-grid">
             <div class="pillar-card">
-                <div class="pillar-number">N</div>
+                <div class="pillar-letter">N</div>
                 <h3 class="pillar-title">NAME (Nomear)</h3>
-                <p class="pillar-description">
-                    Aprenda a nomear o propósito real de qualquer pensamento, decisão ou projeto. Nomeação imprecisa = geometria borrada.
-                </p>
-                <p class="pillar-result">→ Clareza instantânea</p>
+                <p class="pillar-desc">Aprenda a nomear o proposito real de qualquer pensamento, decisao ou projeto. Nomeacao imprecisa = geometria borrada.</p>
+                <p class="pillar-result">Clareza instantanea</p>
             </div>
-            
+
             <div class="pillar-card">
-                <div class="pillar-number">Ú</div>
-                <h3 class="pillar-title">USE VERIFIABLE CRITERIA (Usar Critérios Verificáveis)</h3>
-                <p class="pillar-description">
-                    Domine critérios verificáveis que eliminam vieses cognitivos e dúvidas paralisantes. Decisões baseadas em estrutura, não emoção.
-                </p>
-                <p class="pillar-result">→ Precisão imediata</p>
+                <div class="pillar-letter">U</div>
+                <h3 class="pillar-title">USE VERIFIABLE CRITERIA</h3>
+                <p class="pillar-desc">Domine criterios verificaveis que eliminam vieses cognitivos e duvidas paralisantes. Decisoes baseadas em estrutura.</p>
+                <p class="pillar-result">Precisao imediata</p>
             </div>
-            
+
             <div class="pillar-card">
-                <div class="pillar-number">C</div>
-                <h3 class="pillar-title">CONTEXTUALIZE THE ESSENTIAL (Contextualizar o Essencial)</h3>
-                <p class="pillar-description">
-                    Separe o essencial do ruído em segundos. Contextualização é a geometria da relevância.
-                </p>
-                <p class="pillar-result">→ Foco absoluto</p>
+                <div class="pillar-letter">C</div>
+                <h3 class="pillar-title">CONTEXTUALIZE THE ESSENTIAL</h3>
+                <p class="pillar-desc">Separe o essencial do ruido em segundos. Contextualizacao e a geometria da relevancia.</p>
+                <p class="pillar-result">Foco absoluto</p>
             </div>
-            
+
             <div class="pillar-card">
-                <div class="pillar-number">L</div>
-                <h3 class="pillar-title">LIMIT THE SCOPE (Limitar o Escopo)</h3>
-                <p class="pillar-description">
-                    Restrinja o escopo e multiplique seus resultados. Limitação não é privação, é <span class="highlight-glow">concentração de poder</span>.
-                </p>
-                <p class="pillar-result">→ Poder exponencial</p>
+                <div class="pillar-letter">L</div>
+                <h3 class="pillar-title">LIMIT THE SCOPE</h3>
+                <p class="pillar-desc">Restrinja o escopo e multiplique seus resultados. Limitacao nao e privacao, e <span class="highlight">concentracao de poder</span>.</p>
+                <p class="pillar-result">Poder exponencial</p>
             </div>
-            
+
             <div class="pillar-card">
-                <div class="pillar-number">E</div>
-                <h3 class="pillar-title">ESPECIFY CONSTRAINTS (Especificar Restrições)</h3>
-                <p class="pillar-description">
-                    Use restrições para desbloquear criatividade explosiva. Especificação é a mãe da inovação.
-                </p>
-                <p class="pillar-result">→ Criatividade estruturada</p>
+                <div class="pillar-letter">E</div>
+                <h3 class="pillar-title">SPECIFY CONSTRAINTS</h3>
+                <p class="pillar-desc">Use restricoes para desbloquear criatividade explosiva. Especificacao e a mae da inovacao.</p>
+                <p class="pillar-result">Criatividade estruturada</p>
             </div>
-            
+
             <div class="pillar-card">
-                <div class="pillar-number">O</div>
-                <h3 class="pillar-title">ORDER LOGICALLY (Ordenar Logicamente)</h3>
-                <p class="pillar-description">
-                    Organize pensamentos em sequências lógicas imparáveis. Ordem não é rigidez, é <span class="highlight-glow">fluidez geometricamente perfeita</span>.
-                </p>
-                <p class="pillar-result">→ Execução fluida</p>
+                <div class="pillar-letter">O</div>
+                <h3 class="pillar-title">ORDER LOGICALLY</h3>
+                <p class="pillar-desc">Organize pensamentos em sequencias logicas imparaveis. Ordem nao e rigidez, e <span class="highlight">fluidez perfeita</span>.</p>
+                <p class="pillar-result">Execucao fluida</p>
             </div>
-            
+
             <div class="pillar-card">
-                <div class="pillar-number">X</div>
-                <h3 class="pillar-title">EXPAND EXPONENTIALLY (Expandir Exponencialmente)</h3>
-                <p class="pillar-description">
-                    Escale suas ideias exponencialmente sem perder estrutura. Expansão controlada = impacto multiplicado.
-                </p>
-                <p class="pillar-result">→ Impacto máximo</p>
+                <div class="pillar-letter">X</div>
+                <h3 class="pillar-title">EXPAND EXPONENTIALLY</h3>
+                <p class="pillar-desc">Escale suas ideias exponencialmente sem perder estrutura. Expansao controlada = impacto multiplicado.</p>
+                <p class="pillar-result">Impacto maximo</p>
             </div>
         </div>
-        
-        <!-- CTA após 7 pilares -->
-        <div style="text-align: center; margin-top: 4rem;">
-            <a href="https://pay.voompcreators.com.br/11811/offer/m4HKL6" target="_blank" rel="noopener noreferrer" class="cta-primary" style="font-size: 18px; padding: 1.5rem 3rem;">
-                Quero dominar os 7 pilares →
-            </a>
-            <p style="margin-top: 1rem; font-size: 14px; color: var(--text-secondary);">
-                R$ 48,90 • Parcelamento disponível em até 12x
-            </p>
+
+        <div class="text-center" style="margin-top: 3rem;">
+            <a href="https://pay.voompcreators.com.br/11811/offer/m4HKL6" class="cta-primary">Quero dominar os 7 pilares</a>
+            <p style="margin-top: 1rem; font-size: 14px; color: var(--text-muted);">R$ 48,90 &bull; Parcelamento em ate 12x</p>
         </div>
     </section>
 
-    <!-- ========================================
-         CTA FINAL DE URGÊNCIA - REDESENHADO
-         ======================================== -->
-    <section class="section gradient-animated" style="color: #ffffff; padding: 60px 1.5rem;">
-        <div style="text-align: center; max-width: 600px; margin: 0 auto;">
-            
-            <!-- Badge de urgência -->
-            <div class="urgency-badge pulse-effect" style="margin-bottom: 1.5rem; font-size: 13px; padding: 0.6rem 1.2rem;">
-                🔥 ÚLTIMAS UNIDADES • 30% OFF
+    <!-- ================================
+         PREVIEW / INSIGHTS
+         ================================ -->
+    <section id="preview" class="insights-section">
+        <div style="max-width: 800px; margin: 0 auto;">
+            <div class="overline text-center">Preview Exclusivo</div>
+            <h2 class="section-title">3 Insights que Vao Mudar Seu Pensamento</h2>
+            <p class="section-subtitle">Mesmo antes de comprar</p>
+
+            <div class="insight-card animate-fade">
+                <div class="insight-number">Insight #1</div>
+                <p class="insight-quote">"Pensar e desenhar: todo pensamento vago e um triangulo incompleto."</p>
+                <p class="insight-text">Assim como um arquiteto nao constroi sem planta, sua mente nao deveria processar informacao sem estrutura geometrica. O NUCLEOx ensina a desenhar seus pensamentos antes de executa-los.</p>
             </div>
-            
-            <!-- Título -->
-            <h2 style="font-size: clamp(28px, 8vw, 42px); font-weight: 800; margin-bottom: 1rem; line-height: 1.2; letter-spacing: -1px;">
-                Última Chance de<br>Transformar Sua Mente
-            </h2>
-            
-            <!-- Box de preço destacado -->
-            <div style="background: linear-gradient(135deg, rgba(212, 175, 55, 0.15) 0%, rgba(212, 175, 55, 0.05) 100%); 
-                backdrop-filter: blur(15px); 
-                border-radius: 24px; 
-                padding: 3rem 2.5rem; 
-                margin: 3rem 0; 
-                border: 3px solid rgba(212, 175, 55, 0.6); 
-                box-shadow: 0 20px 60px rgba(212, 175, 55, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.1);
-                position: relative;
-                overflow: hidden;">
-                
-                <!-- Preço riscado menor -->
-                <div style="margin-bottom: 0.5rem;">
-                    <span style="font-size: clamp(20px, 4.5vw, 28px); text-decoration: line-through; opacity: 0.7; font-weight: 600; color: #FFD700;">De R$ 69,90</span>
-                </div>
-                
-                <!-- Preço principal GIGANTE -->
-                <div style="margin-bottom: 1rem;">
-                    <div style="display: inline-block; font-size: clamp(18px, 3.5vw, 24px); opacity: 0.9; margin-bottom: 0.8rem; color: #FFD700; font-weight: 600;">Por apenas</div>
-                    <div style="font-size: clamp(64px, 16vw, 88px); font-weight: 900; color: #FFD700; line-height: 1; letter-spacing: -2px; margin: 0.5rem 0; text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000, 0 0 0 #000;">
-                        R$ 48,90
-                    </div>
-                    
-                </div>
-                
-                <!-- Badge de economia -->
-                <div class="gold-badge" style="font-size: clamp(11px, 2.5vw, 13px); padding: 0.5rem 1.2rem; margin-top: 1rem;">
-                    💰 VOCÊ ECONOMIZA R$ 21,00
-                </div>
-                
-                <!-- Parcelamento -->
-                <p style="margin-top: 1.5rem; font-size: clamp(14px, 3.5vw, 16px); opacity: 0.9; font-weight: 500;">
-                    ou em até <strong style="color: var(--gold);">12x de R$ 4,08</strong> sem juros
-                </p>
+
+            <div class="insight-card animate-fade">
+                <div class="insight-number">Insight #2</div>
+                <p class="insight-quote">"A forma e o corpo do pensamento, e quase ninguem a enxerga."</p>
+                <p class="insight-text">Voce nunca teve um problema de conteudo. Voce tinha um problema de geometria. Quando voce aprende a ver a FORMA por tras das ideias, tudo se simplifica instantaneamente.</p>
             </div>
-            
-            <!-- Detalhes do produto -->
-            <div style="margin-bottom: 2rem; padding: 0 1rem;">
-                <p style="font-size: clamp(14px, 3.5vw, 16px); opacity: 0.85; line-height: 1.6;">
-                    ✨ o Ebook de neurociência aplicada<br>
-                    ⚡ 7 pilares do pensamento estruturado<br>
-                    🚀 21 dias de transformação mental<br>
-                    🌍 Bilíngue (PT-BR + EN)<br>
-                    📧 Entrega instantânea por e-mail
-                </p>
+
+            <div class="insight-card animate-fade">
+                <div class="insight-number">Insight #3</div>
+                <p class="insight-quote">"Velocidade sem direcao e apenas ruido acelerado."</p>
+                <p class="insight-text">A era da IA nao premia quem pensa mais rapido. Premia quem pensa com ESTRUTURA. O NUCLEOx e o sistema operacional que faltava na sua mente.</p>
             </div>
-            
-            <!-- Botão CTA GIGANTE -->
-            <a href="https://pay.voompcreators.com.br/11811/offer/m4HKL6" class="cta-primary glow-effect pulse-effect" style="font-size: clamp(16px, 4vw, 20px); padding: clamp(1.2rem, 4vw, 1.8rem) clamp(2rem, 8vw, 4rem); background: var(--gold); color: #000; font-weight: 700; display: inline-block; width: 100%; max-width: 400px; border-radius: 12px; text-decoration: none; box-shadow: 0 10px 40px rgba(212, 175, 55, 0.4); transition: all 0.3s ease;">
-                ⚡ GARANTIR MEU ACESSO AGORA
-            </a>
-            
-            <!-- Garantias -->
-            <div style="margin-top: 2rem; padding: 1.5rem; background: rgba(0,0,0,0.3); border-radius: 12px; border: 1px solid rgba(255,255,255,0.1);">
-                <p style="font-size: clamp(13px, 3vw, 15px); opacity: 0.8; line-height: 1.8;">
-                    ✓ Pagamento 100% seguro<br>
-                    ✓ Parcelamento em até 12x sem juros<br>
-                    ✓ Garantia incondicional de 7 dias<br></p>
+
+            <div class="text-center" style="margin-top: 3rem;">
+                <a href="https://pay.voompcreators.com.br/11811/offer/m4HKL6" class="cta-primary">Quero transformar meu pensamento</a>
+                <p style="margin-top: 1rem; font-size: 14px; color: var(--text-muted);">Pagamento unico &bull; Parcelamento em ate 12x</p>
             </div>
-            
-            <!-- Urgência final -->
-            <p style="margin-top: 1.5rem; font-size: clamp(12px, 3vw, 14px); opacity: 0.6; font-style: italic;">
-                ⏰ Oferta válida por tempo limitado
-            </p>
-            
         </div>
     </section>
-    <!-- ========================================
-         PROVA SOCIAL
-         ======================================== -->
-    <section class="section" style="background: var(--surface-dark); padding: 100px 2rem; margin: 0 -2rem; border: 1px solid rgba(255, 255, 255, 0.08);">
+
+    <!-- ================================
+         DEPOIMENTOS
+         ================================ -->
+    <section class="section animate-fade">
+        <h2 class="section-title">Mentes Que Ja Pensam Geometricamente</h2>
+        <p class="section-subtitle">Veja o que dizem quem ja aplicou o metodo</p>
+
+        <div class="testimonials-grid">
+            <div class="testimonial-card">
+                <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                <p class="testimonial-text">"Nunca mais comecei um projeto sem estruturar primeiro meu triangulo mental. O NUCLEOx mudou nao apenas como eu penso, mas como eu existo."</p>
+                <p class="testimonial-author">Camila R.</p>
+                <p class="testimonial-role">Fundadora de Startup &bull; Sao Paulo</p>
+            </div>
+
+            <div class="testimonial-card">
+                <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                <p class="testimonial-text">"Eu achava que pensava rapido. Descobri que pensava caoticamente. Com o sistema, reduzi paralisia de decisao em 80% em 3 semanas."</p>
+                <p class="testimonial-author">Rafael M.</p>
+                <p class="testimonial-role">Designer de Produto &bull; Lisboa</p>
+            </div>
+
+            <div class="testimonial-card">
+                <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                <p class="testimonial-text">"Finalmente entendi por que grandes lideres parecem calmos sob pressao: eles operam com geometria, nao com impulso. Transformador."</p>
+                <p class="testimonial-author">Beatriz L.</p>
+                <p class="testimonial-role">Executiva C-Level &bull; Rio de Janeiro</p>
+            </div>
+
+            <div class="testimonial-card">
+                <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                <p class="testimonial-text">"Apliquei o metodo no meu time de engenharia. Em 2 semanas, as reunioes ficaram 50% mais curtas e as decisoes 3x mais claras."</p>
+                <p class="testimonial-author">Lucas T.</p>
+                <p class="testimonial-role">CTO &bull; Curitiba</p>
+            </div>
+
+            <div class="testimonial-card">
+                <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                <p class="testimonial-text">"Como psicologa, reconheco a base neurocientifica solida. O NUCLEOx traduz conceitos complexos em pratica acessivel. Recomendo aos meus pacientes."</p>
+                <p class="testimonial-author">Dra. Marina S.</p>
+                <p class="testimonial-role">Psicologa Clinica &bull; Porto Alegre</p>
+            </div>
+
+            <div class="testimonial-card">
+                <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                <p class="testimonial-text">"Comecei cético. Em 21 dias, minha produtividade como escritor triplicou. A geometria do pensamento e real."</p>
+                <p class="testimonial-author">Andre P.</p>
+                <p class="testimonial-role">Escritor &bull; Brasilia</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================================
+         O QUE VOCE RECEBE
+         ================================ -->
+    <section class="product-section animate-fade">
         <div style="max-width: 1100px; margin: 0 auto;">
-            <h2 class="section-title">
-                Mentes Que Já Pensam Geometricamente
-            </h2>
-            
-            <div class="testimonials-grid">
-                <div class="testimonial-card animate-in">
-                    <p class="testimonial-text">
-                        "Nunca mais comecei um projeto sem estruturar primeiro meu triângulo mental. O NUCLEOˣ mudou não apenas como eu penso, mas como eu existo."
-                    </p>
-                    <p class="testimonial-author">Camila R.</p>
-                    <p class="testimonial-role">Fundadora de Startup • São Paulo</p>
+            <div class="overline text-center">Tudo Incluido</div>
+            <h2 class="section-title">O Que Voce Recebe</h2>
+            <p class="section-subtitle">Um sistema completo de transformacao mental por um unico investimento</p>
+
+            <div class="product-grid">
+                <div class="product-item">
+                    <div class="product-icon">&#128214;</div>
+                    <div class="product-name">E-book NUCLEOx Completo</div>
+                    <div class="product-detail">147 paginas de neurociencia aplicada com os 7 pilares do pensamento estruturado</div>
                 </div>
-                
-                <div class="testimonial-card">
-                    <p class="testimonial-text">
-                        "Eu achava que pensava rápido. Descobri que pensava caoticamente. Com o sistema, reduzi paralisia de decisão em 80% em 3 semanas."
-                    </p>
-                    <p class="testimonial-author">Rafael M.</p>
-                    <p class="testimonial-role">Designer de Produto • Lisboa</p>
+                <div class="product-item">
+                    <div class="product-icon">&#128736;</div>
+                    <div class="product-name">Protocolo de 21 Dias</div>
+                    <div class="product-detail">Passo a passo pratico para implementar cada pilar na sua rotina diaria</div>
                 </div>
-                
-                <div class="testimonial-card">
-                    <p class="testimonial-text">
-                        "Finalmente entendi por que grandes líderes parecem calmos sob pressão: eles operam com geometria, não com impulso. Transformador."
-                    </p>
-                    <p class="testimonial-author">Beatriz L.</p>
-                    <p class="testimonial-role">Executiva C-Level • Rio de Janeiro</p>
+                <div class="product-item">
+                    <div class="product-icon">&#127760;</div>
+                    <div class="product-name">Bilingue (PT + EN)</div>
+                    <div class="product-detail">Conteudo completo em Portugues e Ingles para voce estudar em ambos idiomas</div>
                 </div>
-            </div>
-            
-            <!-- CTA após depoimentos -->
-            <div style="text-align: center; margin-top: 4rem;">
-                <a href="https://pay.voompcreators.com.br/11811/offer/m4HKL6" target="_blank" rel="noopener noreferrer" class="cta-primary glow-effect" style="font-size: 18px; padding: 1.5rem 3rem;">
-                    Junte-se a quem já pensa com estrutura →
-                </a>
-                <p style="margin-top: 1rem; font-size: 14px; color: var(--text-secondary);">
-                    ✨ Acesso imediato • <span class="gold-badge" style="padding: 0.3rem 0.8rem; font-size: 12px;">12x sem juros</span>
-                </p>
+                <div class="product-item">
+                    <div class="product-icon">&#128196;</div>
+                    <div class="product-name">3 Formatos</div>
+                    <div class="product-detail">Receba em PDF, DOCX e HTML para ler no dispositivo que preferir</div>
+                </div>
+                <div class="product-item">
+                    <div class="product-icon">&#9889;</div>
+                    <div class="product-name">Entrega Instantanea</div>
+                    <div class="product-detail">Acesso imediato apos a confirmacao do pagamento no seu e-mail</div>
+                </div>
+                <div class="product-item">
+                    <div class="product-icon">&#127793;</div>
+                    <div class="product-name">Acesso a Comunidade</div>
+                    <div class="product-detail">Junte-se a mentes que pensam com estrutura na Sociedade NUCLEOx</div>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- ========================================
-         CTA FINAL DE URGÊNCIA - REDESENHADO
-         ======================================== -->
-    <section class="section gradient-animated" style="color: #ffffff; padding: 60px 1.5rem;">
-        <div style="text-align: center; max-width: 600px; margin: 0 auto;">
-            
-            <!-- Badge de urgência -->
-            <div class="urgency-badge pulse-effect" style="margin-bottom: 1.5rem; font-size: 13px; padding: 0.6rem 1.2rem;">
-                🔥 ÚLTIMAS UNIDADES • 30% OFF
-            </div>
-            
-            <!-- Título -->
-            <h2 style="font-size: clamp(28px, 8vw, 42px); font-weight: 800; margin-bottom: 1rem; line-height: 1.2; letter-spacing: -1px;">
-                Última Chance de<br>Transformar Sua Mente
-            </h2>
-            
-            <!-- Box de preço destacado -->
-            <div style="background: linear-gradient(135deg, rgba(212, 175, 55, 0.15) 0%, rgba(212, 175, 55, 0.05) 100%); 
-                backdrop-filter: blur(15px); 
-                border-radius: 24px; 
-                padding: 3rem 2.5rem; 
-                margin: 3rem 0; 
-                border: 3px solid rgba(212, 175, 55, 0.6); 
-                box-shadow: 0 20px 60px rgba(212, 175, 55, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.1);
-                position: relative;
-                overflow: hidden;">
-                
-                <!-- Preço riscado menor -->
-                <div style="margin-bottom: 0.5rem;">
-                    <span style="font-size: clamp(20px, 4.5vw, 28px); text-decoration: line-through; opacity: 0.7; font-weight: 600; color: #FFD700;">De R$ 69,90</span>
-                </div>
-                
-                <!-- Preço principal GIGANTE -->
-                <div style="margin-bottom: 1rem;">
-                    <div style="display: inline-block; font-size: clamp(18px, 3.5vw, 24px); opacity: 0.9; margin-bottom: 0.8rem; color: #FFD700; font-weight: 600;">Por apenas</div>
-                    <div style="font-size: clamp(64px, 16vw, 88px); font-weight: 900; color: #FFD700; line-height: 1; letter-spacing: -2px; margin: 0.5rem 0; text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000, 0 0 0 #000;">
-                        R$ 48,90
-                    </div>
-                    
-                </div>
-                
-                <!-- Badge de economia -->
-                <div class="gold-badge" style="font-size: clamp(11px, 2.5vw, 13px); padding: 0.5rem 1.2rem; margin-top: 1rem;">
-                    💰 VOCÊ ECONOMIZA R$ 21,00
-                </div>
-                
-                <!-- Parcelamento -->
-                <p style="margin-top: 1.5rem; font-size: clamp(14px, 3.5vw, 16px); opacity: 0.9; font-weight: 500;">
-                    ou em até <strong style="color: var(--gold);">12x de R$ 4,08</strong> sem juros
-                </p>
-            </div>
-            
-            <!-- Detalhes do produto -->
-            <div style="margin-bottom: 2rem; padding: 0 1rem;">
-                <p style="font-size: clamp(14px, 3.5vw, 16px); opacity: 0.85; line-height: 1.6;">
-                    ✨ o Ebook de neurociência aplicada<br>
-                    ⚡ 7 pilares do pensamento estruturado<br>
-                    🚀 21 dias de transformação mental<br>
-                    🌍 Bilíngue (PT-BR + EN)<br>
-                    📧 Entrega instantânea por e-mail
-                </p>
-            </div>
-            
-            <!-- Botão CTA GIGANTE -->
-            <a href="https://pay.voompcreators.com.br/11811/offer/m4HKL6" class="cta-primary glow-effect pulse-effect" style="font-size: clamp(16px, 4vw, 20px); padding: clamp(1.2rem, 4vw, 1.8rem) clamp(2rem, 8vw, 4rem); background: var(--gold); color: #000; font-weight: 700; display: inline-block; width: 100%; max-width: 400px; border-radius: 12px; text-decoration: none; box-shadow: 0 10px 40px rgba(212, 175, 55, 0.4); transition: all 0.3s ease;">
-                ⚡ GARANTIR MEU ACESSO AGORA
-            </a>
-            
-            <!-- Garantias -->
-            <div style="margin-top: 2rem; padding: 1.5rem; background: rgba(0,0,0,0.3); border-radius: 12px; border: 1px solid rgba(255,255,255,0.1);">
-                <p style="font-size: clamp(13px, 3vw, 15px); opacity: 0.8; line-height: 1.8;">
-                    ✓ Pagamento 100% seguro<br>
-                    ✓ Parcelamento em até 12x sem juros<br>
-                    ✓ Garantia incondicional de 7 dias<br></p>
-            </div>
-            
-            <!-- Urgência final -->
-            <p style="margin-top: 1.5rem; font-size: clamp(12px, 3vw, 14px); opacity: 0.6; font-style: italic;">
-                ⏰ Oferta válida por tempo limitado
-            </p>
-            
-        </div>
-    </section>
-    <!-- ========================================
-         PILAR 6: OFERTA E URGÊNCIA
-         ======================================== -->
-    <section id="oferta" class="offer-section">
-        <div class="offer-content">
-            <div class="exclusivity-badge pulse-effect" style="background: rgba(212, 175, 55, 0.2); border-color: var(--gold);">
-                ⚡ Nem todos estão prontos para este método
-            </div>
-            <h2 class="fade-in">O NUCLEOˣ não é para quem busca atalhos</h2>
-            <p style="font-size: clamp(16px, 4vw, 18px); margin-bottom: 3rem; opacity: 0.9;">
-                velocidade sem direção é apenas agitação. Este protocolo é para quem <span class="highlight-glow">domina sua trajetória com clareza</span>
-            </p>
+    <!-- ================================
+         OFERTA PRINCIPAL
+         ================================ -->
+    <section id="oferta" class="offer-section animate-fade">
+        <div style="max-width: 800px; margin: 0 auto;">
+            <div class="overline text-center">Investimento</div>
+            <h2 class="section-title">Transforme Sua Mente Hoje</h2>
+            <p class="section-subtitle">Velocidade sem direcao e apenas agitacao. Este protocolo e para quem <span class="highlight">domina sua trajetoria com clareza</span>.</p>
 
             <div id="oferta-final"></div>
-            <!-- Price Box Redesenhado - Mobile First -->
-            <div style="background: linear-gradient(135deg, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.4) 100%); backdrop-filter: blur(15px); border-radius: 24px; padding: clamp(2rem, 5vw, 3rem) clamp(1.5rem, 4vw, 2.5rem); margin: 2rem auto; max-width: 600px; border: 2px solid rgba(212, 175, 55, 0.3); box-shadow: 0 20px 60px rgba(0,0,0,0.5);">
-                
-                <!-- Badge de investimento -->
-                <div style="display: inline-block; background: rgba(212, 175, 55, 0.2); border: 1px solid var(--gold); padding: 0.5rem 1.5rem; border-radius: 50px; margin-bottom: 2rem;">
-                    <span style="color: var(--gold); font-weight: 700; font-size: clamp(12px, 3vw, 14px); letter-spacing: 2px;">
-                        💎 INVESTIMENTO SIMBÓLICO
-                    </span>
-                </div>
-                
-                <!-- Preço riscado -->
-                <div style="margin-bottom: 0.5rem;">
-                    <span style="font-size: clamp(20px, 5vw, 28px); font-weight: 600; opacity: 0.5; text-decoration: line-through;">R$ 69,90</span>
-                </div>
-                
-                <!-- Preço principal GIGANTE -->
-                <div style="margin: 1.5rem 0;">
-                    <div class="animated-number" style="font-size: clamp(64px, 18vw, 96px); font-weight: 900; line-height: 1; background: linear-gradient(135deg, #ffffff 0%, var(--gold) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; text-shadow: 0 4px 20px rgba(212, 175, 55, 0.3);">
-                        R$ 48<span style="font-size: 0.7em; opacity: 0.9;">,90</span>
-                    </div>
-                </div>
-                
-                <!-- Badge de economia destacado -->
-                <div class="gold-badge pulse-effect" style="font-size: clamp(12px, 3vw, 14px); padding: 0.6rem 1.8rem; margin: 1.5rem 0; display: inline-block;">
-                    💰 ECONOMIZE R$ 21,00 • 30% OFF
-                </div>
-                
-                <!-- Divisor sutil -->
-                <div style="width: 100%; height: 1px; background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent); margin: 2rem 0;"></div>
-                
-                <!-- Opções de pagamento -->
-                <div style="text-align: left; background: rgba(0,0,0,0.2); padding: 1.5rem; border-radius: 12px; margin: 1.5rem 0;">
-                    <p style="font-size: clamp(16px, 4vw, 18px); font-weight: 600; margin-bottom: 1rem; color: #fff;">
-                        ✨ Escolha sua forma de pagamento:
-                    </p>
-                    
-                    <div style="display: flex; flex-direction: column; gap: 1rem;">
-                        <!-- Opção 1: À vista -->
-                        <div style="background: rgba(212, 175, 55, 0.15); border: 2px solid var(--gold); padding: 1rem 1.25rem; border-radius: 10px;">
-                            <p style="font-size: clamp(14px, 3.5vw, 16px); margin: 0;">
-                                <strong style="color: var(--gold);">💳 À vista:</strong> <span style="font-size: clamp(20px, 5vw, 24px); font-weight: 700; color: #fff;">R$ 48,90</span>
-                            </p>
-                        </div>
-                        
-                        <!-- Opção 2: Parcelado -->
-                        <div style="background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.2); padding: 1rem 1.25rem; border-radius: 10px;">
-                            <p style="font-size: clamp(14px, 3.5vw, 16px); margin: 0;">
-                                <strong style="color: #fff;">💳 Parcelado:</strong> <span style="font-size: clamp(16px, 4vw, 18px); font-weight: 600; color: var(--gold);">12x de R$ 4,08</span> <span style="opacity: 0.7; font-size: clamp(12px, 3vw, 14px);">sem juros</span>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Frase de impacto -->
-                <p style="font-size: clamp(14px, 3.5vw, 16px); opacity: 0.8; font-style: italic; margin-top: 1.5rem; line-height: 1.6;">
-                    💎 O valor de um livro. O impacto de uma nova arquitetura mental.
-                </p>
-            </div>
-            
-            <!-- Features modernizadas -->
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1rem; margin: 2rem 0; padding: 0 1rem;">
-                <div style="background: rgba(255,255,255,0.06); padding: 1.25rem; border-radius: 12px; border-left: 3px solid var(--gold);">
-                    <p style="font-size: clamp(14px, 3.5vw, 16px); margin: 0;">✓ o Ebook de neurociência aplicada</p>
-                </div>
-                <div style="background: rgba(255,255,255,0.06); padding: 1.25rem; border-radius: 12px; border-left: 3px solid var(--gold);">
-                    <p style="font-size: clamp(14px, 3.5vw, 16px); margin: 0;">✓ 7 pilares do pensamento estruturado</p>
-                </div>
-                <div style="background: rgba(255,255,255,0.06); padding: 1.25rem; border-radius: 12px; border-left: 3px solid var(--gold);">
-                    <p style="font-size: clamp(14px, 3.5vw, 16px); margin: 0;">✓ Protocolo de 21 dias passo a passo</p>
-                </div>
-                <div style="background: rgba(255,255,255,0.06); padding: 1.25rem; border-radius: 12px; border-left: 3px solid var(--gold);">
-                    <p style="font-size: clamp(14px, 3.5vw, 16px); margin: 0;">✓ Bilíngue (Português + Inglês)</p>
-                </div>
-                <div style="background: rgba(255,255,255,0.06); padding: 1.25rem; border-radius: 12px; border-left: 3px solid var(--gold);">
-                    <p style="font-size: clamp(14px, 3.5vw, 16px); margin: 0;">✓ 3 formatos (PDF, DOCX, HTML)</p>
-                </div>
-                <div style="background: rgba(255,255,255,0.06); padding: 1.25rem; border-radius: 12px; border-left: 3px solid var(--gold);">
-                    <p style="font-size: clamp(14px, 3.5vw, 16px); margin: 0;">✓ Entrega instantânea por e-mail</p>
-                </div>
-            </div>
-            
-            <!-- Comparação de valor compacta -->
-            <div style="background: rgba(0,0,0,0.3); padding: clamp(1.5rem, 4vw, 2rem); border-radius: 16px; margin: 2rem 0; border: 1px solid rgba(255,255,255,0.1);">
-                <p style="font-size: clamp(12px, 3vw, 14px); opacity: 0.6; margin-bottom: 1.5rem; text-transform: uppercase; letter-spacing: 2px; text-align: center;">
-                    📊 Perspectiva de Valor
-                </p>
-                
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 1rem; text-align: center;">
-                    <div style="opacity: 0.6;">
-                        <p style="font-size: clamp(11px, 2.5vw, 13px); margin-bottom: 0.5rem;">Coaching</p>
-                        <p style="font-size: clamp(18px, 4vw, 22px); font-weight: 700;">R$ 300+</p>
-                    </div>
-                    <div style="opacity: 0.6;">
-                        <p style="font-size: clamp(11px, 2.5vw, 13px); margin-bottom: 0.5rem;">Cursos online</p>
-                        <p style="font-size: clamp(18px, 4vw, 22px); font-weight: 700;">R$ 297+</p>
-                    </div>
-                    <div style="background: rgba(212, 175, 55, 0.15); padding: 1rem; border-radius: 10px; border: 2px solid var(--gold);">
-                        <p style="font-size: clamp(11px, 2.5vw, 13px); margin-bottom: 0.5rem; color: var(--gold); font-weight: 600;">NUCLEOˣ</p>
-                        <p style="font-size: clamp(22px, 5vw, 28px); font-weight: 900; color: var(--gold);">R$ 48,90</p>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- CTA principal -->
-            <a href="https://pay.voompcreators.com.br/11811/offer/m4HKL6" class="cta-primary glow-effect" style="font-size: clamp(16px, 4vw, 18px); padding: clamp(1.2rem, 4vw, 1.75rem) clamp(2rem, 6vw, 3.5rem); background: var(--gold); color: #000000; margin-top: 2rem; display: inline-block; width: 100%; max-width: 400px; border-radius: 12px; font-weight: 700; text-decoration: none; box-shadow: 0 10px 30px rgba(212, 175, 55, 0.35);">
-                ⚡ ACESSAR O NUCLEOˣ AGORA →
-            </a>
-            
-            <!-- Garantia -->
-            <p style="font-size: clamp(13px, 3vw, 15px); opacity: 0.7; margin-top: 2rem; line-height: 1.6;">
-                🛡️ <strong>Garantia total:</strong> Leia, aplique, transforme ou devolvo 100% sem perguntas
-            </p>
 
-        </div>
-    </section>
-    
-    <!-- ========================================
-         OS 6 PRINCÍPIOS NUCLEOX (N-C-L-E-E-O)
-         ======================================== -->
-    <section id="principios" class="container" style="padding: 4rem 1rem; margin: 4rem auto;">
-        <h2 style="text-align: center; font-size: clamp(28px, 6vw, 42px); margin-bottom: 1rem;">
-            Os 7 Pilares da Arquitetura Mental
-        </h2>
-        <p style="text-align: center; font-size: clamp(14px, 3.5vw, 18px); opacity: 0.7; margin-bottom: 4rem; max-width: 700px; margin-left: auto; margin-right: auto;">
-            A geometria do pensamento estruturado em seis pilares atemporais
-        </p>
-        
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; max-width: 1200px; margin: 0 auto;">
-            
-            <!-- N: NAME THE PURPOSE -->
-            <div class="principle-card">
-                <div class="geometric-icon">
-                    <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="50" cy="50" r="35" fill="none" stroke="#ffffff" stroke-width="3"/>
-                    </svg>
-                </div>
-                <div class="principle-letter">N</div>
-                <div class="principle-title">Nomeie</div>
-                <div class="principle-subtitle">O Propósito</div>
-                <div class="principle-description">Um objetivo claro é o rótulo para o aprendizado</div>
-            </div>
-            
-            <!-- Ú: USE VERIFIABLE CRITERIA -->
-            <div class="principle-card">
-                <div class="geometric-icon">
-                    <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M 35,30 Q 35,65 50,65 Q 65,65 65,30" fill="none" stroke="#ffffff" stroke-width="3"/>
-                        <circle cx="50" cy="68" r="3" fill="#ffffff"/>
-                    </svg>
-                </div>
-                <div class="principle-letter">Ú</div>
-                <div class="principle-title">Use</div>
-                <div class="principle-subtitle">Critérios Verificáveis</div>
-                <div class="principle-description">Sem avaliação, o sucesso é apenas ruído</div>
-            </div>
-            
-            <!-- C: CONTEXTUALIZE THE ESSENTIAL -->
-            <div class="principle-card">
-                <div class="geometric-icon">
-                    <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                        <polygon points="50,20 80,70 20,70" fill="none" stroke="#ffffff" stroke-width="3"/>
-                        <line x1="30" y1="62" x2="70" y2="62" stroke="#ffffff" stroke-width="3"/>
-                        <circle cx="50" cy="62" r="5" fill="#ffffff"/>
-                    </svg>
-                </div>
-                <div class="principle-letter">C</div>
-                <div class="principle-title">Contextualize</div>
-                <div class="principle-subtitle">O Essencial</div>
-                <div class="principle-description">Sem avaliação, o sucesso é apenas ruído</div>
-            </div>
-            
-            <!-- L: LIMIT THE SCOPE -->
-            <div class="principle-card">
-                <div class="geometric-icon">
-                    <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                        <rect x="25" y="25" width="50" height="50" fill="none" stroke="#ffffff" stroke-width="3"/>
-                    </svg>
-                </div>
-                <div class="principle-letter">L</div>
-                <div class="principle-title">Limite</div>
-                <div class="principle-subtitle">O Escopo</div>
-                <div class="principle-description">Fronteiras dão liberdade para criar</div>
-            </div>
-            
-            <!-- E: ESPECIFY CONSTRAINTS -->
-            <div class="principle-card">
-                <div class="geometric-icon">
-                    <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                        <polygon points="50,20 75,35 75,65 50,80 25,65 25,35" fill="none" stroke="#ffffff" stroke-width="3"/>
-                        <polygon points="50,35 65,43 65,57 50,65 35,57 35,43" fill="none" stroke="#ffffff" stroke-width="2"/>
-                    </svg>
-                </div>
-                <div class="principle-letter">E</div>
-                <div class="principle-title">Especifique</div>
-                <div class="principle-subtitle">As Restrições</div>
-                <div class="principle-description">A invenção é ficção contra limites</div>
-            </div>
-            
-            <!-- E: ORDER LOGICALLY -->
-            <div class="principle-card">
-                <div class="geometric-icon">
-                    <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="50" cy="50" r="35" fill="none" stroke="#ffffff" stroke-width="3"/>
-                        <line x1="20" y1="50" x2="80" y2="50" stroke="var(--gold)" stroke-width="4" transform="rotate(45 50 50)"/>
-                    </svg>
-                </div>
-                <div class="principle-letter">O</div>
-                <div class="principle-title">Ordene</div>
-                <div class="principle-subtitle">Logicamente</div>
-                <div class="principle-description">A clareza vive na sequência, não na confusão</div>
-            </div>
-            
-            <!-- O: 6XPAID EXPONENTIALLY -->
-            <div class="principle-card">
-                <div class="geometric-icon">
-                    <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="30" cy="70" r="5" fill="#ffffff"/>
-                        <circle cx="50" cy="50" r="5" fill="#ffffff"/>
-                        <circle cx="70" cy="25" r="5" fill="#ffffff"/>
-                        <line x1="30" y1="70" x2="50" y2="50" stroke="#ffffff" stroke-width="2"/>
-                        <line x1="50" y1="50" x2="70" y2="25" stroke="#ffffff" stroke-width="2"/>
-                        <polyline points="60,25 70,25 70,35" fill="none" stroke="var(--gold)" stroke-width="2"/>
-                    </svg>
-                </div>
-                <div class="principle-letter">X</div>
-                <div class="principle-title">Expanda</div>
-                <div class="principle-subtitle">Exponencialmente</div>
-                <div class="principle-description">O crescimento é o objetivo que se ensina</div>
-            </div>
-            
-        </div>
-    </section>
+            <div class="offer-box">
+                <div class="offer-badge">INVESTIMENTO SIMBOLICO</div>
+                <div class="offer-price-old">R$ 69,90</div>
+                <div class="offer-price-new">R$ 48<span>,90</span></div>
+                <div class="offer-savings">VOCE ECONOMIZA R$ 21,00 &bull; 30% OFF</div>
 
+                <div class="offer-payment-options">
+                    <p style="font-weight: 600; margin-bottom: 1rem;">Escolha sua forma de pagamento:</p>
+                    <div class="payment-option payment-highlight">
+                        <p style="margin: 0;">
+                            <strong style="color: var(--gold);">A vista:</strong>
+                            <span style="font-size: 22px; font-weight: 700; margin-left: 0.5rem;">R$ 48,90</span>
+                        </p>
+                    </div>
+                    <div class="payment-option payment-regular">
+                        <p style="margin: 0;">
+                            <strong>Parcelado:</strong>
+                            <span style="font-size: 18px; font-weight: 600; color: var(--gold); margin-left: 0.5rem;">12x de R$ 4,08</span>
+                            <span style="opacity: 0.7; font-size: 13px;"> sem juros</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
 
-    
-    <!-- ========================================
-         SOBRE A MARCA NUCLEOˣ
-         ======================================== -->
-    <section class="container" style="padding: 4rem 1rem; margin: 3rem auto; max-width: 900px;">
-        <div style="text-align: center; background: rgba(76, 175, 80, 0.08); border: 1px solid rgba(76, 175, 80, 0.25); border-radius: 20px; padding: clamp(2rem, 5vw, 3rem);">
-            
-            <div style="width: 60px; height: 2px; background: var(--atomic-green); margin: 0 auto 2rem;"></div>
-            
-            <blockquote style="font-size: clamp(18px, 4vw, 24px); line-height: 1.6; font-weight: 300; font-style: italic; color: rgba(255,255,255,0.9); margin: 0;">
-                "Na NUCLEOˣ, pensamos em estruturas.<br>
-                Porque ideias soltas não constroem o futuro."
-            </blockquote>
-            
-            <div style="width: 60px; height: 2px; background: var(--atomic-green); margin: 2rem auto 0;"></div>
-            
-            <p style="margin-top: 2rem; font-size: clamp(14px, 3vw, 16px); opacity: 0.7; letter-spacing: 2px; text-transform: uppercase;">
-                A Geometria do Pensamento
+            <div class="offer-features">
+                <div class="offer-feature">E-book de neurociencia aplicada</div>
+                <div class="offer-feature">7 pilares do pensamento</div>
+                <div class="offer-feature">Protocolo de 21 dias</div>
+                <div class="offer-feature">Bilingue (PT + EN)</div>
+                <div class="offer-feature">3 formatos (PDF, DOCX, HTML)</div>
+                <div class="offer-feature">Entrega instantanea</div>
+            </div>
+
+            <div class="offer-comparison">
+                <p style="font-size: 12px; opacity: 0.5; text-transform: uppercase; letter-spacing: 2px; text-align: center;">Perspectiva de Valor</p>
+                <div class="comparison-grid">
+                    <div class="comparison-item">
+                        <div class="comparison-label">Coaching</div>
+                        <div class="comparison-price">R$ 300+</div>
+                    </div>
+                    <div class="comparison-item">
+                        <div class="comparison-label">Cursos online</div>
+                        <div class="comparison-price">R$ 297+</div>
+                    </div>
+                    <div class="comparison-item featured">
+                        <div class="comparison-label">NUCLEOx</div>
+                        <div class="comparison-price">R$ 48,90</div>
+                    </div>
+                </div>
+            </div>
+
+            <a href="https://pay.voompcreators.com.br/11811/offer/m4HKL6" class="cta-primary cta-large">ACESSAR O NUCLEOx AGORA</a>
+
+            <p style="font-size: 14px; opacity: 0.7; margin-top: 2rem; line-height: 1.6;">
+                Garantia total: Leia, aplique, transforme ou devolvo 100% sem perguntas
             </p>
         </div>
     </section>
 
+    <!-- ================================
+         GARANTIA DETALHADA
+         ================================ -->
+    <section class="guarantee-section animate-fade">
+        <div class="guarantee-box">
+            <div class="guarantee-icon">&#128737;</div>
+            <h3 class="guarantee-title">Garantia Incondicional de 7 Dias</h3>
+            <p class="guarantee-text">
+                Se voce nao sentir que o NUCLEOx transformou a forma como voce pensa, decide e executa, basta enviar um e-mail e devolvemos 100% do seu investimento. Sem perguntas, sem burocracia, sem risco. A confianca no metodo e total.
+            </p>
+            <div style="margin-top: 2rem; display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap;">
+                <div style="font-size: 14px; color: var(--text-muted);">&#10003; Pagamento seguro</div>
+                <div style="font-size: 14px; color: var(--text-muted);">&#10003; 12x sem juros</div>
+                <div style="font-size: 14px; color: var(--text-muted);">&#10003; Reembolso total</div>
+            </div>
+        </div>
+    </section>
 
-    <!-- ========================================
-         PILAR 7: COMUNIDADE E CONTINUIDADE
-         ======================================== -->
-    <section class="community-section">
-        <div class="community-badge">⚛️</div>
-        
-        <h2 class="community-title">
-            Você Não Está Apenas Comprando um E-book
-        </h2>
-        
+    <!-- ================================
+         FAQ
+         ================================ -->
+    <section class="section animate-fade">
+        <h2 class="section-title">Perguntas Frequentes</h2>
+        <p class="section-subtitle">Tudo o que voce precisa saber antes de comecar</p>
+
+        <div class="faq-list">
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    <span>Para quem e o NUCLEOx?</span>
+                    <span class="faq-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    Para qualquer pessoa que quer pensar com mais clareza, tomar decisoes melhores e executar com eficiencia. Empreendedores, profissionais, estudantes, criativos, lideres e qualquer mente que busca estrutura no caos da informacao moderna.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    <span>Preciso de conhecimento previo em neurociencia?</span>
+                    <span class="faq-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    Nao. O NUCLEOx traduz conceitos complexos de neurociencia e filosofia em linguagem simples e exercicios praticos. O protocolo de 21 dias guia voce passo a passo, independente do seu nivel de conhecimento.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    <span>Em quanto tempo vou ver resultados?</span>
+                    <span class="faq-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    Muitos leitores relatam mudancas perceptiveis na primeira semana. O protocolo completo de 21 dias e desenhado para que voce internalize cada pilar progressivamente. A transformacao completa acontece quando os 7 pilares se tornam automaticos.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    <span>Em quais formatos recebo o e-book?</span>
+                    <span class="faq-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    Voce recebe em 3 formatos: PDF (para leitura em qualquer dispositivo), DOCX (para fazer anotacoes e editar) e HTML (para leitura no navegador). Tudo bilingue: Portugues e Ingles.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    <span>Como funciona a garantia?</span>
+                    <span class="faq-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    Voce tem 7 dias para ler, aplicar e avaliar. Se nao ficar satisfeito, basta enviar um e-mail solicitando o reembolso. Devolvemos 100% do valor, sem perguntas e sem burocracia.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    <span>Como recebo o material?</span>
+                    <span class="faq-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    Apos a confirmacao do pagamento, voce recebe automaticamente um e-mail com o link de download. O acesso e instantaneo, disponivel 24/7. Voce pode comecar a ler imediatamente.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    <span>Posso parcelar?</span>
+                    <span class="faq-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    Sim! Voce pode parcelar em ate 12x de R$ 4,08 sem juros no cartao de credito. Tambem aceitamos PIX, boleto e outros metodos de pagamento.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================================
+         SOBRE O AUTOR
+         ================================ -->
+    <section class="author-section animate-fade">
+        <div class="author-content">
+            <div class="author-avatar">&#128104;</div>
+            <h3 class="author-name">Jose Felipe Carneiro</h3>
+            <p class="author-title">Criador do NUCLEOx</p>
+            <p class="author-bio">
+                Empreendedor, escritor e pensador sistematico. Fundador de empresas em multiplos setores, Jose Felipe desenvolveu o NUCLEOx apos anos estudando os padroes invisiveis que separam mentes comuns de mentes excepcionais. A metodologia combina neurociencia, filosofia estrutural e decadas de experiencia pratica em tomada de decisao.
+            </p>
+            <div class="author-credentials">
+                <div class="credential">Empreendedor Serial</div>
+                <div class="credential">Escritor</div>
+                <div class="credential">Pesquisador de Neurociencia</div>
+                <div class="credential">Fundador de Cervejaria</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================================
+         COMUNIDADE
+         ================================ -->
+    <section class="community-section animate-fade">
+        <div class="community-icon">&#9883;</div>
+        <h2 class="community-title">Voce Nao Esta Apenas Comprando um E-book</h2>
         <p class="community-text">
-            Você está ingressando na <strong class="highlight-glow">Sociedade NUCLEOˣ</strong>: uma comunidade global de mentes que pensam em estrutura, decidem com geometria e vivem exponencialmente.
+            Voce esta ingressando na <span class="highlight">Sociedade NUCLEOx</span>: uma comunidade global de mentes que pensam em estrutura, decidem com geometria e vivem exponencialmente.
         </p>
-        
         <p class="community-text">
-            O futuro não pertence aos mais rápidos.<br>
+            O futuro nao pertence aos mais rapidos.<br>
             Pertence aos mais <strong>estruturados</strong>.
         </p>
-        
-        <a href="https://pay.voompcreators.com.br/11811/offer/m4HKL6" target="_blank" rel="noopener noreferrer" class="cta-primary">
-            Quero pensar com estrutura →
-        </a>
+        <a href="https://pay.voompcreators.com.br/11811/offer/m4HKL6" class="cta-primary">Quero pensar com estrutura</a>
     </section>
 
-    <!-- ========================================
-         CTA FINAL DE URGÊNCIA - REDESENHADO
-         ======================================== -->
-    <section class="section gradient-animated" style="color: #ffffff; padding: 60px 1.5rem;">
-        <div style="text-align: center; max-width: 600px; margin: 0 auto;">
-            
-            <!-- Badge de urgência -->
-            <div class="urgency-badge pulse-effect" style="margin-bottom: 1.5rem; font-size: 13px; padding: 0.6rem 1.2rem;">
-                🔥 ÚLTIMAS UNIDADES • 30% OFF
-            </div>
-            
-            <!-- Título -->
-            <h2 style="font-size: clamp(28px, 8vw, 42px); font-weight: 800; margin-bottom: 1rem; line-height: 1.2; letter-spacing: -1px;">
-                Última Chance de<br>Transformar Sua Mente
-            </h2>
-            
-            <!-- Box de preço destacado -->
-            <div style="background: linear-gradient(135deg, rgba(212, 175, 55, 0.15) 0%, rgba(212, 175, 55, 0.05) 100%); 
-                backdrop-filter: blur(15px); 
-                border-radius: 24px; 
-                padding: 3rem 2.5rem; 
-                margin: 3rem 0; 
-                border: 3px solid rgba(212, 175, 55, 0.6); 
-                box-shadow: 0 20px 60px rgba(212, 175, 55, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.1);
-                position: relative;
-                overflow: hidden;">
-                
-                <!-- Preço riscado menor -->
-                <div style="margin-bottom: 0.5rem;">
-                    <span style="font-size: clamp(20px, 4.5vw, 28px); text-decoration: line-through; opacity: 0.7; font-weight: 600; color: #FFD700;">De R$ 69,90</span>
-                </div>
-                
-                <!-- Preço principal GIGANTE -->
-                <div style="margin-bottom: 1rem;">
-                    <div style="display: inline-block; font-size: clamp(18px, 3.5vw, 24px); opacity: 0.9; margin-bottom: 0.8rem; color: #FFD700; font-weight: 600;">Por apenas</div>
-                    <div style="font-size: clamp(64px, 16vw, 88px); font-weight: 900; color: #FFD700; line-height: 1; letter-spacing: -2px; margin: 0.5rem 0; text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000, 0 0 0 #000;">
-                        R$ 48,90
-                    </div>
-                    
-                </div>
-                
-                <!-- Badge de economia -->
-                <div class="gold-badge" style="font-size: clamp(11px, 2.5vw, 13px); padding: 0.5rem 1.2rem; margin-top: 1rem;">
-                    💰 VOCÊ ECONOMIZA R$ 21,00
-                </div>
-                
-                <!-- Parcelamento -->
-                <p style="margin-top: 1.5rem; font-size: clamp(14px, 3.5vw, 16px); opacity: 0.9; font-weight: 500;">
-                    ou em até <strong style="color: var(--gold);">12x de R$ 4,08</strong> sem juros
-                </p>
-            </div>
-            
-            <!-- Detalhes do produto -->
-            <div style="margin-bottom: 2rem; padding: 0 1rem;">
-                <p style="font-size: clamp(14px, 3.5vw, 16px); opacity: 0.85; line-height: 1.6;">
-                    ✨ o Ebook de neurociência aplicada<br>
-                    ⚡ 7 pilares do pensamento estruturado<br>
-                    🚀 21 dias de transformação mental<br>
-                    🌍 Bilíngue (PT-BR + EN)<br>
-                    📧 Entrega instantânea por e-mail
-                </p>
-            </div>
-            
-            <!-- Botão CTA GIGANTE -->
-            <a href="https://pay.voompcreators.com.br/11811/offer/m4HKL6" class="cta-primary glow-effect pulse-effect" style="font-size: clamp(16px, 4vw, 20px); padding: clamp(1.2rem, 4vw, 1.8rem) clamp(2rem, 8vw, 4rem); background: var(--gold); color: #000; font-weight: 700; display: inline-block; width: 100%; max-width: 400px; border-radius: 12px; text-decoration: none; box-shadow: 0 10px 40px rgba(212, 175, 55, 0.4); transition: all 0.3s ease;">
-                ⚡ GARANTIR MEU ACESSO AGORA
-            </a>
-            
-            <!-- Garantias -->
-            <div style="margin-top: 2rem; padding: 1.5rem; background: rgba(0,0,0,0.3); border-radius: 12px; border: 1px solid rgba(255,255,255,0.1);">
-                <p style="font-size: clamp(13px, 3vw, 15px); opacity: 0.8; line-height: 1.8;">
-                    ✓ Pagamento 100% seguro<br>
-                    ✓ Parcelamento em até 12x sem juros<br>
-                    ✓ Garantia incondicional de 7 dias<br></p>
-            </div>
-            
-            <!-- Urgência final -->
-            <p style="margin-top: 1.5rem; font-size: clamp(12px, 3vw, 14px); opacity: 0.6; font-style: italic;">
-                ⏰ Oferta válida por tempo limitado
+    <!-- ================================
+         CTA FINAL
+         ================================ -->
+    <section class="final-cta-section animate-fade">
+        <div style="max-width: 800px; margin: 0 auto;">
+            <p class="final-quote">
+                "A diferenca entre caos e clareza<br>
+                nao e inteligencia.<br>
+                E geometria."
             </p>
-            
-        </div>
-    </section>
-    <!-- ========================================
-         FECHAMENTO FILOSÓFICO
-         ======================================== -->
-    <section class="section">
-        <div style="text-align: center; max-width: 800px; margin: 0 auto;">
-            <p style="font-size: 32px; font-weight: 300; line-height: 1.5; color: var(--text-primary); margin-bottom: 3rem; font-style: italic;">
-                "A diferença entre caos e clareza<br>
-                não é inteligência.<br>
-                É geometria."
-            </p>
-            
-            <p style="font-size: 28px; color: var(--text-secondary); line-height: 1.7; margin-bottom: 3rem;">
+            <p class="final-text">
                 O mundo premia quem pensa com clareza.<br>
                 A IA amplifica quem pensa com estrutura.<br>
                 O futuro pertence a quem domina ambos.
             </p>
-            
-            <div style="font-size: 18px; font-weight: 600; color: var(--text-primary);">
-                Junte-se à geometria.
-            </div>
-            
-            <a href="https://pay.voompcreators.com.br/11811/offer/m4HKL6" class="cta-primary" style="margin-top: 2rem;">
-                Estruturar Meu Pensamento →
-            </a>
-            
-            <p style="margin-top: 1.5rem; font-size: 14px; color: var(--text-tertiary);">
-                R$ 48,90 pagamento único • ou 12x sem juros • Acesso instantâneo
-            </p>
-        </div>
-    </section>
-    
-    <!-- ========================================
 
-    <!-- ========================================
-         CTA FINAL DE URGÊNCIA - REDESENHADO
-         ======================================== -->
-    <section class="section gradient-animated" style="color: #ffffff; padding: 60px 1.5rem;">
-        <div style="text-align: center; max-width: 600px; margin: 0 auto;">
-            
-            <!-- Badge de urgência -->
-            <div class="urgency-badge pulse-effect" style="margin-bottom: 1.5rem; font-size: 13px; padding: 0.6rem 1.2rem;">
-                🔥 ÚLTIMAS UNIDADES • 30% OFF
-            </div>
-            
-            <!-- Título -->
-            <h2 style="font-size: clamp(28px, 8vw, 42px); font-weight: 800; margin-bottom: 1rem; line-height: 1.2; letter-spacing: -1px;">
-                Última Chance de<br>Transformar Sua Mente
-            </h2>
-            
-            <!-- Box de preço destacado -->
-            <div style="background: linear-gradient(135deg, rgba(212, 175, 55, 0.15) 0%, rgba(212, 175, 55, 0.05) 100%); 
-                backdrop-filter: blur(15px); 
-                border-radius: 24px; 
-                padding: 3rem 2.5rem; 
-                margin: 3rem 0; 
-                border: 3px solid rgba(212, 175, 55, 0.6); 
-                box-shadow: 0 20px 60px rgba(212, 175, 55, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.1);
-                position: relative;
-                overflow: hidden;">
-                
-                <!-- Preço riscado menor -->
-                <div style="margin-bottom: 0.5rem;">
-                    <span style="font-size: clamp(20px, 4.5vw, 28px); text-decoration: line-through; opacity: 0.7; font-weight: 600; color: #FFD700;">De R$ 69,90</span>
-                </div>
-                
-                <!-- Preço principal GIGANTE -->
-                <div style="margin-bottom: 1rem;">
-                    <div style="display: inline-block; font-size: clamp(18px, 3.5vw, 24px); opacity: 0.9; margin-bottom: 0.8rem; color: #FFD700; font-weight: 600;">Por apenas</div>
-                    <div style="font-size: clamp(64px, 16vw, 88px); font-weight: 900; color: #FFD700; line-height: 1; letter-spacing: -2px; margin: 0.5rem 0; text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000, 0 0 0 #000;">
-                        R$ 48,90
-                    </div>
-                    
-                </div>
-                
-                <!-- Badge de economia -->
-                <div class="gold-badge" style="font-size: clamp(11px, 2.5vw, 13px); padding: 0.5rem 1.2rem; margin-top: 1rem;">
-                    💰 VOCÊ ECONOMIZA R$ 21,00
-                </div>
-                
-                <!-- Parcelamento -->
-                <p style="margin-top: 1.5rem; font-size: clamp(14px, 3.5vw, 16px); opacity: 0.9; font-weight: 500;">
-                    ou em até <strong style="color: var(--gold);">12x de R$ 4,08</strong> sem juros
-                </p>
-            </div>
-            
-            <!-- Detalhes do produto -->
-            <div style="margin-bottom: 2rem; padding: 0 1rem;">
-                <p style="font-size: clamp(14px, 3.5vw, 16px); opacity: 0.85; line-height: 1.6;">
-                    ✨ o Ebook de neurociência aplicada<br>
-                    ⚡ 7 pilares do pensamento estruturado<br>
-                    🚀 21 dias de transformação mental<br>
-                    🌍 Bilíngue (PT-BR + EN)<br>
-                    📧 Entrega instantânea por e-mail
-                </p>
-            </div>
-            
-            <!-- Botão CTA GIGANTE -->
-            <a href="https://pay.voompcreators.com.br/11811/offer/m4HKL6" class="cta-primary glow-effect pulse-effect" style="font-size: clamp(16px, 4vw, 20px); padding: clamp(1.2rem, 4vw, 1.8rem) clamp(2rem, 8vw, 4rem); background: var(--gold); color: #000; font-weight: 700; display: inline-block; width: 100%; max-width: 400px; border-radius: 12px; text-decoration: none; box-shadow: 0 10px 40px rgba(212, 175, 55, 0.4); transition: all 0.3s ease;">
-                ⚡ GARANTIR MEU ACESSO AGORA
-            </a>
-            
-            <!-- Garantias -->
-            <div style="margin-top: 2rem; padding: 1.5rem; background: rgba(0,0,0,0.3); border-radius: 12px; border: 1px solid rgba(255,255,255,0.1);">
-                <p style="font-size: clamp(13px, 3vw, 15px); opacity: 0.8; line-height: 1.8;">
-                    ✓ Pagamento 100% seguro<br>
-                    ✓ Parcelamento em até 12x sem juros<br>
-                    ✓ Garantia incondicional de 7 dias<br></p>
-            </div>
-            
-            <!-- Urgência final -->
-            <p style="margin-top: 1.5rem; font-size: clamp(12px, 3vw, 14px); opacity: 0.6; font-style: italic;">
-                ⏰ Oferta válida por tempo limitado
+            <a href="https://pay.voompcreators.com.br/11811/offer/m4HKL6" class="cta-primary cta-large">GARANTIR MEU ACESSO AGORA</a>
+
+            <p style="margin-top: 1.5rem; font-size: 14px; color: var(--text-muted);">
+                R$ 48,90 pagamento unico &bull; 12x sem juros &bull; Garantia de 7 dias
             </p>
-            
         </div>
     </section>
-    <!-- ========================================
+
+    <!-- ================================
          FOOTER
-         ======================================== -->
+         ================================ -->
     <footer class="footer">
-        <div class="footer-brand">
-            NUCLEO<span class="brand-x">ˣ</span>
-        </div>
+        <div class="footer-brand">NUCLEO<sup>x</sup></div>
         <div class="footer-links">
-            <a href="#">Política de Privacidade</a>
-            <a href="#">Termos de Serviço</a>
+            <a href="#">Politica de Privacidade</a>
+            <a href="#">Termos de Servico</a>
             <a href="#">Contato</a>
         </div>
-        <p class="footer-copy">
-            © 2025 NUCLEOˣ por José Felipe Carneiro. Todos os direitos reservados.
-        </p>
+        <p class="footer-copy">&copy; 2025 NUCLEOx por Jose Felipe Carneiro. Todos os direitos reservados.</p>
     </footer>
 
-    <!-- ========================================
-         CTA FINAL DE URGÊNCIA - REDESENHADO
-         ======================================== -->
-    <section class="section gradient-animated" style="color: #ffffff; padding: 60px 1.5rem;">
-        <div style="text-align: center; max-width: 600px; margin: 0 auto;">
-            
-            <!-- Badge de urgência -->
-            <div class="urgency-badge pulse-effect" style="margin-bottom: 1.5rem; font-size: 13px; padding: 0.6rem 1.2rem;">
-                🔥 ÚLTIMAS UNIDADES • 30% OFF
-            </div>
-            
-            <!-- Título -->
-            <h2 style="font-size: clamp(28px, 8vw, 42px); font-weight: 800; margin-bottom: 1rem; line-height: 1.2; letter-spacing: -1px;">
-                Última Chance de<br>Transformar Sua Mente
-            </h2>
-            
-            <!-- Box de preço destacado -->
-            <div style="background: linear-gradient(135deg, rgba(212, 175, 55, 0.15) 0%, rgba(212, 175, 55, 0.05) 100%); 
-                backdrop-filter: blur(15px); 
-                border-radius: 24px; 
-                padding: 3rem 2.5rem; 
-                margin: 3rem 0; 
-                border: 3px solid rgba(212, 175, 55, 0.6); 
-                box-shadow: 0 20px 60px rgba(212, 175, 55, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.1);
-                position: relative;
-                overflow: hidden;">
-                
-                <!-- Preço riscado menor -->
-                <div style="margin-bottom: 0.5rem;">
-                    <span style="font-size: clamp(20px, 4.5vw, 28px); text-decoration: line-through; opacity: 0.7; font-weight: 600; color: #FFD700;">De R$ 69,90</span>
-                </div>
-                
-                <!-- Preço principal GIGANTE -->
-                <div style="margin-bottom: 1rem;">
-                    <div style="display: inline-block; font-size: clamp(18px, 3.5vw, 24px); opacity: 0.9; margin-bottom: 0.8rem; color: #FFD700; font-weight: 600;">Por apenas</div>
-                    <div style="font-size: clamp(64px, 16vw, 88px); font-weight: 900; color: #FFD700; line-height: 1; letter-spacing: -2px; margin: 0.5rem 0; text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000, 0 0 0 #000;">
-                        R$ 48,90
-                    </div>
-                    
-                </div>
-                
-                <!-- Badge de economia -->
-                <div class="gold-badge" style="font-size: clamp(11px, 2.5vw, 13px); padding: 0.5rem 1.2rem; margin-top: 1rem;">
-                    💰 VOCÊ ECONOMIZA R$ 21,00
-                </div>
-                
-                <!-- Parcelamento -->
-                <p style="margin-top: 1.5rem; font-size: clamp(14px, 3.5vw, 16px); opacity: 0.9; font-weight: 500;">
-                    ou em até <strong style="color: var(--gold);">12x de R$ 4,08</strong> sem juros
-                </p>
-            </div>
-            
-            <!-- Detalhes do produto -->
-            <div style="margin-bottom: 2rem; padding: 0 1rem;">
-                <p style="font-size: clamp(14px, 3.5vw, 16px); opacity: 0.85; line-height: 1.6;">
-                    ✨ o Ebook de neurociência aplicada<br>
-                    ⚡ 7 pilares do pensamento estruturado<br>
-                    🚀 21 dias de transformação mental<br>
-                    🌍 Bilíngue (PT-BR + EN)<br>
-                    📧 Entrega instantânea por e-mail
-                </p>
-            </div>
-            
-            <!-- Botão CTA GIGANTE -->
-            <a href="https://pay.voompcreators.com.br/11811/offer/m4HKL6" class="cta-primary glow-effect pulse-effect" style="font-size: clamp(16px, 4vw, 20px); padding: clamp(1.2rem, 4vw, 1.8rem) clamp(2rem, 8vw, 4rem); background: var(--gold); color: #000; font-weight: 700; display: inline-block; width: 100%; max-width: 400px; border-radius: 12px; text-decoration: none; box-shadow: 0 10px 40px rgba(212, 175, 55, 0.4); transition: all 0.3s ease;">
-                ⚡ GARANTIR MEU ACESSO AGORA
-            </a>
-            
-            <!-- Garantias -->
-            <div style="margin-top: 2rem; padding: 1.5rem; background: rgba(0,0,0,0.3); border-radius: 12px; border: 1px solid rgba(255,255,255,0.1);">
-                <p style="font-size: clamp(13px, 3vw, 15px); opacity: 0.8; line-height: 1.8;">
-                    ✓ Pagamento 100% seguro<br>
-                    ✓ Parcelamento em até 12x sem juros<br>
-                    ✓ Garantia incondicional de 7 dias<br></p>
-            </div>
-            
-            <!-- Urgência final -->
-            <p style="margin-top: 1.5rem; font-size: clamp(12px, 3vw, 14px); opacity: 0.6; font-style: italic;">
-                ⏰ Oferta válida por tempo limitado
-            </p>
-            
-        </div>
-    </section>
+    <!-- ================================
+         BOTAO FLUTUANTE MOBILE
+         ================================ -->
+    <div class="floating-cta" id="floating-cta">
+        <a href="https://pay.voompcreators.com.br/11811/offer/m4HKL6">GARANTIR POR R$ 48,90</a>
+        <p class="floating-price">ou 12x de R$ 4,08 sem juros</p>
+    </div>
+
+    <!-- ================================
+         SCRIPTS
+         ================================ -->
     <script>
-        // Smooth scroll
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
-        });
-        
-        // Analytics tracking
-        document.querySelectorAll('.cta-primary, .cta-secondary').forEach(button => {
-            button.addEventListener('click', function() {
-                console.log('CTA clicked:', this.textContent);
-                // window.dataLayer && window.dataLayer.push({ event: 'cta_click', cta_text: this.textContent });
-            });
-        });
-    </script>
+        // Countdown Timer (7 minutos)
+        (function() {
+            let timeLeft = 7 * 60;
+            const timerEl = document.getElementById('countdown-timer');
 
-    <!-- ========================================
-         COUNTDOWN TIMER SCRIPT
-         ======================================== -->
-    <script>
-        // Configurar timer para 2 horas a partir do carregamento da página
-        const countdownDuration = 2 * 60 * 60 * 1000; // 2 horas em milissegundos
-        
-        // Verificar se já existe um timer no localStorage
-        let endTime = localStorage.getItem('nucleox_countdown_end');
-        
-        if (!endTime) {
-            // Primeira visita: criar novo timer
-            endTime = Date.now() + countdownDuration;
-            localStorage.setItem('nucleox_countdown_end', endTime);
-        } else {
-            endTime = parseInt(endTime);
-            
-            // Se já expirou, resetar para novo visitante
-            if (endTime < Date.now()) {
-                endTime = Date.now() + countdownDuration;
-                localStorage.setItem('nucleox_countdown_end', endTime);
+            function update() {
+                const h = Math.floor(timeLeft / 3600);
+                const m = Math.floor((timeLeft % 3600) / 60);
+                const s = timeLeft % 60;
+                timerEl.textContent =
+                    String(h).padStart(2, '0') + ':' +
+                    String(m).padStart(2, '0') + ':' +
+                    String(s).padStart(2, '0');
+                if (timeLeft > 0) timeLeft--;
+                else timeLeft = 7 * 60;
             }
-        }
-        
-        function updateCountdown() {
-            const now = Date.now();
-            const remaining = Math.max(0, endTime - now);
-            
-            const hours = Math.floor(remaining / (1000 * 60 * 60));
-            const minutes = Math.floor((remaining % (1000 * 60 * 60)) / (1000 * 60));
-            const seconds = Math.floor((remaining % (1000 * 60)) / 1000);
-            
-            document.getElementById('hours').textContent = String(hours).padStart(2, '0');
-            document.getElementById('minutes').textContent = String(minutes).padStart(2, '0');
-            document.getElementById('seconds').textContent = String(seconds).padStart(2, '0');
-            
-            // Adicionar urgência visual quando < 30 min
-            if (remaining < 30 * 60 * 1000 && remaining > 0) {
-                document.getElementById('urgency-bar').style.background = 'linear-gradient(135deg, #8B0000 0%, #FF0000 100%)';
-            }
-            
-            // Quando expirar
-            if (remaining === 0) {
-                document.getElementById('urgency-bar').innerHTML = '<div style="color: var(--gold); font-weight: 700; padding: 1rem;">⚠️ OFERTA EXPIRADA • Entre em contato para condições especiais</div>';
-            }
-        }
-        
-        // Atualizar a cada segundo
-        updateCountdown();
-        setInterval(updateCountdown, 1000);
-        
-        // Smooth scroll para âncoras
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
-        });
-    </script>
 
-    <!-- ========================================
-         BRAND IDENTITY NUCLEOˣ
-         ======================================== 
-         
-         Paleta Oficial:
-         • Background: #000000 (Preto)
-         • Texto: #FFFFFF (Branco)
-         • Accent: #D4AF37 (Dourado)
-         • Brain/Atomic: #00FF6F (Verde Atômico)
-         • Orbitals: #2F4F4F (Cinza Grafite)
-         
-         Tipografia:
-         • Títulos: Inter 900 (Bold)
-         • Corpo: Inter 400 (Regular)
-         • Taglines: Inter 300 (Light)
-         
-         Veja Brand Book completo em:
-         /BRANDBOOK.md
-         
-         ======================================== -->
+            update();
+            setInterval(update, 1000);
+        })();
 
-
-    <!-- ========================================
-         ✅ BRAND COMPLIANCE CHECKLIST
-         ======================================== 
-         
-         Esta página está em 100% conformidade com:
-         /NucleoX/BRANDBOOK.md
-         
-         ✓ Paleta: #000000, #FFFFFF, #00FF6F, #D4AF37, #2F4F4F
-         ✓ Tipografia: Inter (300/400/600/700/900)
-         ✓ Logo: Átomo + cérebro verde + "ˣ" superscript
-         ✓ Tom de voz: Claro, racional, provocativo
-         ✓ 6 Princípios: N-C-L-E-E-O com ícones
-         ✓ Slogan: "A Geometria do Pensamento"
-         ✓ Frases institucionais aplicadas
-         ✓ Letter-spacing: 2-3px em títulos
-         ✓ Contraste WCAG AA: Aprovado
-         
-         Última atualização: 4 de novembro de 2025
-         Versão Brand Book: 1.0
-         
-         ======================================== -->
-
-
-    <script>
         // Header scroll effect
         window.addEventListener('scroll', function() {
             const header = document.querySelector('.site-header');
-            if (window.scrollY > 50) {
-                header.classList.add('scrolled');
-            } else {
-                header.classList.remove('scrolled');
-            }
+            header.classList.toggle('scrolled', window.scrollY > 50);
+        });
+
+        // Floating CTA visibility (mobile)
+        (function() {
+            const floatingCta = document.getElementById('floating-cta');
+            const hero = document.querySelector('.hero');
+
+            window.addEventListener('scroll', function() {
+                if (window.innerWidth > 768) return;
+                const heroBottom = hero.getBoundingClientRect().bottom;
+                floatingCta.style.display = heroBottom < 0 ? 'block' : 'none';
+            });
+        })();
+
+        // FAQ toggle
+        function toggleFaq(el) {
+            const item = el.parentElement;
+            const wasOpen = item.classList.contains('open');
+            document.querySelectorAll('.faq-item').forEach(function(i) { i.classList.remove('open'); });
+            if (!wasOpen) item.classList.add('open');
+        }
+
+        // Scroll animations (Intersection Observer)
+        (function() {
+            const observer = new IntersectionObserver(function(entries) {
+                entries.forEach(function(entry) {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+
+            document.querySelectorAll('.animate-fade').forEach(function(el) {
+                observer.observe(el);
+            });
+        })();
+
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                var target = document.querySelector(this.getAttribute('href'));
+                if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            });
+        });
+
+        // GA4 CTA tracking
+        document.querySelectorAll('.cta-primary, .cta-secondary, .header-cta').forEach(function(btn) {
+            btn.addEventListener('click', function() {
+                if (typeof gtag === 'function') {
+                    gtag('event', 'cta_click', {
+                        button_text: this.textContent.trim(),
+                        button_location: this.closest('section') ? this.closest('section').id || 'unknown' : 'header'
+                    });
+                }
+            });
         });
     </script>
 
