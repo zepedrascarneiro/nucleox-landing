@@ -343,6 +343,54 @@
             animation: glow 3s ease-in-out infinite;
         }
 
+        .cta-amazon {
+            background: #FF9900;
+            color: #111;
+            border: none;
+            padding: 1.25rem 2.5rem;
+            font-size: 16px;
+            font-weight: 700;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s;
+            display: inline-block;
+            text-decoration: none;
+            box-shadow: 0 10px 30px rgba(255, 153, 0, 0.3);
+        }
+
+        .cta-amazon:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 15px 40px rgba(255, 153, 0, 0.4);
+            background: #e88b00;
+        }
+
+        .cta-amazon.cta-large {
+            font-size: clamp(14px, 3.5vw, 18px);
+            padding: clamp(1rem, 3vw, 1.4rem) clamp(1.5rem, 6vw, 3rem);
+            width: 100%;
+            max-width: 440px;
+            border-radius: 12px;
+        }
+
+        .cta-amazon-icon {
+            margin-right: 0.5rem;
+        }
+
+        .buy-buttons {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .buy-buttons .divider-text {
+            font-size: 13px;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
         .cta-secondary {
             background: transparent;
             color: var(--gold);
@@ -1337,7 +1385,11 @@
                 </div>
             </div>
 
-            <a href="https://pay.voompcreators.com.br/11811/offer/m4HKL6" class="cta-primary cta-large">ACESSAR O NUCLEOx AGORA</a>
+            <div class="buy-buttons">
+                <a href="https://pay.voompcreators.com.br/11811/offer/m4HKL6" class="cta-primary cta-large">ACESSAR O NUCLEOx AGORA</a>
+                <span class="divider-text">ou</span>
+                <a href="https://www.amazon.com.br/dp/6551830722?ref=cm_sw_r_ffobk_cp_ud_dp_HB859H5THJBGVB5TVD9H&ref_=cm_sw_r_ffobk_cp_ud_dp_HB859H5THJBGVB5TVD9H&social_share=cm_sw_r_ffobk_cp_ud_dp_HB859H5THJBGVB5TVD9H&bestFormat=true&dplnkId=d40fae01-377a-4740-8d6d-02a733f689d2&nodl=1" class="cta-amazon cta-large" target="_blank" rel="noopener">&#128722; Compre com 1 Clique na Amazon</a>
+            </div>
 
             <p style="font-size: 14px; opacity: 0.7; margin-top: 2rem; line-height: 1.6;">
                 Garantia total: Leia, aplique, transforme ou devolvo 100% sem perguntas
@@ -1476,7 +1528,11 @@
             O futuro nao pertence aos mais rapidos.<br>
             Pertence aos mais <strong>estruturados</strong>.
         </p>
-        <a href="https://pay.voompcreators.com.br/11811/offer/m4HKL6" class="cta-primary">Quero pensar com estrutura</a>
+        <div class="buy-buttons">
+            <a href="https://pay.voompcreators.com.br/11811/offer/m4HKL6" class="cta-primary">Quero pensar com estrutura</a>
+            <span class="divider-text">ou</span>
+            <a href="https://www.amazon.com.br/dp/6551830722?ref=cm_sw_r_ffobk_cp_ud_dp_HB859H5THJBGVB5TVD9H&ref_=cm_sw_r_ffobk_cp_ud_dp_HB859H5THJBGVB5TVD9H&social_share=cm_sw_r_ffobk_cp_ud_dp_HB859H5THJBGVB5TVD9H&bestFormat=true&dplnkId=d40fae01-377a-4740-8d6d-02a733f689d2&nodl=1" class="cta-amazon" target="_blank" rel="noopener">&#128722; Compre com 1 Clique na Amazon</a>
+        </div>
     </section>
 
     <!-- ================================
@@ -1495,7 +1551,11 @@
                 O futuro pertence a quem domina ambos.
             </p>
 
-            <a href="https://pay.voompcreators.com.br/11811/offer/m4HKL6" class="cta-primary cta-large">GARANTIR MEU ACESSO AGORA</a>
+            <div class="buy-buttons">
+                <a href="https://pay.voompcreators.com.br/11811/offer/m4HKL6" class="cta-primary cta-large">GARANTIR MEU ACESSO AGORA</a>
+                <span class="divider-text">ou</span>
+                <a href="https://www.amazon.com.br/dp/6551830722?ref=cm_sw_r_ffobk_cp_ud_dp_HB859H5THJBGVB5TVD9H&ref_=cm_sw_r_ffobk_cp_ud_dp_HB859H5THJBGVB5TVD9H&social_share=cm_sw_r_ffobk_cp_ud_dp_HB859H5THJBGVB5TVD9H&bestFormat=true&dplnkId=d40fae01-377a-4740-8d6d-02a733f689d2&nodl=1" class="cta-amazon cta-large" target="_blank" rel="noopener">&#128722; Compre com 1 Clique na Amazon</a>
+            </div>
 
             <p style="margin-top: 1.5rem; font-size: 14px; color: var(--text-muted);">
                 R$ 49,90 pagamento unico &bull; 12x sem juros &bull; Garantia de 7 dias
