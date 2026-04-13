@@ -1,0 +1,1344 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Copy Geometry Course — NÚCLEOˣ by José Felipe Carneiro</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --gold: #D4AF37;
+            --atomic-green: #4CAF50;
+            --black: #000000;
+            --white: #FFFFFF;
+            --gray-900: #0A0A0A;
+            --gray-800: #1A1A1A;
+            --gray-700: #2A2A2A;
+            --gray-600: #3A3A3A;
+            --gray-400: #999999;
+            --gray-300: #CCCCCC;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--black);
+            color: var(--white);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        /* Typography */
+        h1, h2, h3, h4, h5, h6 {
+            font-weight: 700;
+            line-height: 1.2;
+            letter-spacing: -0.02em;
+        }
+
+        h1 {
+            font-size: clamp(2.5rem, 5vw, 4.5rem);
+            margin-bottom: 1.5rem;
+        }
+
+        h2 {
+            font-size: clamp(2rem, 4vw, 3.5rem);
+            margin-bottom: 1.25rem;
+        }
+
+        h3 {
+            font-size: clamp(1.5rem, 3vw, 2.5rem);
+            margin-bottom: 1rem;
+        }
+
+        p {
+            font-size: clamp(1rem, 1.5vw, 1.25rem);
+            line-height: 1.7;
+            color: var(--gray-300);
+        }
+
+        /* Container */
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .container-narrow {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* Section */
+        section {
+            padding: 6rem 0;
+        }
+
+        .section-dark {
+            background: var(--gray-900);
+        }
+
+        .section-darker {
+            background: var(--gray-800);
+        }
+
+        /* Hero */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            padding: 4rem 0;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(ellipse at 50% 0%, rgba(212, 175, 55, 0.15) 0%, transparent 50%),
+                radial-gradient(ellipse at 0% 50%, rgba(76, 175, 80, 0.08) 0%, transparent 50%);
+            pointer-events: none;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 0.5rem 1.5rem;
+            background: linear-gradient(135deg, var(--gold), #B8941F);
+            color: var(--black);
+            font-weight: 700;
+            font-size: 0.875rem;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            border-radius: 50px;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 20px rgba(212, 175, 55, 0.3);
+        }
+
+        .hero-title {
+            background: linear-gradient(135deg, var(--white) 0%, var(--gray-300) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero-subtitle {
+            font-size: clamp(1.25rem, 2vw, 1.75rem);
+            color: var(--gray-300);
+            max-width: 900px;
+            margin: 0 auto 3rem;
+            font-weight: 400;
+        }
+
+        .hero-highlight {
+            color: var(--gold);
+            font-weight: 700;
+        }
+
+        /* Buttons */
+        .btn {
+            display: inline-block;
+            padding: 1.25rem 3rem;
+            font-size: 1.125rem;
+            font-weight: 700;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: none;
+            text-align: center;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--gold), #B8941F);
+            color: var(--black);
+            box-shadow: 0 4px 20px rgba(212, 175, 55, 0.4);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 30px rgba(212, 175, 55, 0.6);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--white);
+            border: 2px solid var(--gold);
+        }
+
+        .btn-secondary:hover {
+            background: var(--gold);
+            color: var(--black);
+            transform: translateY(-2px);
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        /* Section Header */
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .section-label {
+            color: var(--gold);
+            font-size: 0.875rem;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+        }
+
+        .section-title {
+            background: linear-gradient(135deg, var(--white) 0%, var(--gray-300) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .section-description {
+            max-width: 800px;
+            margin: 1.5rem auto 0;
+            font-size: 1.25rem;
+            color: var(--gray-400);
+        }
+
+        /* Grid */
+        .grid {
+            display: grid;
+            gap: 2rem;
+        }
+
+        .grid-2 {
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        }
+
+        .grid-3 {
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        }
+
+        /* Cards */
+        .card {
+            background: var(--gray-800);
+            border: 1px solid var(--gray-700);
+            border-radius: 16px;
+            padding: 3rem;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--gold), var(--atomic-green));
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .card:hover {
+            border-color: var(--gold);
+            transform: translateY(-4px);
+            box-shadow: 0 12px 40px rgba(212, 175, 55, 0.2);
+        }
+
+        .card:hover::before {
+            opacity: 1;
+        }
+
+        .card-icon {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            display: block;
+        }
+
+        .card-label {
+            color: var(--gold);
+            font-size: 0.875rem;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+        }
+
+        .card-title {
+            font-size: 1.75rem;
+            margin-bottom: 1rem;
+            color: var(--white);
+        }
+
+        .card-description {
+            color: var(--gray-400);
+            margin-bottom: 1.5rem;
+        }
+
+        .card-list {
+            list-style: none;
+            margin-top: 1.5rem;
+        }
+
+        .card-list li {
+            padding: 0.75rem 0;
+            padding-left: 2rem;
+            position: relative;
+            color: var(--gray-300);
+        }
+
+        .card-list li::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: var(--gold);
+            font-weight: 700;
+        }
+
+        /* Module Card */
+        .module-card {
+            background: linear-gradient(135deg, var(--gray-800) 0%, var(--gray-900) 100%);
+            border: 2px solid var(--gray-700);
+            border-radius: 20px;
+            padding: 3rem;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .module-card::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(212, 175, 55, 0.1) 0%, transparent 70%);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .module-card:hover {
+            border-color: var(--gold);
+            transform: translateY(-8px);
+            box-shadow: 0 20px 60px rgba(212, 175, 55, 0.3);
+        }
+
+        .module-card:hover::after {
+            opacity: 1;
+        }
+
+        .module-header {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .module-number {
+            font-size: 4rem;
+            font-weight: 900;
+            background: linear-gradient(135deg, var(--gold), var(--atomic-green));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            line-height: 1;
+        }
+
+        .module-info {
+            flex: 1;
+        }
+
+        .module-label {
+            color: var(--gold);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            margin-bottom: 0.5rem;
+        }
+
+        .module-title {
+            font-size: 2rem;
+            color: var(--white);
+            margin-bottom: 0.5rem;
+        }
+
+        .module-subtitle {
+            color: var(--gray-400);
+            font-size: 1rem;
+        }
+
+        .module-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .module-description {
+            color: var(--gray-300);
+            margin-bottom: 2rem;
+            font-size: 1.125rem;
+            line-height: 1.8;
+        }
+
+        .module-deliverables {
+            background: var(--gray-900);
+            border-left: 4px solid var(--gold);
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-top: 2rem;
+        }
+
+        .module-deliverables h4 {
+            color: var(--gold);
+            font-size: 0.875rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+        }
+
+        .module-deliverables ul {
+            list-style: none;
+        }
+
+        .module-deliverables li {
+            padding: 0.5rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+            color: var(--gray-300);
+        }
+
+        .module-deliverables li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--atomic-green);
+            font-weight: 700;
+        }
+
+        /* Bonus Card */
+        .bonus-card {
+            background: linear-gradient(135deg, var(--gray-800), var(--gray-900));
+            border: 2px solid var(--atomic-green);
+            border-radius: 16px;
+            padding: 2.5rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .bonus-badge {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: var(--atomic-green);
+            color: var(--black);
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+        }
+
+        .bonus-title {
+            font-size: 1.5rem;
+            color: var(--white);
+            margin-bottom: 1rem;
+        }
+
+        .bonus-value {
+            color: var(--atomic-green);
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        /* Pricing */
+        .pricing-card {
+            background: linear-gradient(135deg, var(--gray-800) 0%, var(--black) 100%);
+            border: 3px solid var(--gold);
+            border-radius: 24px;
+            padding: 4rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .pricing-badge {
+            background: linear-gradient(135deg, var(--gold), #B8941F);
+            color: var(--black);
+            padding: 0.75rem 2rem;
+            border-radius: 50px;
+            font-size: 0.875rem;
+            font-weight: 700;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            display: inline-block;
+            margin-bottom: 2rem;
+        }
+
+        .pricing-amount {
+            font-size: 4rem;
+            font-weight: 900;
+            color: var(--white);
+            margin-bottom: 1rem;
+        }
+
+        .pricing-currency {
+            font-size: 2rem;
+            vertical-align: super;
+        }
+
+        .pricing-period {
+            color: var(--gray-400);
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+        }
+
+        .pricing-features {
+            list-style: none;
+            margin: 3rem 0;
+            text-align: left;
+        }
+
+        .pricing-features li {
+            padding: 1rem 0;
+            padding-left: 2.5rem;
+            position: relative;
+            color: var(--gray-300);
+            font-size: 1.125rem;
+            border-bottom: 1px solid var(--gray-700);
+        }
+
+        .pricing-features li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--atomic-green);
+            font-weight: 700;
+            font-size: 1.5rem;
+        }
+
+        /* Guarantee */
+        .guarantee-box {
+            background: var(--gray-800);
+            border: 2px solid var(--atomic-green);
+            border-radius: 16px;
+            padding: 3rem;
+            text-align: center;
+            max-width: 800px;
+            margin: 4rem auto 0;
+        }
+
+        .guarantee-icon {
+            font-size: 4rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .guarantee-title {
+            font-size: 2rem;
+            color: var(--atomic-green);
+            margin-bottom: 1rem;
+        }
+
+        .guarantee-text {
+            color: var(--gray-300);
+            font-size: 1.125rem;
+            line-height: 1.8;
+        }
+
+        /* FAQ */
+        .faq-item {
+            background: var(--gray-800);
+            border: 1px solid var(--gray-700);
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 1.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .faq-item:hover {
+            border-color: var(--gold);
+        }
+
+        .faq-question {
+            font-size: 1.25rem;
+            color: var(--white);
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .faq-answer {
+            color: var(--gray-300);
+            line-height: 1.8;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--gray-900);
+            padding: 4rem 0 2rem;
+            text-align: center;
+            border-top: 1px solid var(--gray-700);
+        }
+
+        .footer-logo {
+            font-size: 2rem;
+            font-weight: 900;
+            background: linear-gradient(135deg, var(--gold), var(--atomic-green));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 1rem;
+        }
+
+        .footer-text {
+            color: var(--gray-400);
+            font-size: 0.875rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-links a {
+            color: var(--gray-400);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: var(--gold);
+        }
+
+        .copyright {
+            color: var(--gray-600);
+            font-size: 0.875rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            section {
+                padding: 4rem 0;
+            }
+
+            .container {
+                padding: 0 1.5rem;
+            }
+
+            .hero {
+                min-height: auto;
+                padding: 4rem 0;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+            }
+
+            .btn {
+                width: 100%;
+            }
+
+            .module-header {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .module-number {
+                font-size: 3rem;
+            }
+
+            .pricing-card {
+                padding: 2.5rem;
+            }
+
+            .pricing-amount {
+                font-size: 3rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <span class="badge">Lançamento Exclusivo 2025</span>
+                <h1 class="hero-title">Copy Geometry™</h1>
+                <p class="hero-subtitle">
+                    O primeiro curso que ensina <span class="hero-highlight">copywriting como arquitetura</span> — não como fórmulas decoradas. 
+                    Aprenda a pensar geometricamente, criar sistemas de conversão e construir copy que converte na era da IA.
+                </p>
+                <div class="cta-buttons">
+                    <a href="#inscricao" class="btn btn-primary">Garantir Minha Vaga</a>
+                    <a href="#estrutura" class="btn btn-secondary">Ver Estrutura do Curso</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- O Problema -->
+    <section class="section-dark">
+        <div class="container-narrow">
+            <div class="section-header">
+                <span class="section-label">O Problema</span>
+                <h2 class="section-title">95% do Copywriting é Arquitetura Emocional Mal Desenhada</h2>
+                <p class="section-description">
+                    Na era da IA, qualquer pessoa pode gerar copy em segundos. Mas copy que converte? Isso exige pensamento geométrico.
+                </p>
+            </div>
+
+            <div class="grid grid-2">
+                <div class="card">
+                    <span class="card-icon">🧟</span>
+                    <h3 class="card-title">Copywriters Zumbis</h3>
+                    <p class="card-description">
+                        Copiam swipes, decoram fórmulas, regurgitam frases de gurus americanos. 
+                        Quando o mercado muda, eles ficam perdidos.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <span class="card-icon">🤖</span>
+                    <h3 class="card-title">IA Que Não Pensa</h3>
+                    <p class="card-description">
+                        ChatGPT escreve copy em segundos. Mas ele não desenha geometria emocional. 
+                        Não arquiteta conversão. Não pensa estrategicamente.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- A Solução -->
+    <section class="section-darker">
+        <div class="container-narrow">
+            <div class="section-header">
+                <span class="section-label">A Solução</span>
+                <h2 class="section-title">Pense Como IA. Escreva Como Humano.</h2>
+                <p class="section-description">
+                    Copy Geometry™ é o sistema que traduz os 7 princípios do NÚCLEOˣ para copywriting estrutural de alta conversão.
+                </p>
+            </div>
+
+            <div class="grid grid-3">
+                <div class="card">
+                    <span class="card-icon">⭕</span>
+                    <span class="card-label">N — NAME</span>
+                    <h3 class="card-title">Naming Systems</h3>
+                    <p class="card-description">
+                        Aprenda a nomear conceitos, posicionamentos e ofertas com precisão semântica que grudam na memória.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <span class="card-icon">🔺</span>
+                    <span class="card-label">Ú — USE CRITERIA</span>
+                    <h3 class="card-title">Proof Architecture</h3>
+                    <p class="card-description">
+                        Transforme claims vazios em confiança auditável com critérios verificáveis e métricas de resultado.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <span class="card-icon">⬜</span>
+                    <span class="card-label">C — CONTEXTUALIZE</span>
+                    <h3 class="card-title">Context Layers</h3>
+                    <p class="card-description">
+                        Mapeie níveis de consciência do seu avatar e desenhe mensagens para cada estágio da jornada.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <span class="card-icon">⬡</span>
+                    <span class="card-label">L — LIMIT</span>
+                    <h3 class="card-title">Focus Geometry</h3>
+                    <p class="card-description">
+                        Elimine distrações, defina fronteiras e construa ofertas que repelem o público errado.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <span class="card-icon">♾️</span>
+                    <span class="card-label">E — ESPECIFY</span>
+                    <h3 class="card-title">Granular Messaging</h3>
+                    <p class="card-description">
+                        Transforme promessas genéricas em especificidade tangível que gera confiança instantânea.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <span class="card-icon">📈</span>
+                    <span class="card-label">O — ORDER</span>
+                    <h3 class="card-title">Story Sequencing</h3>
+                    <p class="card-description">
+                        Arquitete a ordem perfeita de informações para guiar o leitor da curiosidade ao checkout.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <span class="card-icon">⚡</span>
+                    <span class="card-label">X — 6XPAND</span>
+                    <h3 class="card-title">Scalable Systems</h3>
+                    <p class="card-description">
+                        Crie sistemas de copy replicáveis que mantêm conversão em qualquer canal ou produto.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Estrutura do Curso -->
+    <section id="estrutura" class="section-dark">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Estrutura do Curso</span>
+                <h2 class="section-title">12 Semanas. 7 Princípios. 1 Sistema Completo.</h2>
+                <p class="section-description">
+                    Uma jornada estruturada do fundamento filosófico até a operacionalização prática de copy de alta conversão.
+                </p>
+            </div>
+
+            <!-- Módulo 1 -->
+            <div class="module-card">
+                <div class="module-header">
+                    <div class="module-number">01</div>
+                    <div class="module-info">
+                        <div class="module-label">Fundação</div>
+                        <h3 class="module-title">Copy Não é Texto, é Arquitetura</h3>
+                        <p class="module-subtitle">A mudança de paradigma que separa amadores de arquitetos</p>
+                    </div>
+                </div>
+                <div class="module-content">
+                    <p class="module-description">
+                        <strong>Por que 95% dos copywriters são zumbis criativos?</strong> Porque copiam estruturas sem entender a geometria invisível por trás da conversão. 
+                        Neste módulo, você desconstrói tudo que aprendeu sobre copy e reconstrói com pensamento estrutural.
+                    </p>
+                    <div class="module-deliverables">
+                        <h4>Entregáveis</h4>
+                        <ul>
+                            <li>Framework de Pensamento Geométrico aplicado a copy</li>
+                            <li>Mapa Visual dos 7 Princípios NÚCLEOˣ</li>
+                            <li>Análise forense de 5 campanhas de sucesso</li>
+                            <li>Seu primeiro Blueprint de Copy Architecture</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Módulo 2 -->
+            <div class="module-card">
+                <div class="module-header">
+                    <div class="module-number">02</div>
+                    <div class="module-info">
+                        <div class="module-label">⭕ N — NAME</div>
+                        <h3 class="module-title">Naming Systems</h3>
+                        <p class="module-subtitle">Como criar conceitos que grudam na memória</p>
+                    </div>
+                </div>
+                <div class="module-content">
+                    <p class="module-description">
+                        <strong>Palavras criam realidade.</strong> Aprenda a nomear seu mecanismo único, posicionamento e oferta com precisão semântica. 
+                        Nomes ruins são esquecidos. Nomes geométricos viram memes.
+                    </p>
+                    <div class="module-deliverables">
+                        <h4>Entregáveis</h4>
+                        <ul>
+                            <li>Semantic Naming Framework™</li>
+                            <li>Biblioteca com 50+ estruturas de naming</li>
+                            <li>Seu Concept Name (mecanismo único da sua oferta)</li>
+                            <li>Brand Voice Blueprint</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Módulo 3 -->
+            <div class="module-card">
+                <div class="module-header">
+                    <div class="module-number">03</div>
+                    <div class="module-info">
+                        <div class="module-label">🔺 Ú — USE CRITERIA</div>
+                        <h3 class="module-title">Proof Architecture</h3>
+                        <p class="module-subtitle">Transformar claims em confiança auditável</p>
+                    </div>
+                </div>
+                <div class="module-content">
+                    <p class="module-description">
+                        <strong>Promessas vagas são mentiras socialmente aceitas.</strong> Neste módulo, você aprende a construir Matrizes de Evidências que sustentam cada claim com critérios verificáveis. 
+                        O resultado? Copy que converte 3-5x mais porque gera confiança instantânea.
+                    </p>
+                    <div class="module-deliverables">
+                        <h4>Entregáveis</h4>
+                        <ul>
+                            <li>Matriz de Evidências (framework de 6 camadas de prova)</li>
+                            <li>Biblioteca de Tipos de Prova para seu nicho</li>
+                            <li>Seu Proof Stack completo</li>
+                            <li>Templates de Case Studies geometrizados</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Módulo 4 -->
+            <div class="module-card">
+                <div class="module-header">
+                    <div class="module-number">04</div>
+                    <div class="module-info">
+                        <div class="module-label">⬜ C — CONTEXTUALIZE</div>
+                        <h3 class="module-title">Context Layers</h3>
+                        <p class="module-subtitle">Mensagens certas para níveis de consciência certos</p>
+                    </div>
+                </div>
+                <div class="module-content">
+                    <p class="module-description">
+                        <strong>Uma mensagem para todos = uma mensagem para ninguém.</strong> Aprenda a mapear os 5 níveis de consciência do seu avatar e desenhar copy que encontra cada pessoa exatamente onde ela está.
+                    </p>
+                    <div class="module-deliverables">
+                        <h4>Entregáveis</h4>
+                        <ul>
+                            <li>Avatar Orbital Map™ (mapa de consciência)</li>
+                            <li>Context Layer Framework (5 níveis de mensagem)</li>
+                            <li>Seu Avatar Profile geometrizado</li>
+                            <li>Biblioteca de Headlines por nível de consciência</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Módulo 5 -->
+            <div class="module-card">
+                <div class="module-header">
+                    <div class="module-number">05</div>
+                    <div class="module-info">
+                        <div class="module-label">⬡ L — LIMIT</div>
+                        <h3 class="module-title">Focus Geometry</h3>
+                        <p class="module-subtitle">Repelir o público errado para atrair o certo</p>
+                    </div>
+                </div>
+                <div class="module-content">
+                    <p class="module-description">
+                        <strong>Conversão começa com repulsão.</strong> Neste módulo, você aprende a criar Paredes de Rejeição™ — copy que afasta curiosos e atrai só quem está pronto para comprar. 
+                        Menos cliques, mais conversão.
+                    </p>
+                    <div class="module-deliverables">
+                        <h4>Entregáveis</h4>
+                        <ul>
+                            <li>Rejection Wall Framework™</li>
+                            <li>Biblioteca de filtros de qualificação</li>
+                            <li>Seu Positioning Statement definitivo</li>
+                            <li>Scripts de "Este curso NÃO é para você"</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Módulo 6 -->
+            <div class="module-card">
+                <div class="module-header">
+                    <div class="module-number">06</div>
+                    <div class="module-info">
+                        <div class="module-label">♾️ E — ESPECIFY</div>
+                        <h3 class="module-title">Granular Messaging</h3>
+                        <p class="module-subtitle">A especificidade que gera confiança instantânea</p>
+                    </div>
+                </div>
+                <div class="module-content">
+                    <p class="module-description">
+                        <strong>"Resultados rápidos" não converte. "47 landing pages em 14 dias" converte.</strong> 
+                        Aprenda a granularizar promessas, benefícios e provas com a precisão cirúrgica que elimina ceticismo.
+                    </p>
+                    <div class="module-deliverables">
+                        <h4>Entregáveis</h4>
+                        <ul>
+                            <li>Granularity Scale™ (escala de especificidade)</li>
+                            <li>Biblioteca de transformações genérico → específico</li>
+                            <li>Suas Promessas Granulares finais</li>
+                            <li>Templates de Headlines ultra-específicas</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Módulo 7 -->
+            <div class="module-card">
+                <div class="module-header">
+                    <div class="module-number">07</div>
+                    <div class="module-info">
+                        <div class="module-label">📈 O — ORDER</div>
+                        <h3 class="module-title">Story Sequencing</h3>
+                        <p class="module-subtitle">A ordem perfeita que guia da curiosidade ao checkout</p>
+                    </div>
+                </div>
+                <div class="module-content">
+                    <p class="module-description">
+                        <strong>Ordem não é opcional. É conversão.</strong> Neste módulo, você aprende a arquitetar a sequência lógica e emocional perfeita para landing pages, VSLs, emails e threads. 
+                        Cada bloco no lugar certo.
+                    </p>
+                    <div class="module-deliverables">
+                        <h4>Entregáveis</h4>
+                        <ul>
+                            <li>Story Pipeline Framework™</li>
+                            <li>Blueprints de sequência para 7 tipos de copy</li>
+                            <li>Sua Landing Page Structure finalizada</li>
+                            <li>Email Sequence Map (5-7 emails geometrizados)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Módulo 8 -->
+            <div class="module-card">
+                <div class="module-header">
+                    <div class="module-number">08</div>
+                    <div class="module-info">
+                        <div class="module-label">⚡ X — 6XPAND</div>
+                        <h3 class="module-title">Scalable Copy Systems</h3>
+                        <p class="module-subtitle">Replicar geometria em qualquer canal</p>
+                    </div>
+                </div>
+                <div class="module-content">
+                    <p class="module-description">
+                        <strong>Copy que não escala não é sistema.</strong> Aprenda a criar templates, checklists e bancos de dados que mantêm conversão alta em landing pages, VSLs, emails, ads e threads — sem perder autenticidade.
+                    </p>
+                    <div class="module-deliverables">
+                        <h4>Entregáveis</h4>
+                        <ul>
+                            <li>Copy Expansion Matrix™</li>
+                            <li>Biblioteca de templates para 10+ formatos</li>
+                            <li>Seu Copy System Documentation completo</li>
+                            <li>Checklist de replicação de voz entre canais</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Módulo 9 -->
+            <div class="module-card">
+                <div class="module-header">
+                    <div class="module-number">09</div>
+                    <div class="module-info">
+                        <div class="module-label">Ferramentas</div>
+                        <h3 class="module-title">Notion Copy Hub</h3>
+                        <p class="module-subtitle">Seu sistema operacional de copy</p>
+                    </div>
+                </div>
+                <div class="module-content">
+                    <p class="module-description">
+                        <strong>Não é um template. É uma arquitetura.</strong> Um workspace Notion completo com dashboards, bancos de dados de frameworks, biblioteca de swipes geometrizados e rituais semanais do arquiteto de copy.
+                    </p>
+                    <div class="module-deliverables">
+                        <h4>Entregáveis</h4>
+                        <ul>
+                            <li>Notion Copy Hub completo (duplicável)</li>
+                            <li>Vídeo walkthrough de 60min</li>
+                            <li>Biblioteca de Swipes Geometrizados</li>
+                            <li>Dashboard de projetos ativos</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Módulo 10 -->
+            <div class="module-card">
+                <div class="module-header">
+                    <div class="module-number">10</div>
+                    <div class="module-info">
+                        <div class="module-label">Ferramentas</div>
+                        <h3 class="module-title">IA como Copiloto Geométrico</h3>
+                        <p class="module-subtitle">Instruindo máquinas a pensar com você</p>
+                    </div>
+                </div>
+                <div class="module-content">
+                    <p class="module-description">
+                        <strong>A IA não substitui o arquiteto. Ela executa a geometria que você desenha.</strong> 
+                        Aprenda a treinar ChatGPT, Claude e outras IAs com seus frameworks para automatizar sem perder autenticidade.
+                    </p>
+                    <div class="module-deliverables">
+                        <h4>Entregáveis</h4>
+                        <ul>
+                            <li>Biblioteca com 50+ prompts geométricos</li>
+                            <li>Guia de fine-tuning para IAs de copy</li>
+                            <li>Workflows de pesquisa, ideação e otimização com IA</li>
+                            <li>Casos de uso: como José Felipe usa IA no NÚCLEOˣ</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Módulo 11 -->
+            <div class="module-card">
+                <div class="module-header">
+                    <div class="module-number">11</div>
+                    <div class="module-info">
+                        <div class="module-label">Produtividade</div>
+                        <h3 class="module-title">O Ritual do Arquiteto</h3>
+                        <p class="module-subtitle">Produtividade geométrica de alta performance</p>
+                    </div>
+                </div>
+                <div class="module-content">
+                    <p class="module-description">
+                        <strong>Copy de alta conversão não nasce de inspiração. Nasce de ritual.</strong> 
+                        Aprenda o ritmo semanal, rituais de foco profundo e sistemas de organização de projetos para escalar sem perder qualidade.
+                    </p>
+                    <div class="module-deliverables">
+                        <h4>Entregáveis</h4>
+                        <ul>
+                            <li>Calendário Semanal do Arquiteto de Copy</li>
+                            <li>Checklist pré-escrita e pós-escrita</li>
+                            <li>Dashboard de produtividade no Notion</li>
+                            <li>Métricas que importam vs. métricas vaidade</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Módulo 12 -->
+            <div class="module-card">
+                <div class="module-header">
+                    <div class="module-number">12</div>
+                    <div class="module-info">
+                        <div class="module-label">Masterclass Final</div>
+                        <h3 class="module-title">Swipe Atlas Geométrico™</h3>
+                        <p class="module-subtitle">Análise forense de 20 campanhas de sucesso</p>
+                    </div>
+                </div>
+                <div class="module-content">
+                    <p class="module-description">
+                        <strong>A geometria invisível por trás da conversão.</strong> 
+                        Desconstrução completa de landing pages (+15% conversão), VSLs (7 figuras), emails (+40% open rate) e threads virais (1M+ views) pela lente dos 7 princípios NÚCLEOˣ.
+                    </p>
+                    <div class="module-deliverables">
+                        <h4>Entregáveis</h4>
+                        <ul>
+                            <li>20 cases geometrizados com análise completa</li>
+                            <li>O que replicar (estrutura) vs. o que é único (voz)</li>
+                            <li>Erros sutis que reduziriam performance</li>
+                            <li>Certificado Copy Geometry Architect™</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bônus -->
+    <section class="section-darker">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Bônus Exclusivos</span>
+                <h2 class="section-title">+R$ 12.470 em Ferramentas & Recursos</h2>
+            </div>
+
+            <div class="grid grid-2">
+                <div class="bonus-card">
+                    <span class="bonus-badge">Bônus #1</span>
+                    <h3 class="bonus-title">The Geometry Tribe (Acesso Vitalício)</h3>
+                    <p class="bonus-value">Valor: R$ 3.970</p>
+                    <p class="card-description">
+                        Comunidade privada de arquitetos de copy com eventos mensais, Q&As com José Felipe, análises de campanhas e networking de alto nível.
+                    </p>
+                </div>
+
+                <div class="bonus-card">
+                    <span class="bonus-badge">Bônus #2</span>
+                    <h3 class="bonus-title">Biblioteca de 200+ Templates Geometrizados</h3>
+                    <p class="bonus-value">Valor: R$ 2.500</p>
+                    <p class="card-description">
+                        Headlines, bullets, CTAs, estruturas de VSL, sequências de email e scripts de vendas já geometrizados e prontos para adaptar.
+                    </p>
+                </div>
+
+                <div class="bonus-card">
+                    <span class="bonus-badge">Bônus #3</span>
+                    <h3 class="bonus-title">Copy Geometry Certification Program</h3>
+                    <p class="bonus-value">Valor: R$ 4.000</p>
+                    <p class="card-description">
+                        Certificação oficial de Copy Geometry Architect™ com selo verificado e licença para usar a metodologia em seus próprios cursos/consultorias.
+                    </p>
+                </div>
+
+                <div class="bonus-card">
+                    <span class="bonus-badge">Bônus #4</span>
+                    <h3 class="bonus-title">Sessão de Estratégia 1:1 com José Felipe</h3>
+                    <p class="bonus-value">Valor: R$ 2.000</p>
+                    <p class="card-description">
+                        60 minutos de consultoria individual para aplicar Copy Geometry no seu negócio, produto ou serviço específico.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Investimento -->
+    <section id="inscricao" class="section-dark">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Investimento</span>
+                <h2 class="section-title">Não é um Curso. É um Sistema.</h2>
+                <p class="section-description">
+                    Você não está comprando aulas. Você está adquirindo uma nova forma de pensar que vai durar a vida toda.
+                </p>
+            </div>
+
+            <div class="pricing-card">
+                <span class="pricing-badge">Lançamento Exclusivo</span>
+                <div class="pricing-amount">
+                    <span class="pricing-currency">R$</span>4.970
+                </div>
+                <p class="pricing-period">ou 12x de R$ 497</p>
+
+                <ul class="pricing-features">
+                    <li>12 módulos completos de Copy Geometry™</li>
+                    <li>7 frameworks NÚCLEOˣ aplicados a copywriting</li>
+                    <li>Notion Copy Hub (workspace completo)</li>
+                    <li>Biblioteca com 50+ prompts geométricos de IA</li>
+                    <li>200+ templates de copy geometrizados</li>
+                    <li>The Geometry Tribe (acesso vitalício)</li>
+                    <li>Certificação Copy Geometry Architect™</li>
+                    <li>Sessão 1:1 com José Felipe</li>
+                    <li>Swipe Atlas Geométrico™ (20 cases analisados)</li>
+                    <li>Atualizações vitalícias do conteúdo</li>
+                </ul>
+
+                <a href="#checkout" class="btn btn-primary" style="width: 100%; margin-top: 2rem;">Garantir Minha Vaga Agora</a>
+
+                <div class="guarantee-box">
+                    <div class="guarantee-icon">🛡️</div>
+                    <h3 class="guarantee-title">Garantia Incondicional de 30 Dias</h3>
+                    <p class="guarantee-text">
+                        Se nos próximos 30 dias você não sentir que Copy Geometry transformou completamente sua forma de pensar copywriting, 
+                        basta enviar um email e devolvemos 100% do seu investimento. Sem perguntas.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section-darker">
+        <div class="container-narrow">
+            <div class="section-header">
+                <span class="section-label">Perguntas Frequentes</span>
+                <h2 class="section-title">Dúvidas?</h2>
+            </div>
+
+            <div class="faq-item">
+                <h3 class="faq-question">❓ Copy Geometry é para iniciantes ou avançados?</h3>
+                <p class="faq-answer">
+                    Ambos. Se você nunca escreveu copy, aprenderá a arquitetura correta desde o início. 
+                    Se já escreve copy, descobrirá por que suas estruturas funcionam (ou não) e como escalar sem perder conversão.
+                </p>
+            </div>
+
+            <div class="faq-item">
+                <h3 class="faq-question">❓ Quanto tempo tenho para acessar o conteúdo?</h3>
+                <p class="faq-answer">
+                    Acesso vitalício. Você pode fazer no seu ritmo. Recomendamos 12 semanas para absorver e aplicar com profundidade, 
+                    mas pode levar mais ou menos tempo dependendo da sua disponibilidade.
+                </p>
+            </div>
+
+            <div class="faq-item">
+                <h3 class="faq-question">❓ Como funciona a comunidade The Geometry Tribe?</h3>
+                <p class="faq-answer">
+                    É uma comunidade privada no Discord com eventos mensais, Q&As ao vivo com José Felipe, análises de campanhas, 
+                    networking entre arquitetos de copy e suporte contínuo. Você entra automaticamente ao se inscrever no curso.
+                </p>
+            </div>
+
+            <div class="faq-item">
+                <h3 class="faq-question">❓ Posso usar a metodologia Copy Geometry com meus clientes?</h3>
+                <p class="faq-answer">
+                    Sim. A certificação Copy Geometry Architect™ inclui licença para aplicar os frameworks em consultorias, 
+                    agências e até mesmo criar seus próprios cursos derivados (com as devidas atribuições).
+                </p>
+            </div>
+
+            <div class="faq-item">
+                <h3 class="faq-question">❓ Como é a sessão 1:1 com José Felipe?</h3>
+                <p class="faq-answer">
+                    60 minutos de consultoria estratégica via Zoom onde você traz seu negócio, produto ou serviço específico 
+                    e José Felipe aplica Copy Geometry ao vivo para desenhar sua arquitetura de conversão personalizada.
+                </p>
+            </div>
+
+            <div class="faq-item">
+                <h3 class="faq-question">❓ E se eu não gostar?</h3>
+                <p class="faq-answer">
+                    Garantia incondicional de 30 dias. Se você não sentir que o curso transformou sua forma de pensar copywriting, 
+                    basta enviar um email e devolvemos 100% do seu dinheiro. Sem burocracias.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Final -->
+    <section class="section-dark">
+        <div class="container-narrow" style="text-align: center;">
+            <h2 class="section-title" style="margin-bottom: 2rem;">
+                O Futuro Pertence aos Arquitetos
+            </h2>
+            <p class="section-description" style="margin-bottom: 3rem;">
+                Copy não vai morrer na era da IA. Mas copywriters intuitivos vão.<br>
+                <strong>Você escolhe de que lado quer estar.</strong>
+            </p>
+            <a href="#inscricao" class="btn btn-primary" style="font-size: 1.5rem; padding: 1.5rem 4rem;">
+                Eu Escolho Ser Arquiteto
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-logo">NÚCLEOˣ</div>
+            <p class="footer-text">
+                Copy Geometry™ — O sistema de copywriting estrutural criado por José Felipe Carneiro
+            </p>
+            <div class="footer-links">
+                <a href="#sobre">Sobre</a>
+                <a href="#termos">Termos de Uso</a>
+                <a href="#privacidade">Privacidade</a>
+                <a href="#contato">Contato</a>
+            </div>
+            <p class="copyright">
+                © 2025 NÚCLEOˣ by José Felipe Carneiro. Todos os direitos reservados.
+            </p>
+        </div>
+    </footer>
+</body>
+</html>

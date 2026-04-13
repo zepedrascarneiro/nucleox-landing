@@ -1,0 +1,968 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="NUCLEOˣ Copy Geometry: o curso que transforma pensamento estruturado em copywriting de conversão.">
+    <title>NUCLEOˣ Copy Geometry</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --black: #000000;
+            --white: #ffffff;
+            --gold: #D4AF37;
+            --atomic-green: #00FF6F;
+            --graphite: #2F4F4F;
+            --surface-dark: rgba(255, 255, 255, 0.05);
+            --surface-mid: rgba(255, 255, 255, 0.08);
+            --text-primary: rgba(255, 255, 255, 0.92);
+            --text-secondary: rgba(255, 255, 255, 0.68);
+            --text-tertiary: rgba(255, 255, 255, 0.48);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: radial-gradient(circle at top left, rgba(212, 175, 55, 0.08), transparent 45%),
+                        radial-gradient(circle at bottom right, rgba(0, 255, 111, 0.08), transparent 55%),
+                        #040404;
+            color: var(--text-primary);
+            line-height: 1.7;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .page {
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        header.hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 140px 2rem 120px;
+            background: linear-gradient(135deg, rgba(0, 0, 0, 0.9) 10%, rgba(15, 15, 18, 0.95) 90%);
+            position: relative;
+        }
+
+        header.hero::before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 640px;
+            height: 640px;
+            transform: translate(-50%, -50%);
+            border-radius: 50%;
+            border: 1px solid rgba(212, 175, 55, 0.12);
+            filter: blur(0.4px);
+        }
+
+        header.hero::after {
+            content: "";
+            position: absolute;
+            top: -160px;
+            right: -120px;
+            width: 480px;
+            height: 480px;
+            border-radius: 50%;
+            border: 1px solid rgba(0, 255, 111, 0.18);
+            opacity: 0.5;
+            filter: blur(0.2px);
+        }
+
+        .hero-content {
+            position: relative;
+            max-width: 960px;
+            display: grid;
+            gap: 2.5rem;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            margin: 0 auto;
+            padding: 0.75rem 1.75rem;
+            border-radius: 999px;
+            border: 1px solid rgba(212, 175, 55, 0.4);
+            background: rgba(212, 175, 55, 0.08);
+            color: var(--gold);
+            font-size: 13px;
+            font-weight: 600;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .hero-title {
+            font-size: clamp(42px, 7vw, 72px);
+            font-weight: 900;
+            letter-spacing: -1px;
+            line-height: 1.1;
+        }
+
+        .hero-title span {
+            color: var(--gold);
+        }
+
+        .hero-subtitle {
+            font-size: clamp(18px, 3.2vw, 24px);
+            color: var(--text-secondary);
+            max-width: 760px;
+            margin: 0 auto;
+        }
+
+        .hero-cta {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .btn-primary {
+            background: var(--gold);
+            color: var(--black);
+            padding: 1.1rem 2.6rem;
+            font-size: 16px;
+            font-weight: 700;
+            border-radius: 10px;
+            text-decoration: none;
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+            box-shadow: 0 18px 45px rgba(212, 175, 55, 0.28);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 22px 50px rgba(212, 175, 55, 0.4);
+        }
+
+        .btn-outline {
+            border: 1.5px solid rgba(212, 175, 55, 0.5);
+            padding: 1rem 2.4rem;
+            font-size: 16px;
+            font-weight: 600;
+            border-radius: 10px;
+            color: var(--gold);
+            text-decoration: none;
+            transition: background 0.25s ease, color 0.25s ease;
+        }
+
+        .btn-outline:hover {
+            background: rgba(212, 175, 55, 0.12);
+        }
+
+        .hero-proof {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .hero-proof .metric {
+            padding: 1.75rem;
+            border-radius: 16px;
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .metric strong {
+            font-size: 36px;
+            font-weight: 800;
+            color: var(--gold);
+            display: block;
+        }
+
+        .section {
+            padding: 110px 2rem;
+            position: relative;
+        }
+
+        .section.narrow {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .section.max {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .overline {
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--gold);
+            margin-bottom: 1.75rem;
+        }
+
+        .section-title {
+            font-size: clamp(32px, 5vw, 52px);
+            font-weight: 800;
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+        }
+
+        .section-subtitle {
+            color: var(--text-secondary);
+            font-size: clamp(18px, 3vw, 22px);
+            max-width: 720px;
+        }
+
+        .grid-3 {
+            display: grid;
+            gap: 2rem;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            margin-top: 3rem;
+        }
+
+        .card {
+            padding: 2.2rem;
+            border-radius: 18px;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            display: grid;
+            gap: 1rem;
+        }
+
+        .card strong {
+            font-size: 18px;
+            font-weight: 700;
+        }
+
+        .card p {
+            color: var(--text-secondary);
+        }
+
+        .contrast {
+            background: rgba(255, 255, 255, 0.04);
+            border-radius: 28px;
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            padding: 4rem 3rem;
+            margin-top: 4rem;
+        }
+
+        .split {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 3rem;
+            margin-top: 3rem;
+        }
+
+        .split .panel {
+            padding: 2.5rem;
+            border-radius: 24px;
+            border: 1px solid rgba(255, 255, 255, 0.12);
+        }
+
+        .split .panel h3 {
+            font-size: 18px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            margin-bottom: 1.5rem;
+        }
+
+        .split .panel ul {
+            display: grid;
+            gap: 1rem;
+            color: var(--text-secondary);
+            list-style: none;
+        }
+
+        .split .panel ul li {
+            position: relative;
+            padding-left: 1.75rem;
+        }
+
+        .split .panel ul li::before {
+            content: "";
+            position: absolute;
+            top: 0.75rem;
+            left: 0.35rem;
+            width: 7px;
+            height: 7px;
+            border-radius: 50%;
+            background: var(--gold);
+        }
+
+        .panel-before {
+            background: rgba(255, 255, 255, 0.015);
+        }
+
+        .panel-after {
+            background: linear-gradient(135deg, rgba(212, 175, 55, 0.12), rgba(212, 175, 55, 0.02));
+        }
+
+        .modules {
+            display: grid;
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .module-card {
+            padding: 2.4rem;
+            border-radius: 22px;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            background: linear-gradient(145deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0.01));
+            display: grid;
+            gap: 1.25rem;
+        }
+
+        .module-card header {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            align-items: baseline;
+            justify-content: space-between;
+        }
+
+        .module-id {
+            font-size: 14px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            color: var(--atomic-green);
+        }
+
+        .module-title {
+            font-size: 24px;
+            font-weight: 700;
+        }
+
+        .module-meta {
+            font-size: 14px;
+            color: var(--text-tertiary);
+        }
+
+        .module-card ul {
+            list-style: none;
+            display: grid;
+            gap: 0.75rem;
+            color: var(--text-secondary);
+        }
+
+        .module-card ul li::before {
+            content: "→";
+            color: var(--gold);
+            margin-right: 0.75rem;
+        }
+
+        .bonuses {
+            display: grid;
+            gap: 1.5rem;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            margin-top: 3rem;
+        }
+
+        .bonus-card {
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            border-radius: 22px;
+            padding: 2.2rem;
+            display: grid;
+            gap: 0.75rem;
+        }
+
+        .bonus-card span {
+            font-size: 13px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--gold);
+        }
+
+        .testimonials {
+            display: grid;
+            gap: 2rem;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            margin-top: 3rem;
+        }
+
+        .testimonial {
+            padding: 2.2rem;
+            border-radius: 22px;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.09);
+            display: grid;
+            gap: 1rem;
+        }
+
+        .testimonial p {
+            color: var(--text-secondary);
+            font-style: italic;
+        }
+
+        .testimonial strong {
+            font-size: 15px;
+        }
+
+        .mentor {
+            display: grid;
+            gap: 2.5rem;
+            align-items: center;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            margin-top: 3rem;
+        }
+
+        .mentor-card {
+            padding: 2.5rem;
+            border-radius: 24px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            background: rgba(255, 255, 255, 0.02);
+            display: grid;
+            gap: 1.5rem;
+        }
+
+        .faq {
+            display: grid;
+            gap: 1.5rem;
+            margin-top: 3rem;
+        }
+
+        .faq-item {
+            border-radius: 18px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            background: rgba(255, 255, 255, 0.025);
+            padding: 1.75rem 2rem;
+        }
+
+        .faq-item h4 {
+            font-size: 18px;
+            margin-bottom: 0.75rem;
+        }
+
+        footer {
+            padding: 3rem 2rem 4rem;
+            text-align: center;
+            color: var(--text-tertiary);
+            font-size: 14px;
+        }
+
+        .cta-block {
+            text-align: center;
+            display: grid;
+            gap: 1.5rem;
+            margin-top: 3rem;
+        }
+
+        .price-tag {
+            font-size: clamp(36px, 7vw, 56px);
+            font-weight: 900;
+            color: var(--gold);
+        }
+
+        .price-tag small {
+            font-size: 18px;
+            color: var(--text-tertiary);
+        }
+
+        .section-title.small {
+            font-size: 28px;
+        }
+
+        .section-title.tight {
+            margin-bottom: 0.5rem;
+        }
+
+        .overline.tight {
+            margin-bottom: 1rem;
+        }
+
+        .contrast.shift-top {
+            margin-top: 3.5rem;
+        }
+
+        .contrast.flush {
+            margin: 0;
+        }
+
+        .mentor-list {
+            list-style: none;
+            display: grid;
+            gap: 0.65rem;
+            color: var(--text-secondary);
+            padding-left: 0;
+        }
+
+        .text-secondary {
+            color: var(--text-secondary);
+        }
+
+        .quote-author {
+            margin-top: 2rem;
+            color: var(--gold);
+            font-weight: 600;
+        }
+
+        .legal-note {
+            color: var(--text-tertiary);
+            font-size: 13px;
+        }
+
+        .cta-grid {
+            display: grid;
+            gap: 2rem;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            margin-top: 3rem;
+        }
+
+        .cta-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 2.4rem;
+            display: grid;
+            gap: 1.2rem;
+            transition: transform 0.3s ease, border 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .cta-card:hover {
+            transform: translateY(-6px);
+            border-color: rgba(212, 175, 55, 0.6);
+            box-shadow: 0 16px 40px rgba(212, 175, 55, 0.15);
+        }
+
+        .cta-index {
+            font-size: 13px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--atomic-green);
+        }
+
+        .cta-card h3 {
+            font-size: 20px;
+            font-weight: 700;
+        }
+
+        .cta-card p {
+            color: var(--text-secondary);
+            font-size: 15px;
+            line-height: 1.7;
+        }
+
+        .cta-card a {
+            justify-self: flex-start;
+            padding: 0.9rem 1.8rem;
+            border-radius: 999px;
+            background: var(--gold);
+            color: var(--black);
+            font-weight: 600;
+            text-decoration: none;
+            font-size: 14px;
+            letter-spacing: 0.5px;
+            box-shadow: 0 12px 30px rgba(212, 175, 55, 0.25);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .cta-card a:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 16px 35px rgba(212, 175, 55, 0.35);
+        }
+
+        @media (max-width: 768px) {
+            .hero-cta {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .btn-primary, .btn-outline {
+                width: 100%;
+                text-align: center;
+            }
+
+            header.hero {
+                padding: 120px 1.5rem 100px;
+            }
+
+            .section {
+                padding: 90px 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="page">
+    <header class="hero">
+        <div class="hero-content">
+            <div class="hero-badge">Turma ALFA • 40 vagas estrategicamente limitadas</div>
+            <h1 class="hero-title">NUCLEO<sup>ˣ</sup> <span>Copy Geometry</span></h1>
+            <p class="hero-subtitle">
+                O curso que transforma o framework filosófico do NUCLEOˣ em copywriting cirúrgico. Uma arquitetura geométrica para promessas, ofertas e narrativas que convertem com consciência.
+            </p>
+            <div class="hero-cta">
+                <a href="#checkout" class="btn-primary">Garantir minha vaga</a>
+                <a href="#metodo" class="btn-outline">Ver o método completo</a>
+            </div>
+            <div class="hero-proof">
+                <div class="metric">
+                    <strong>7</strong>
+                    Princípios do NUCLEOˣ traduzidos em roteiros de copy.
+                </div>
+                <div class="metric">
+                    <strong>21</strong>
+                    Dias de laboratório aplicado com desafios guiados.
+                </div>
+                <div class="metric">
+                    <strong>∞</strong>
+                    Templates, prompts e estruturas para multiplicar suas campanhas.
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="section narrow">
+        <div class="overline">O mecanismo invisível</div>
+        <h2 class="section-title">Copywriting é geometria verbal. Se a forma estiver errada, a conversão colapsa.</h2>
+        <p class="section-subtitle">
+            A maioria dos redatores decora fórmulas. No NUCLEOˣ Copy Geometry você aprende a desenhar a forma da mensagem antes das palavras. Pensamento estruturado primeiro, copy depois.
+        </p>
+        <div class="grid-3">
+            <div class="card">
+                <strong>Promessa com propósito nomeado</strong>
+                <p>Você aprende a nomear a transformação de maneira verificável. Nada de "resultado rápido" — falamos em métricas, critérios e frames geométricos.</p>
+            </div>
+            <div class="card">
+                <strong>Arquitetura das restrições</strong>
+                <p>Usamos o limite como catalisador criativo. Cada peça de copy nasce de restrições precisas: tempo, tom, energia, medium.</p>
+            </div>
+            <div class="card">
+                <strong>Sequência lógica orbital</strong>
+                <p>Copy sem ordem é ruído. Você domina a sequência orbital do NUCLEOˣ: atração → ancoragem → geometria de prova → expansão.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section max" id="publico">
+        <div class="overline">Para quem é</div>
+        <h2 class="section-title">Mestres do pensamento que precisam transformar clareza em conversão.</h2>
+        <div class="grid-3">
+            <div class="card">
+                <strong>Estratégas e Founders</strong>
+                <p>Querem dominar copy para campanhas próprias, sem depender de terceiros. Precisam de frameworks para comunicar visão com precisão.</p>
+            </div>
+            <div class="card">
+                <strong>Redatores e Creators</strong>
+                <p>Buscam diferenciação intelectual. Cansados de fórmulas rasas, desejam copy profunda, minimalista e exponencial.</p>
+            </div>
+            <div class="card">
+                <strong>Consultores e Mentores</strong>
+                <p>Precisam transformar metodologias complexas em palavras que movimentam tribos, produtos premium e programas de alto ticket.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section narrow">
+        <div class="contrast">
+            <div class="overline">Transformação</div>
+            <div class="split">
+                <div class="panel panel-before">
+                    <h3>Antes</h3>
+                    <ul>
+                        <li>Copy dependente de inspiração e swipes alheios.</li>
+                        <li>Mensagens densas que perdem impacto em múltiplos canais.</li>
+                        <li>Falta de critérios para validar promessas e provas.</li>
+                        <li>Storytelling intuitivo, sem engenharia.</li>
+                    </ul>
+                </div>
+                <div class="panel panel-after">
+                    <h3>Depois</h3>
+                    <ul>
+                        <li>Copy arquitetada com geometria: forma antes das palavras.</li>
+                        <li>Mensagens modulares, prontas para ads, email, long-form e scripts.</li>
+                        <li>Promessas auditáveis com critérios NUCLEOˣ.</li>
+                        <li>Story pipelines com lógica orbital e multiplicação exponencial.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section max" id="metodo">
+        <div class="overline">O método em 6 orbitais</div>
+        <h2 class="section-title">Do manifesto à conversão: o mapa geométrico da copy premium.</h2>
+        <div class="modules">
+            <article class="module-card">
+                <header>
+                    <span class="module-id">Módulo 01 • NAME</span>
+                    <h3 class="module-title">Nomear a Promessa Central</h3>
+                    <span class="module-meta">Frameworks de tese e headline mestre</span>
+                </header>
+                <ul>
+                    <li>Arquitetura da Big Idea com critérios verificáveis.</li>
+                    <li>Headline Geometry: sete formas geométricas para promessas magnéticas.</li>
+                    <li>Mapa de dores e desejos pelo prisma orbital.</li>
+                </ul>
+            </article>
+            <article class="module-card">
+                <header>
+                    <span class="module-id">Módulo 02 • CRITERIA</span>
+                    <h3 class="module-title">Dados que sustentam narrativa</h3>
+                    <span class="module-meta">Pesquisa, provas e âncoras</span>
+                </header>
+                <ul>
+                    <li>Matriz de evidências geométricas (dados, filosofia, testemunhos, contexto).</li>
+                    <li>Framework de perguntas para entrevistas e cases.</li>
+                    <li>Construção de provas empíricas e energéticas.</li>
+                </ul>
+            </article>
+            <article class="module-card">
+                <header>
+                    <span class="module-id">Módulo 03 • LIMIT</span>
+                    <h3 class="module-title">Limitar o escopo para ganhar potência</h3>
+                    <span class="module-meta">Posicionamento e avatar orbital</span>
+                </header>
+                <ul>
+                    <li>Seleção de público-alvo por densidade de consciência.</li>
+                    <li>Script "Parede de Rejeição" para eliminar generalização.</li>
+                    <li>Design de ofertas minimalistas e altamente valiosas.</li>
+                </ul>
+            </article>
+            <article class="module-card">
+                <header>
+                    <span class="module-id">Módulo 04 • ESPECIFY</span>
+                    <h3 class="module-title">Especificar restrições que desbloqueiam criatividade</h3>
+                    <span class="module-meta">Formato, tom e energia</span>
+                </header>
+                <ul>
+                    <li>Blueprint de voz: léxico, ritmos, metáforas e geometrias.</li>
+                    <li>Limitações produtivas para roteiros, emails, páginas e scripts.</li>
+                    <li>Prompts avançados para IA seguir sua geometria.</li>
+                </ul>
+            </article>
+            <article class="module-card">
+                <header>
+                    <span class="module-id">Módulo 05 • ORDER</span>
+                    <h3 class="module-title">Sequenciar histórias e argumentos</h3>
+                    <span class="module-meta">Story pipeline e cadência multicanal</span>
+                </header>
+                <ul>
+                    <li>Story Geometry: abertura, amplificação, prova, expansão.</li>
+                    <li>Roteiro de lançamentos e sprints semanais.</li>
+                    <li>Matriz de follow-up para aumento de LTV.</li>
+                </ul>
+            </article>
+            <article class="module-card">
+                <header>
+                    <span class="module-id">Módulo 06 • 6XPAND</span>
+                    <h3 class="module-title">Escalar sem perder forma</h3>
+                    <span class="module-meta">Automação inteligente e experimentos</span>
+                </header>
+                <ul>
+                    <li>Dashboard de métricas e rituais de otimização.</li>
+                    <li>Playbook de campanhas evergreen + eventos.</li>
+                    <li>Uso de IA como copiloto de copy com consciência.</li>
+                </ul>
+            </article>
+        </div>
+    </section>
+
+    <section class="section max" id="entregaveis">
+        <div class="overline">Ferramentas e laboratoriais</div>
+        <h2 class="section-title">Você recebe o sistema completo para pensar, escrever e testar.</h2>
+        <div class="grid-3">
+            <div class="card">
+                <strong>Notion Copy Hub</strong>
+                <p>Todas as frameworks, checklists, gráficos e calendários integrados com o método NUCLEOˣ. Simples, modular e pronto para duplicar para cada projeto.</p>
+            </div>
+            <div class="card">
+                <strong>Templates de Alta Conversão</strong>
+                <p>Landing pages, emails, VSLs, anúncios, roteiros de vendas e follow-up. Cada template acompanha explicação geométrica + exemplo real.</p>
+            </div>
+            <div class="card">
+                <strong>Prompts Inteligentes</strong>
+                <p>Biblioteca de prompts para IA que respeitam a geometria da copy. Geração rápida de variações sem perder originalidade.</p>
+            </div>
+        </div>
+        <div class="contrast shift-top">
+            <h3 class="section-title small">Laboratórios guiados</h3>
+            <p class="section-subtitle">21 dias com desafios aplicados: headlines, narrativas, emails, páginas, scripts. Feedbacks assíncronos e sessões ao vivo de engenharia de copy.</p>
+        </div>
+    </section>
+
+    <section class="section max" id="guide">
+        <div class="overline">Guia de ativação NUCLEOˣ</div>
+        <h2 class="section-title">10 CTAs para conduzir a Copy Geometry do despertar à conversão.</h2>
+        <p class="section-subtitle">Distribua estes gatilhos nos touchpoints do funil: cada chamada ativa um pilar do NUCLEOˣ e move o aluno pela geometria do curso.</p>
+        <div class="cta-grid">
+            <div class="cta-card">
+                <span class="cta-index">01 • Name</span>
+                <h3>Nomeie sua promessa com precisão cirúrgica</h3>
+                <p>Atrair exige clareza. Leve o lead direto ao módulo que ensina a batizar a transformação central sem ruídos.</p>
+                <a href="#metodo">Explorar o Módulo NAME</a>
+            </div>
+            <div class="cta-card">
+                <span class="cta-index">02 • Criteria</span>
+                <h3>Valide a narrativa com evidências geométricas</h3>
+                <p>Converta céticos mostrando critérios verificáveis, estudos e provas que sustentam a promessa.</p>
+                <a href="#metodo">Liberar matriz de critérios</a>
+            </div>
+            <div class="cta-card">
+                <span class="cta-index">03 • Limit</span>
+                <h3>Delimite o avatar ideal para a turma ALFA</h3>
+                <p>Reduza atrito declarando para quem o curso foi esculpido e por que o acesso é limitado.</p>
+                <a href="#publico">Conhecer quem entra</a>
+            </div>
+            <div class="cta-card">
+                <span class="cta-index">04 • Specify</span>
+                <h3>Configure o tom, o canal e a energia da copy</h3>
+                <p>Mostre como as restrições inteligentes liberam criatividade e garantem consistência em todos os formatos.</p>
+                <a href="#metodo">Ver frameworks de especificação</a>
+            </div>
+            <div class="cta-card">
+                <span class="cta-index">05 • Order</span>
+                <h3>Desenhe a sequência orbital da sua narrativa</h3>
+                <p>Conduza o aluno pelo story pipeline: atração, ancoragem, prova e expansão alinhados.</p>
+                <a href="#metodo">Ativar story pipeline</a>
+            </div>
+            <div class="cta-card">
+                <span class="cta-index">06 • 6xpand</span>
+                <h3>Multiplique campanhas sem perder estrutura</h3>
+                <p>Mostre como o módulo final garante escala com dashboards, automações e testes contínuos.</p>
+                <a href="#metodo">Garantir expansão exponencial</a>
+            </div>
+            <div class="cta-card">
+                <span class="cta-index">07 • Labs</span>
+                <h3>Entrar no laboratório de headlines geométricas</h3>
+                <p>Convide o lead a participar dos 21 dias de desafios práticos e sessões ao vivo.</p>
+                <a href="#entregaveis">Iniciar os laboratórios</a>
+            </div>
+            <div class="cta-card">
+                <span class="cta-index">08 • Tools</span>
+                <h3>Desbloquear o Notion Copy Hub completo</h3>
+                <p>Reforce a entrega tangível: o sistema operacional que centraliza templates, prompts e métricas.</p>
+                <a href="#entregaveis">Abrir o Copy Hub</a>
+            </div>
+            <div class="cta-card">
+                <span class="cta-index">09 • Tribe</span>
+                <h3>Conectar-se à Geometry Tribe de Copywriters</h3>
+                <p>Mostre a mentoria, os encontros e a legitimidade do movimento NUCLEOˣ dentro da comunidade.</p>
+                <a href="#mentor">Conhecer a mentoria</a>
+            </div>
+            <div class="cta-card">
+                <span class="cta-index">10 • Commit</span>
+                <h3>Garantir presença na turma ALFA</h3>
+                <p>Finalize com urgência e segurança: acesso imediato, bônus ativos e garantia geométrica.</p>
+                <a href="https://pay.voompcreators.com.br/nucleox-copy" target="_blank" rel="noopener noreferrer">Reservar minha vaga</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="section max" id="bonus">
+        <div class="overline">Bônus estratégicos</div>
+        <h2 class="section-title">Curadoria para acelerar resultado e proteger seu posicionamento.</h2>
+        <div class="bonuses">
+            <div class="bonus-card">
+                <span>Bônus #1</span>
+                <h3>Swipe Atlas Geométrico</h3>
+                <p>Banco comentado de 60 campanhas vencedoras desconstruídas pela lente NUCLEOˣ. Identifique a geometria por trás da conversão e recrie com autenticidade.</p>
+            </div>
+            <div class="bonus-card">
+                <span>Bônus #2</span>
+                <h3>Clínica de Headlines ao vivo</h3>
+                <p>Encontros trimestrais para otimizar promessas e títulos das suas campanhas com feedback direto.</p>
+            </div>
+            <div class="bonus-card">
+                <span>Bônus #3</span>
+                <h3>Script de Pitches Orbitais</h3>
+                <p>Modelos prontos para pitch decks, reuniões comerciais, podcasts e lives. Domine a narrativa em qualquer canal.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section narrow" id="prova">
+        <div class="overline">Validação da tribo</div>
+        <h2 class="section-title">Copywriters beta do NUCLEOˣ já estão multiplicando clareza em conversão.</h2>
+        <div class="testimonials">
+            <div class="testimonial">
+                <p>“Nunca tinha visto uma metodologia que traduzisse pensamento em copy com tanta precisão. O módulo de ordem lógica fez minha VSL saltar 3,2x em conversão.”</p>
+                <strong>Bruno Almeida</strong>
+                <span class="module-meta">Copywriter • Tribo Geometry</span>
+            </div>
+            <div class="testimonial">
+                <p>“Passei anos chupando fórmulas americanas. Agora construo campanhas a partir da geometria da oferta. Meus clientes sentem a diferença no primeiro copy deck.”</p>
+                <strong>Ana Rodrigues</strong>
+                <span class="module-meta">Consultora de Infoprodutos</span>
+            </div>
+            <div class="testimonial">
+                <p>“O framework de restrições mudou tudo. Limitei minha copy a uma promessa, um mecanismo, um avatar: faturamento dobrou em 45 dias.”</p>
+                <strong>Lucas Pereira</strong>
+                <span class="module-meta">Founder SaaS</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="section max" id="mentor">
+        <div class="overline">Mentoria de origem</div>
+        <div class="mentor">
+            <div class="mentor-card">
+                <h2 class="section-title tight">José Felipe Carneiro</h2>
+                <p class="section-subtitle">Criador do NUCLEOˣ, arquiteto de sistemas cognitivos e estrategista da The Geometry Tribe.</p>
+                <p>José aplicou os 7 pilares do NUCLEOˣ em educação, lançamentos, copy premium e growth. A Copy Geometry nasceu da necessidade de traduzir a filosofia em campanhas que movimentam comunidades e produtos exponenciais.</p>
+                <ul class="mentor-list">
+                    <li>→ 12 anos em comunicação estratégica e growth.</li>
+                    <li>→ Projetos com múltiplos 7 dígitos em vendas recorrentes.</li>
+                    <li>→ Autor do manifesto e brandbook NUCLEOˣ.</li>
+                    <li>→ Mentor de tribos que pensam com clareza radical.</li>
+                </ul>
+            </div>
+            <div class="contrast flush">
+                <div class="overline tight">Filosofia aplicada</div>
+                <p class="text-secondary">“Copy não é sobre palavras bonitas. É sobre transformar geometria interna em linguagem externa. Você aprenderá a pensar como engenheiro da mensagem antes de escrever como artista.”</p>
+                <div class="quote-author">— José Felipe</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section narrow" id="garantia">
+        <div class="overline">Garantia geométrica</div>
+        <h2 class="section-title">Teste a metodologia por 7 dias. Sem perguntas, sem atritos.</h2>
+        <p class="section-subtitle">Se dentro da primeira semana você sentir que a Copy Geometry não entregou clareza estratégica, devolvemos 100% do investimento. Pensamento estruturado não tem risco — tem responsabilidade.</p>
+    </section>
+
+    <section class="section narrow" id="faq">
+        <div class="overline">FAQ</div>
+        <h2 class="section-title">Perguntas frequentes</h2>
+        <div class="faq">
+            <div class="faq-item">
+                <h4>Quanto tempo preciso dedicar por semana?</h4>
+                <p>Recomendamos 5 horas: 2h de conteúdo, 2h de laboratório aplicado e 1h de revisão/otimização. As sessões ficam gravadas.</p>
+            </div>
+            <div class="faq-item">
+                <h4>Já sou copywriter. O curso ainda faz sentido?</h4>
+                <p>Sim, porque você vai recalibrar sua base intelectual. O foco está em engenharia de copy, não em fórmulas prontas. Ideal para quem quer liderar campanhas premium.</p>
+            </div>
+            <div class="faq-item">
+                <h4>O curso usa inteligência artificial?</h4>
+                <p>Sim. Você receberá prompts geométricos que instruem a IA a respeitar sua voz e estrutura. Automatizamos sem perder essência humana.</p>
+            </div>
+            <div class="faq-item">
+                <h4>Há suporte individual?</h4>
+                <p>Teremos canal exclusivo com feedback assíncrono durante 30 dias e clínicas coletivas ao vivo. Opção de upgrade para mentoria 1:1.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section narrow" id="checkout">
+        <div class="overline">Investimento</div>
+        <div class="cta-block">
+            <h2 class="section-title">Sua clareza merece escala.</h2>
+            <div class="price-tag">R$ 2.490 <small>à vista ou 12x de R$ 249</small></div>
+            <p class="section-subtitle">Inclui acesso vitalício às atualizações, laboratórios e bônus estratégicos. Valores especiais para a turma ALFA.</p>
+            <a href="https://pay.voompcreators.com.br/nucleox-copy" class="btn-primary">Quero entrar para a Copy Geometry</a>
+            <p class="legal-note">Pagamento 100% seguro • Suporte dedicado • Garantia de 7 dias</p>
+        </div>
+    </section>
+
+    <footer>
+        © 2025 NUCLEOˣ • The Geometry Tribe — Todos os direitos reservados. Pensamento com propósito deixa rastro.
+    </footer>
+</div>
+</body>
+</html>
